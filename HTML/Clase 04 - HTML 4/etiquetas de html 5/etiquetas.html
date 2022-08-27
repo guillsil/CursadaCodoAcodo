@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link href="estilo-etiquetas.css" rel="stylesheet" type="text/css" />
+
+    <title>Maquetado Semántico</title>
+</head>
+
+<body>
+    <header>
+        <h1>Esto es un header!</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <section id="etiquetas">
+            <h1>Etiquetas</h1>
+            <article>
+                <h1>details</h1>
+                <h2>promo Club Personal</h2>
+                <p>2 x 1 en sundaes</p>
+                <!--la etiqueta details permite desplegar u ocultar el texto en su interior.-->
+                <!--etiqueta summary es el titulo de la etiqueta details.-->
+                <details>
+                    <summary>Condiciones de la promo</summary>
+                    <p>On the Insert tab, the galleries include items that are designed to coordinate with the overall
+                        look of your document. You can use these galleries to insert tables, headers, footers, lists,
+                        cover pages, and other document building blocks. When you create pictures, charts, or diagrams,
+                        they also coordinate with your current document look.
+                        You can easily change the formatting of selected text in the document text by choosing a look
+                        for the selected text from the Quick Styles gallery on the Home tab. You can also format text
+                        directly by using the other controls on the Home tab. Most controls offer a choice of using the
+                        look from the current theme or using a format that you specify directly.
+                        To change the overall look of your document, choose new Theme elements on the Page Layout tab.
+                        To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set
+                        command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you
+                        can always restore the look of your document to the original contained in your current template.
+                        On the Insert tab, the galleries include items that are designed to coordinate with the overall
+                        look of your document. You can use these galleries to insert tables, headers, footers, lists,
+                        cover pages, and other document building blocks. When you create pictures, charts, or diagrams,
+                        they also coordinate with your current document look.
+                        You can easily change the formatting of selected text in the document text by choosing a look
+                        for the selected text from the Quick Styles gallery on the Home tab. You can also format text
+                        directly by using the other controls on the Home tab. Most controls offer a choice of using the
+                        look from the current theme or using a format that you specify directly.
+
+                    </p>
+                </details>
+
+            </article>
+
+            <article>
+
+                <h1>time</h1>
+                <!--La etiqueta time se usa para marcar fechas y horas en un formato que entiendan los ordenadores y mediante aplicaciones poder generar alarmas que le avisen al usuario sobre el recordatorio de algun evento. -->
+                <p>La <time datetime="2012-12-25" title="25 de diciembre de 2012"> navidad pasada</time> se juntaron 20
+                    personas</p>
+                <p>El evento comienza <time datetime="23:30" title="23:30 de la noche, no faltes"> poco antes de la
+                        media noche.</time>
+            </article>
+            <article>
+                <h1>Mark</h1>
+                <!--La etiqueta mark se usa para marcar partes del contenido de manera que pueda resaltarse y diferenciarse del resto.-->
+                <p>
+                    Esto es una prueba de mark particularmente <mark>esta palabra</mark>
+                </p>
+            </article>
+
+            <article>
+                <h1>Del</h1>
+                <!--La etiqueta del se usa para tachar una parte del contenido-->
+                <p>
+                    Esto es una prueba de la etiqueta del particularmente <del>esta palabra</del>
+                </p>
+            </article>
+
+            <article>
+                <h1>Small</h1>
+                <!--La etiqueta small se usa para achicar el tamaño de parte del contenido-->
+                <p>
+                    Esto es una prueba de small particularmente <small>esta palabra</small>
+                </p>
+            </article>
+
+            <article>
+                <h1>Sup</h1>
+                <!--La etiqueta sup se usa para marcar un superindice-->
+                <p>
+                    Esto es una prueba de sup particularmente <sup>esta palabra</sup>
+                </p>
+            </article>
+
+            <article>
+                <h1>Sub</h1>
+                <!--La etiqueta sub se usa para marcar un subindice-->
+                <p>
+                    Esto es una prueba de sub particularmente <sub>esta palabra</sub>
+                </p>
+            </article>
+
+            <article>
+                <h1>meter</h1>
+                <!--La etiqueta meter se usa para marcar medidas, siempre que estas sean parte de una escala con valores mínimos y máximos.-->
+                <h2>Resultados de encuesta telefónica (VOTOS A FAVOR)</h2>
+                <h3>Cantidad de llamados 3500</h3>
+                <h4>Candidato 1:</h4>
+                <meter min="0" low="500" high="2500" max="3500" optimum="3500" value="400" title="400 votos">
+                    500 votos de 3500
+                </meter>
+                <h4>Candidato 2:</h4>
+                <meter min="0" low="500" high="2500" max="3500" optimum="3500" value="1500" title="600 votos">
+                    600 votos de 3500
+                </meter>
+                <h4>Candidato 3:</h4>
+                <meter min="0" low="500" high="2500" max="3500" optimum="3500" value="2700" title="2700 votos">
+                    2700 votos de 3500
+                </meter>
+                <h2>Resultados de encuesta telefónica (VOTOS EN CONTRA)</h2>
+                <h3>Cantidad de llamados 3500</h3>
+                <h4>Candidato 1:</h4>
+                <meter min="0" low="500" high="2500" max="3500" optimum="0" value="400" title="400 votos">
+                    500 votos de 3500
+                </meter>
+                <h4>Candidato 2:</h4>
+                <meter min="0" low="500" high="2500" max="3500" optimum="0" value="600" title="600 votos">
+                    600 votos de 3500
+                </meter>
+                <h4>Candidato 3:</h4>
+                <meter min="0" low="500" high="2500" max="3500" optimum="0" value="2700" title="2700 votos">
+                    2700 votos de 3500
+                </meter>
+            </article>
+            <article>
+                <h1>audio</h1>
+                <!-- 
+                    controls: muestra los controles de reproduccion y pausa 
+                    loop autoplay: hace que el audio se vuelva a reproducir en forma consecutiva
+                    formatos de audio: mp3, ogg y wav
+                -->
+                <audio controls id="miaudio" loop autoplay>
+                    <source src="audio/0802.mp3" type="audio/mpeg">
+                    <source src="audio/0802.ogg" type="audio/ogg">
+                    <source src="audio/0802.wav" type="audio/wav">
+                    <!--Cualquier texto dentro del entre <audio> y </ audio> será mostrado en los navegadores que no admitan la <audio> etiqueta.-->
+                    <p>Tu navegador no soporta este archivo de audio. Puedes descargarlo de aquí<a
+                            href="audio/0802.mp3">aquí</a></p>
+                </audio>
+                <!-- mediante funciones de javascript los botones funcionan para reproducir o pausar -->
+                <input type="button" value="PLAY" onClick="document.getElementById('miaudio').play();">
+                <input type="button" value="PAUSA" onClick="document.getElementById('miaudio').pause();">
+            </article>
+            <article>
+                <h1>video</h1>
+                <video controls id="mivideo" width="400" height="250" poster="video/poster.jpg">
+                    <source src="video/globos.mp4" type="video/mp4">
+                    <source src="video/globos.ogg" type="video/ogg">
+                    <source src="video/globos.webm" type="video/webm">
+
+                    <p>Tu navegador no soporta este archivo de audio. Puedes descargarlo de aquí<a
+                            href="audio/0802.mp3">aquí</a></p>
+                </video>
+                <input type="button" value="PLAY" onClick="document.getElementById('mivideo').play();">
+                <input type="button" value="PAUSA" onClick="document.getElementById('mivideo').pause();">
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    </div>
+</body>
+
+</html>

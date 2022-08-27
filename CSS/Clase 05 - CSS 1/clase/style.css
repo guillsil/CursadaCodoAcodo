@@ -1,0 +1,45 @@
+/*Selector Universal*/
+
+*{
+    background-color: pink;
+    margin: 10px;
+}
+
+/*Selector de etiqueta*/
+
+h4{
+    color: red;
+    background-color: blueviolet;
+}
+
+
+
+/*Selector de clase*/
+
+.hola{
+    color:aqua;
+    background-color: black;
+}
+
+/*Selector de id*/
+
+#chau{
+    color:brown;
+    background-color: antiquewhite;
+}
+
+
+p{
+    color:red;
+    font-size: 30px;
+}
+
+.segundo{
+    color:blue;
+    font-size: 35px;
+}
+
+#tercero{
+    color: green;
+    font-size: 40px;
+}

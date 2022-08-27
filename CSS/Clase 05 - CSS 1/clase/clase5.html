@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Clase 05</title>
+</head>
+<body>
+
+    <h1 >Estilos y CSS</h1>
+
+    <!-- Css en Linea -->
+     
+    <h2 style="color:orange ; background-color: black;  ">Este texto está modificado por CSS en linea</h2>
+ 
+    <!-- Css interno -->
+
+    <h3>Este texto va a ser modificado por CSS interno</h3>
+
+    <style>
+        h3{
+            color:blue;
+            background-color: pink;
+            
+        }
+    </style>
+
+    <!-- Css Externo -->
+
+    <h4>Este texto va a ser modificado por CSS externo</h4>
+
+    <h4 class="hola">Este es otro h4</h4>
+
+    <h4 id="chau">Este es otro h4 mas</h4>
+
+    <!-- Span y divs-->
+
+    <span style="color:blue">Este es un texto</span>
+    <span style="color:red">Acá cambia de color</span>
+
+    <div style="width: 100px;height:100px;background-color:aqua">Esto es un bloque</div>
+    
+    <!-- Especificidad-->
+
+    <p>Primer texto</p>
+    <p class="segundo" >Segundo Texto</p>
+    <p class="segundo" id="tercero">Tercer texto</p>
+    <p id="tercero" class="segundo"  style="color:aqua; font-size: 45px;">Cuarto texto</p>
+    <p>quinto texto</p>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 3</title>
+    <link rel="icon" href="/Clase 03 - HTML 3/Assets/pngwing.com.ico">
+</head>
+<body>
+    <h1>Clase 3</h1>
+    <h2>Multimedia y Tablas</h2>
+    <h3>Imagenes</h3>
+    <p>Para mostrar una imagen en una página tenemos dos formas de hacerlo. Una es usando el
+        elemento <img/> y otras es mediante CSS (que veremos más adelante).
+        Esta etiqueta requiere de dos atributos obligatorios: src (de source) y alt (de alternative).</p>
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <p>Con height y width podemos definir el alto y el ancho de la imagen:</p>
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" width="250" height="100" alt="Google Logo">
+    <h3>Favicon</h3>
+    <p>Un favicon es la pequeña imagen que se muestra en la pestaña del navegador o en la lista
+        de marcadores (favoritos). El tamaño en la barra de direcciones es de 16x16 píxeles.
+        Para agregarlo debemos tener la imagen .png que deseamos colocar como ícono en
+        formato .ico, que se puede convertir desde https://convertico.com/ y luego agregar en el
+        head de nuestro documento HTML lo siguiente:</p>
+        <img src="Assets/pngwing.com.png" width="100" height="100 alt="Logo">
+    <h3>Audio</h3>
+    <p>La etiqueta audio acepta como atributos:</p>
+        <ul>
+            <li><b>preload</b>: es usado en el elemento audio para almacenar
+                temporalmente (buffering) archivos de gran tamaño. + info</li>
+            <li><b>src</b>puede ser una URL del archivo de audio o la ruta al archivo local</li>
+            <li><b>controls</b>muestra los controles estándar para audio en una página
+                web</li>
+            <li><b>autoplay</b>hace que el audio se reproduzca automáticamente</li>
+            <li><b>loop</b>hace que el audio se repita automáticamente</li>
+            <li><b>muted</b>especifica que la salida de audio debe estar silenciada</li>
+        </ul>
+    <audio controls autoplay>
+        <source src="/HTML/Clase 03 - HTML 3/Assets/Ultimate-Victory-WST010901.mp3" type="audio/mp3">
+    </audio> 
+    <h3>Video</h3>
+    <p>La etiqueta video acepta como atributos:</p>
+    <ul>
+        <li><b>controls:</b>permite activar los controles del player</li>
+        <li><b>poster</b>muestra una imagen a modo de presentación</li>
+        <li><b>autoplay, loop, muted, preload y src:</b>misma funcion que en <audio src=""></audio></li>
+        <li><b>width ancho</b>establece el ancho del reproductor de video (pixeles)</li>
+        <li><b>height alto</b>establece la altura del reproductor de video (pixeles)</li>
+    </ul>
+    <video src="/HTML/Clase 03 - HTML 3/Assets/Blue_Sky_and_Clouds_Timelapse_0892__Videvo.mov   " type="video/mp3" width="320" height="240" controls loop autoplay ></video>
+    <h3>Inframe</h3>
+    <p>Se utiliza para incrustar otro documento HTML que se cargará en
+        forma independiente en la página actual. Podemos agregar:
+        contenidos de terceros, interfaces de usuario, videos de YouTube,
+        mapas de Google Maps y banners de publicidad desde otro sitio.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Im6Xi0khL8Q" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7558013685584!2d-58.36694498506604!3d-34.63561088045122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando!5e0!3m2!1ses!2sar!4v1660820732646!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <h3>Tablas</h3>
+    <p>Las tablas se usan para representar datos.El ejemplo más común de tablas son los documentos de Excel.En HTML hay que definir una etiqueta para cada parte de la tabla.Las tablas no se usan para maquetar (hoy se maqueta por CSS).</p>
+    <ul>
+        <li><b>table:</b>Representa a todo el elemento tabla.</li>
+        <li><b>tr:</b>Table row: representa una fila o registro</li>
+        <li><b>td:</b>Table data cell: representa a cada celda.</li>
+        <li><b>th:</b>Table header: representa a una celda de
+            encabezado.</li>
+    </ul>
+    <img src="/Clase 03 - HTML 3/Assets/Screenshot 2022-08-18 at 08-27-46 Clase 03 - HTML 3 - Google Drive.png" alt="Partes de una tabla">
+    <p>Fechas de nacimiento</p>
+    <table width="280" cellspacing="1" cellpadding="3" border="1" bgcolor="#1E678D">
+        <tr>
+            <th><b>Dia</b></th>
+            <th><b>Mes</b></th>
+            <th><b>Año</b></th>
+        </tr>
+        <tr>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">9</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">Enero</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">1980</font></td>
+        </tr>
+        <tr>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">10</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">Febrero</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">1980</font></td>
+        </tr>
+        <tr>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">11</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">Marzo</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">1980</font></td>
+        </tr>
+        <tr>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">12</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">Abril</font></td>
+            <td><font color="#FFFFFF" face="arial, verdana, helvetica">1980</font></td>
+        </tr>
+    </table>
+    <br>
+    <table width="280" cellspacing="2" cellpadding="3" border="1" bgcolor="#1E679A">
+        <tr>
+           <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+        <b>Recuadro curioso con HTML</b>
+           </font></td>
+        </tr>
+        <tr>
+           <td bgcolor="#ffffcc">
+           <font face="arial, verdana, helvetica">
+           Este es el interior del recuadro. Esperamos que os resulte elegante... es muy sencillo.
+           </font>
+           </td>
+        </tr>
+    </table>
+    <h4>Tablas | Colspan y Rowspan</h4>
+    <p>Son atributos que permiten que una celda
+        ocupe más de una columna o más de una fila.
+        Es lo que comúnmente llamamos “combinar
+        celdas”.</p>
+    <p>Las columnas (td) siempre van dentro de las
+        filas (tr). Si queremos agrupar celdas de una
+        misma celda o columna hay que agregar los
+        siguientes atributos:</p>
+    <ul>
+        <li><b>colspan:</b>Permite que una celda ocupe más de una columna.</li>
+        <li><b>rowspan:</b>Permite que una celda ocupe más de una fila.</li>
+    </ul>
+    <table cellspacing="1" cellpadding="3" border="1" bgcolor="#1E679A">
+        <tr>
+            <td>Columna 1</td>
+            <td colspan="2">Columna 2</td>
+            <td>Columna 3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Fila 1</td>
+            <td>Fila 2</td>
+            <td>Fila 2</td>
+            <td>Fila 3</td>
+    </table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+        /* selectores de etiqueta */
+        body
+        {
+            background-color: aliceblue;/*color de fondo*/
+        }
+
+        h1
+        {
+            color: blueviolet;/*color de fuente*/
+            font-family: Verdana, sans-serif;/*tipo de fuente*/
+            font-size: 75px;/*tamaño de fuente*/
+        }
+
+        p
+        {
+            text-align: left;/*alineacion de texto*/
+            font-family: Verdana;
+            font-size: 20px;
+        }

@@ -1,0 +1,37 @@
+Formas de Embeber CSS en HTML
+	
+	--> estilo en linea: se usa el atributo style dentro de la misma etiqueta HTML a afectar.
+		<p style = "text-align:center;color:red;">
+	
+	--> estilo interno o en bloque: las reglas de estilos estan en el mismo archivo HTML pero separado del codigo HTML. El bloque style se ubica dentro del <head></head> del HTML.
+		
+<html>
+<head>
+    <style>
+        body
+        {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+
+	--> vinculo con hoja de estilos externa: se colocan todas las reglas de estilo en un archivo aparte con extension .css y se lo vincula al archivo HTML mediante la etiqueta link.
+
+ARCHIVO index.html
+<html>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+</body>
+</html>
+--------------------------------------
+ARCHIVO estilos.css
+        body
+        {
+            background-color: yellow;
+        }

@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font:14px Verdana, Arial, sans-serif;
+	background-color:#333;
+	width:1050px;
+	margin:auto;
+}
+main, header, nav, footer{/*nos permite optimizar la visualización de este sitio en varios navegadores*/
+	display:block;
+}
+header{
+	height:150px;
+	padding-left:25px;
+	line-height:150px;
+	background-color:#3b3;
+}
+nav{
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	font-weight:bold;
+	background-color:#090;
+	color:#fff;
+	}
+main{
+	padding:25px;
+	background-color:#DDD;
+	}
+footer{
+	height:100px;
+	background-color:#1a1;
+	color:#fff;
+	padding:25px;
+	text-align:right;
+}
+section{
+	border: 1px solid #333;
+	padding: 25px;
+	margin-bottom:25px;
+}
+article{
+	background-color:#444;
+	color:#fff;
+	margin-bottom:25px;
+	padding:25px;
+}
+#etiquetas{
+	border:5px dashed #777;
+	
+}
+time{
+	font-style:italic;
+	font-weight:bold;
+	border-bottom:1px dashed #eee;
+	cursor: default;
+}
+mark{
+	background-color:pink;
+}
+rt{
+	font-size:12px;
+}
+#caja_wbr{
+	width:180px;
+	padding:10px;
+	border: 1px dotted #777;
+	resize:both;
+	overflow:auto;
+}
+meter, progress{
+	width:350px;
+	height:35px;
+}
+video{
+	opacity:0.9;
+}

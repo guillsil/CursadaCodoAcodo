@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Clase 05 - CSS 1/styles.css">
+    <title>Document</title>
+    <style>
+        .midiv{
+            border: 5px outset red;
+            background-color: lightblue;    
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Que es Css</h2>
+    <p>Es un lenguaje de diseño que nos permite darle estilos a los
+        componentes de un documento en función de una jerarquía. Se ocupa
+        de la estética, el aspecto.
+        CSS es una sigla que proviene de Cascading StyleSheets (Hojas de Estilo
+        en Cascada, en español).</p>
+    <h3>¿Cómo incorporamos CSS?</h3>
+    <ul>
+        <h4>CSS en Línea:</h4>
+        <p style="color:aqua; background-color:burlywood;">Dentro del atributo style=”” incorporamos los estilos que se van a
+            aplicar solo en esa misma etiqueta. Opción no recomendable.</p>
+        <h4>CSS Interno:</h4>
+        <p>Incluimos la etiqueta style dentro del head en nuestro documento.
+            Opción menos recomendable:</p>
+        <style>
+            p {
+                color: rgb(220, 245, 245);
+                background-color: rgb(116, 68, 5);
+            }
+        </style>
+        <h4>CSS Externo:</h4>
+        <p>Externo: En el head del documento HTML tenemos que incluir una referencia al
+            archivo .css dentro del elemento link. Es la forma más recomendada.
+            La referencia al archivo externo debe incluir la ruta completa, el nombre del
+            archivo y su extensión si se encuentra en alguna subcarpeta dentro del proyecto.
+            En caso de que el archivo de estilos se encuentre en la misma carpeta que el
+            documento HTML, únicamente se debe incluir el nombre del archivo y su
+            extensión. Recordemos que es aconsejable mantener estos archivos (CSS y HTML)</p>
+    </ul>
+    <h3>Selectores</h3>
+    <p class="hola">La referencia al archivo externo debe incluir la ruta completa, el nombre del
+        archivo y su extensión si se encuentra en alguna subcarpeta dentro del proyecto.
+        En caso de que el archivo de estilos se encuentre en la misma carpeta que el
+        documento HTML, únicamente se debe incluir el nombre del archivo y su
+        extensión. Recordemos que es aconsejable mantener estos archivos (CSS y HTML)</p>
+    <ul>
+        <li><b>selector universal:</b> <br>
+            <img src="/CSS/Clase 05 - CSS 1/img/selectorUniversal.png" alt="">
+            <p>Selecciona todos los elementos de HTML.</p>
+        </li>
+        <li><b>selector de etiqueta o tipo:</b> <br>
+            <img src="/CSS/Clase 05 - CSS 1/img/selectorEtiquetas.png" alt="">
+            Se utiliza para seleccionar una etiqueta específica.
+        </li>
+        <li>
+            <b>selector de clase:</b> <br>
+            <img src="/CSS/Clase 05 - CSS 1/img/selectorClasses.png" alt="">
+            Se utiliza agregando el atributo class a los elementos que queramos aplicarles estilos.
+        </li>
+        <li>
+            <b>selector de ID:</b> <br>
+            <img src="/CSS/Clase 05 - CSS 1/img/selectorID.png" alt="">
+            <p id="hello">Se utiliza agregando el atributo ID a los elementos que queramos aplicarles estilos.</p>
+        </li>
+    </ul>
+    <h3>Span y Div (contenedores de información)</h3>
+    <ul>
+        <li>
+            <h4><b>span (abarcar):</b></h4>
+                <p>Es un elemento en línea. Sirve para aplicar estilo al texto o agrupar elementos uno a continuación del otro. Sus etiquetas son span y /span (ambas obligatorias). Crea una caja que puede contener texto y/u otras etiquetas que se adapten al ancho del contenedor.</p>
+                <p>My mother has <span style="color:blue">blue</span> eyes.</p>
+        </li>
+        <li>
+            <h4><b>div (división):</b></h4>
+            <p>Es un elemento en bloque. Sirve para crear secciones o agrupar contenidos. Sus etiquetas son div y /div (ambas obligatorias). Crea una caja que puede contener texto y/u otras etiquetas, que se separa de la caja anterior con un salto a la línea siguiente.</p>
+            <div class="midiv">
+                <h2>Este es el encabezado de mi Div</h2>
+                <p>Este es el texto de mi elemento Div</p>
+            </div>
+            <p>This is some text outside the div element.</p>
+        </li>
+    </ul>
+    <h2>Atributos Globales</h2>
+    <ul>
+        <li><b>style="estilo CSS":</b></li>
+        <p>Especifica un estilo CSS conforme al elemento.</p>
+        <li><b>class="clase CSS":</b>
+            <p>Especifica una clase CSS conforme al elemento.</p>
+        </li>
+        <li><b>id="texto":</b>
+            <p>Especifica un id único por cada página.</p>
+        </li>
+        <li><b>title="texto":</b>
+            <p>Especifica información extra sobre un elemento (Tooltip Text).</p>
+        </li>
+        <li><b>hidden:</b>
+            <p>Evita que el elemento y sus descendientes se muestran en el
+                navegador. Cualquier control de formulario o de script dentro de la sección
+                hidden será ejecutado, aunque no se muestra al usuario.</p>
+        </li>
+        <li><b>tabindex="número":</b>
+            <p>Especifica la posición del elemento en el orden de
+                tabulación del documento. Se usa para tabular a través de los links de la página
+                (o campos de un formulario).</p>
+        </li>
+        <li><b>translate="yes|no":</b>
+            <p>Indica si el texto del contenido del elemento y los valores del
+                atributo deben ser traducidos o no. La opción por defecto es yes.</p>
+        </li>
+        <li><b>lang=”es”:</b>
+        <p>Especifica el idioma del contenido del elemento.</p>
+        </li>
+        <li><b>spellcheck="true|false":</b>
+        <p>Especifica si se debe corregir o no la gramática y la
+            ortografía del elemento.</p>
+        </li>
+        <li><b>draggable="true|false":</b>
+            <p>Indica si el elemento es arrastrable; se puede mover
+                haciendo click sin soltar, moviéndolo a una nueva posición en la ventana.</p>
+        </li>
+    </ul>
+    <h2>Especificidad</h2>
+    <p>La especificidad es el mecanismo mediante el cual los navegadores deciden qué
+        valores de una propiedad CSS son más relevantes para un elemento. Esto influye en
+        la manera en que los estilos son aplicados. La especificidad está basada en las reglas
+        de coincidencia que están compuestas por diferentes tipos de selectores CSS.</p>
+        <img src="/CSS/Clase 05 - CSS 1/img/especificidad.png" alt="">
+        <img src="/CSS/Clase 05 - CSS 1/img/especificidad2.png" alt="">
+     
+    
+</body>
+</html>

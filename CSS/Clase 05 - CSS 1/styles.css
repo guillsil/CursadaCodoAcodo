@@ -1,0 +1,19 @@
+h4{
+    color: black;
+    background-color: blueviolet;
+}
+/* Selector universal */
+*{
+    color: blue;
+    background-color: #f56f67;
+}
+/* Selectores por Clases */
+.hola{
+    color: aliceblue;
+    background-color: #000;
+}
+/* Selector por ID */
+#hello{
+    color: #f56f67;
+    background-color: #000;
+}
