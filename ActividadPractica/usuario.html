@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveFlix-Usuario</title>
+    <link rel="icon" href="/ActividadPractica/Assents/logo-moveflix2.0.ico">
+    <script src="https://kit.fontawesome.com/6271527c2a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/ActividadPractica/css/styles.css">
+
+</head>
+<body>
+    <div class="nav_bar">
+        <div class="nav_logo">
+            <img src="/ActividadPractica/Assents/MoveFlix2.0.png" alt="">
+        </div>
+        <div class="nav_bar_browse">
+            <ul>
+            <li><a href="/ActividadPractica/index.html" >Home</a></li>
+            <li><a href="/ActividadPractica/peliculas.html" >Peliculas</a></li>
+            <li><a href="/ActividadPractica/series.html" >Series</a></li>
+            <li><a href="/ActividadPractica/buscar.html" >Buscar</a></li>
+            <li><a class="nav_barra_selectd"  href="/ActividadPractica/usuario.html" >User</a></li>
+            <li><a href="/ActividadPractica/Abaut.html" >Acerca de Nosotros</a></li>
+            </ul>
+        </div>
+    </div><br>
+    <h3>Registrarse</h3><br>
+    <form action="show_data.html" target="_blank">
+        <label for="fname">Nombre: </label> <input type="text" name="fname" placeholder="Ingrese su nombre aquí...."> <br> <br>
+        <label for="lname">Apellido: </label> <input type="text" name="lname" placeholder="Ingrese su apellido aquí...."> <br> <br>
+        <label for="datebithday">Fecha de nacimiento</label> <input type="date" name="datebithday" placeholder="Ingrese su fecha de nacimiento aquí...."> <br> <br>
+        <label for="dni">DNI: </label> <input type="number" name="dni" placeholder="Ingrese su DNI aquí...."> <br> <br>
+        <p>Género
+            <input type="radio" name="gender" value="Hombre" checked>Hombre
+            <input type="radio" name="gender" value="Mujer">Mujer
+            <input type="radio" name="gender" value="Otro">Otro
+        </p><br>
+        <p>Estudios Alcanzados
+            <input type="checkbox" name="estudios[]" value="Primaria">Primaria
+            <input type="checkbox" name="estudios[]" value="Secundaria">Secundaria
+            <input type="checkbox" name="estudios[]" value="Bachillerato">Bachillerato
+            <input type="checkbox" name="estudios[]" value="Universidad">Universidad
+            <input type="checkbox" name="estudios[]" value="Postgrado">Postgrado
+            <input type="checkbox" name="estudios[]" value="Otro">Otro
+        </p><br>
+        <label for="address">Direccion</label> <input type="text" name="address" placeholder="Ingrese su direccion aquí...."> <br> <br>
+        <label for="city">Ciudad: </label> <input type="text" name="city" value="C.A.B.A" placeholder="Ingrese su ciudad aquí...."> <br> <br>
+
+        <label for="cp">Codigo Postal: </label> <input type="text" name="cp" placeholder="Ingrese su codigo postal aquí...."> <br> <br>
+        <label for="email">Email: </label> <input type="email" name="email" placeholder="Ingrese su email aquí...."> <br> <br>
+        <label for="password">Contraseña: </label> <input type="password" name="password" placeholder="Ingrese su contraseña aquí...."> <br> <br>
+        <label for="password">Confirmar Contraseña: </label> <input type="password" name="password" placeholder="Ingrese su contraseña aquí...."> <br> <br>
+        <input type="submit" value="Registrarse">
+    </form>
+    <footer>
+        <br>
+        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://discord.com"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://telegram.com"><i class="fa-brands fa-telegram"></i></a>
+        <br>
+        <p ><i>Todo lo Derechos Reservados ©2022</i></p>
+        <br>
+    </footer>
+</body>
+</html>

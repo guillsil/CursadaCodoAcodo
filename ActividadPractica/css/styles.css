@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color : #080F28;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.button{
+    background-color: #080F28;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #080F28;
+    color: gray;
+}
+.button1{
+    background-color: #4CAF50;
+}
+.button2{
+    background-color: #008CBA;
+}
+.titulo_peli{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.titulo_img{
+    text-align: center;
+}
+.nav_bar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0 4%;
+    min-height: 68px;
+    align-items: center;
+    font-size: small;
+    background-color: black;
+    align-items: center;
+}
+
+.nav_logo{
+    display: flex;
+}
+.nav_logo > img{
+    height: 60px;
+}
+
+.nav_bar_browse{
+    flex: 1 0 auto;
+    margin-left: 30px;
+}
+.nav_bar_browse > ul > li{
+    display: inline;
+    margin-right: 20px;
+    background-color: #080F28;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+}
+.nav_bar_browse > ul > li:first-child{
+    margin-left: 0;
+}
+.nav_bar_browse > ul{
+    list-style: none;
+}
+.nav_bar_browse > ul > li:not(.nav_bar_selectd) > a:hover{
+    color: gray;
+    transition: all 200ms  ease-in;
+}
+.nav_bar_browse > ul > li > a{
+    text-decoration: none;
+    color: inherit;
+}
+nav_barra_menu{
+    display: flex;
+    align-items: center;
+}
+.nav_barra_menu > img{
+    margin-right: 25px;
+    cursor: pointer;
+}
+nav_bar_selectd{
+    font-weight: bold;
+}
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+}
+footer > a{
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+}
+footer > p{
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+}
