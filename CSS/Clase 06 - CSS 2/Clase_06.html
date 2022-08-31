@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6: CSS</title>
+    <link rel="stylesheet" href="/CSS/Clase 06 - CSS 2/style.css">
+</head>
+<body>
+    <h2>Unidades de Medidas</h2>
+    <p>Las medidas en CSS se emplean para definir dimensiones y márgenes de los
+        elementos, también para establecer el tamaño de letra del texto. Se indican
+        como un valor numérico entero o decimal seguido de una unidad de medida.
+        CSS divide las unidades de medida en:</p>
+        <ul>
+            <li><b>Absoluto:</b></li>
+            <p>Son medidas fijas e indican cantidades exactas en alguna
+                unidad. Su valor real es directamente el valor indicado y se ve igual en
+                todos los dispositivos No dependen de otro valor de referencia, por eso se
+                llaman absolutas. La desventaja que tienen es que son muy poco
+                flexibles.</p>
+            <p>Son medidas fijas que deberían verse igual en todos los dispositivos. Tienen la
+                desventaja de ser muy poco flexibles y no adaptarse fácilmente a los diferentes
+                medios y por esto no suelen ser utilizadas. La más utilizada es el pixel (px).</p>
+            <ul>
+                <li><b>px:</b></li><p>Un pixel es el elemento más pequeño de imagen que puede mostrar una
+                    pantalla y su medida real depende del dispositivo.</p>
+                <li><b>cm:</b></li><p>centímetros (10 mm).</p>
+                <li><b>mm:</b></li><p>milímetros (1/10 cm).</p>
+                <li><b>in:</b></li><p>pulgadas (1/10 cm).</p>
+                <li><b>pt:</b></li><p>puntos (1/72 in).</p>
+                <li><b>pc:</b></li><p>picas. Una pica equivale a unos 4.23 milímetros.</p>
+
+            </ul>
+            <li><b>Relativo:</b></li>
+            <p>Definen su valor en relación con otra medida y para obtener su
+                valor real se debe realizar alguna operación con el valor indicado.
+                Dentro de las medidas relativas están las flexibles que son relativas al
+                tamaño del viewport.</p>
+                <p>No están completamente definidas, su valor siempre está referenciado respecto a
+                    otro valor (resolución, densidad de pantalla, etc.). Son las más utilizadas por la
+                    flexibilidad con la que se adaptan a los diferentes medios y su potencia.</p>
+                    <ul>
+                        <img src="/CSS/Clase 06 - CSS 2/img/medidad_relativas.png" alt="">
+                        <li>
+                            <p>La unidad <b>em</b> equivale a 16px, salvo que se modifique por el usuario.
+                                1em equivaldría a 16px, mientras que 2em serían justo el doble: 32px. Por otro
+                                lado, 0.5em equivalen justo la mitad: 8px.</p>
+                                <img src="/CSS/Clase 06 - CSS 2/img/em.png" alt="">
+                            <p><b>em</b> es relativa al tamaño de letra. Si empleamos un font-size de 10px en el body,
+                                1em equivale a 10px. Su tamaño varía en función del tamaño del elemento
+                                padre. 1.2em sería un 20% más grande que el tamaño de su elemento padre.</p>
+                        </li>
+                        <li>
+                            <p>Las unidades <i>ex</i> o <i>ch</i>, menos utilizadas. La unidad ex es aproximadamente la
+                                mitad del tamaño de la fuente establecida por el navegador del usuario, por lo
+                                que 1ex es igual a 0.5em.</p>
+                            <img src="/CSS/Clase 06 - CSS 2/img/ex_ch.png" alt="">
+                            <p>La unidad <i>ex</i> se basa en la <i>altura de la x minúscula</i>. Su tamaño exacto depende
+                                de la tipografía utilizada, y puede ser algo mayor a 0.5em.
+                                La unidad <i>ch</i>, equivale al tamaño de ancho del <i>0</i> de la fuente actual.
+                                El <i>porcentaje (%)</i> define una unidad en función de otra. Por ejemplo, si estamos
+                                trabajando en 12px y definimos una unidad como 150% obtendremos 18px.</p>
+                        </li>
+                    </ul>
+        </ul>
+
+        <h2>Segunda Parte CSS</h2>
+        <div class="caja1" >Caja 1</div>
+
+        <div class="caja2" >Caja 2</div>
+
+        <div class="caja3" >Caja 3</div>
+
+        <div class="caja4" >Caja 4</div>
+        
+        <div class="caja5" >Caja 5</div>
+        <h2>Colores</h2>
+</body>
+</html>

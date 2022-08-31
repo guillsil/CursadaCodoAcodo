@@ -1,0 +1,8 @@
+colores por el nombre con w3
+https://www.w3schools.com/colors/colors_names.asp
+
+nombre de colores soportados en css
+https://www.w3schools.com/colors/colors_names.asp
+
+paleta de colores de colorhexa.com
+https://www.colorhexa.com/color-names

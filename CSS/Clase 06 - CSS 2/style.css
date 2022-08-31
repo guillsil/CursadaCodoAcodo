@@ -1,0 +1,29 @@
+.caja1{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+}
+
+.caja2{
+    background-color: #ff0000;
+    width: 12.5em;
+    height: 12.5em;|
+}
+
+
+.caja3{
+    background-color: chartreuse;
+    width: 50vw;
+    height: 50vh;
+}
+.caja4{
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 200px;
+    height: 200px;
+}
+
+.caja5{
+    background-image: url(/CSS/Clase\ 06\ -\ CSS\ 2/.caja3);
+    width: 200px;
+    height: 200px;
+}

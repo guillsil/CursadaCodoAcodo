@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+    <style>
+        body
+        {
+            /* 
+                1) Se repite el la imagen de fondo como un mosaico. Se puede 
+                achicar la pagina web para ver mejor el efecto. Esto ocurre
+                porque el tamaño de la imagen de fondo no alcanza a cubrir la
+                pantalla completa. Para que no se repita se utiliza
+                la propiedad background-repeat:no repeat;
+             */
+            background-image: url(paisaje.jpg);
+
+            /* 
+                2) Descomentar esta linea para que el fondo no se repita. Ahora el problema
+                es que la imagen de fondo no llega a cubrir toda la pantalla. 
+            */
+
+            background-repeat: no-repeat;
+
+            /* 
+                3) Descomentar esta linea para que el fondo cubra toda la 
+                pantalla(aun achicando o agrandando el tamaño de la pantalla) 
+                se utiliza la propiedad background-size:cover;
+            */
+
+            background-size: cover;
+            
+
+            /* 
+                4) Esto ultimo aplica para cualquier etiqueta de bloque como body,
+                div, article, section, etc. para que la imagen cubra toda el area
+                de esa etiqueta de bloque contenedora de la imagen.
+            */
+
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

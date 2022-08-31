@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a7187feedf.js" crossorigin="anonymous"></script>
+    <title>Colores en la Web</title>
+    <style>
+        div
+        {
+            width: 300px;/*ancho de todas las cajas*/
+            height: 200px;/*alto de todas las cajas*/
+            color: white;/*color de fuente de todas las cajas*/
+            font-size: 50px;
+            margin: auto;/*centrado de todas las cajas*/
+            text-align: center;/*alinea el texto horizontalmente al centro*/
+            line-height: 200px;/*Es el espacio entre lineas de texto. Deja la mitad hacia
+            arriba(100px) y la otra mitad hacia abajo(100px). De este modo centramos
+            verticalmente el texto*/
+            border: tomato 5px solid;/*borde de todas las cajas*/
+        }
+
+        /* 
+            Colores por el nombre con w3
+            https://www.w3schools.com/colors/colors_names.asp 
+        */
+
+        /* background-color = color de fondo */
+        .caja1
+        {
+            /*Color por nombre*/
+            /* background-color: red; */
+            
+            /*Color por valor hexadecimal*/
+            /*forma simplificada: #f00*/
+            /* background-color:#ff0000; */
+
+            /*Color por valor rgb*/
+            /* background-color:rgb(255, 0, 0); */
+
+            /*
+                Color por valor rgba 
+                (a = opacidad -> va entre 0(todo opaco) y 1(nada opaco))
+            */
+            background-color:rgba(255, 0, 0, 0.7);
+        }
+        .caja2
+        {
+            background-color: LightGreen;
+        }
+        .caja3
+        {
+            background-color: MediumTurquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja1">Caja 1</div>
+    <div class="caja2">Caja 2</div>
+    <div class="caja3">Caja 3</div>
+
+    
+</body>
+</html>
