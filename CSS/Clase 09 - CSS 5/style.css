@@ -1,0 +1,61 @@
+*{
+    background-color: pink;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.caja1{
+    width: 30vw;
+    height: 30vh;
+    border: black solid 2px;
+    
+    
+}
+
+.caja2{
+    width: 30vw;
+    height: 30vh;
+    border: black solid 2px;
+    
+    
+}
+
+.caja3{
+    width: 30vw;
+    height: 30vh;
+    border: black solid 2px;
+    
+    
+}
+
+/*Tamaño de tablet*/
+
+@media only screen and (max-width: 700px){
+
+    *{background-color: aqua;
+    }
+    .caja1{
+        background-color: red;
+    }
+}
+
+/*Tamaño de celular*/
+
+@media only screen and (max-width: 500px){
+
+    *{background-color: green;
+    }
+    .caja1{
+        background-color: blue;
+        width: 50vw;
+    }
+
+    h1{
+        display: none;
+    }
+}

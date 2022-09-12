@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+    <style>
+        h1
+        {
+            font-size: 3rem;
+            text-align: center;
+            line-height: 3rem;
+        }
+
+        body 
+        { 
+            background-image: url(imagenes/dia.jpg);;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: yellow;
+            height: 100vh;
+        }
+
+        @media (max-width: 1000px) 
+        {
+            body 
+            {
+                background-image: url(imagenes/noche.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: lightyellow;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Por debajo de 1000 pixeles, pasamos del dia a la noche!!</h1>
+</body>
+</html>

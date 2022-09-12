@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		section {
+		  display: flex;
+		  width: 100%;
+		  height: 100vh;
+		  padding: 0.5rem;
+		  background-color: blanchedalmond;
+		}
+		 
+		div {
+            /* no se colocan ni ancho ni alto ya que se manejan las proporciones
+            de crecimiento(grow) a traves de la propiedad flex en las cajas
+            hijas.
+
+            Las 3 cajas crecen en diferente proporcion para ocupar todo el 
+            espacio sobrante en el eje horizontal
+            Aqui, la caja1 ocupa el doble de ancho q la caja2 y a su vez,
+            la caja2 ocupa el doble de ancho de la caja3 */
+
+		  margin: 0.5rem;
+		  /* padding: 2rem; */
+		  font-size: 2rem;
+		  background-color: palevioletred;
+		  color: white;
+		  box-sizing: border-box;
+		}
+
+        div#caja1{flex: 4;}
+        div#caja2{flex: 2;}
+        div#caja3{flex: 1;}
+
+</style>
+</head>
+<body>
+	<section>
+	  <div id="caja1">¡Hola mundo!</div>
+	  <div id="caja2">Hello world!</div>
+	  <div id="caja3">Ciao mondo!</div>
+	</section>
+</body>
+</html>

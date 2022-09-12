@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 3</title>
+    <style>
+    /* 
+        Los media queries nos permiten definir una serie de reglas CSS 
+        dependiendo del medio donde se ejecuta (pantalla, impresora, tv etc) 
+        y las características propias del medio como puede ser el ancho en 
+        píxeles del dispositivo.
+
+        Actualmente donde más se los emplean es para implementar sitios 
+        adaptables al dispositivo donde se ejecutan: celular, tablet, pc etc.
+
+        Para ver su funcionamiento implementaremos una página que se adapte el 
+        "div" principal dependiendo del ancho del dispositivo.
+    */
+
+.contenedor {
+  width:100%; /*el div ocupa el 100% del ancho del body*/
+  margin:0 auto;/*contenedor sin margen y centrado*/
+  text-align: center;/*centra texto en forma horizontal*/
+  height:200px;
+  line-height: 200px;/*centra el texto en forma vertical. Su valor debe ser idem q height*/
+  color: floralwhite;
+  background-color: darkgray;
+  font-size: 1rem;/* 2 * 16px(font-size de la etiqueta <html>) = 32px*/
+  box-sizing: border-box;
+}
+
+/* 
+    1)Los valores del ancho de pantalla van en la regla @media.
+    
+    2)Los valores de min-width se deben colocar de menor a mayor.
+    
+    3)A medida q vayamos achicando el ancho de la pantalla, llegara un punto
+    en el que no se cumplira mas con una determinada regla @media y entonces 
+    cambiara el estilo aplicado a la siguiente regla @media que se cumpla y
+    asi sucesivamente.
+
+    4) A pantalla maximizada, se debe analizar las reglas de mayor a menor.
+    A pantalla minimizada, se debe analizar las reglas de menor a mayor.
+
+    5) El min-width de la pantalla debe ser superior al max-width del div.
+
+*/
+
+/* Cuando se achique la pantalla por debajo de 576px, no se cumplira mas con
+esta regla y ya no hay mas reglas definidas, por lo cual toma el ancho
+predefinido del contenedor(100% de su "padre", la etiqueta body) y el color
+de fondo original del contenedor(darkgray) */
+@media (min-width: 576px) {
+  .contenedor {
+    max-width: 540px;/*ancho del div contenedor*/
+    background-color:gold;
+  }
+}
+
+/* Cuando se achique la pantalla por debajo de 768px, no se cumplira mas con
+esta regla y el ancho del div cambiara de 720px a 540px */
+@media (min-width: 768px) {
+  .contenedor {
+    max-width: 720px;
+    background-color:blueviolet;	
+  }
+}
+
+/* Cuando se achique la pantalla por debajo de 992px, no se cumplira mas con
+esta regla y el ancho del div cambiara de 960px a 720px */
+@media (min-width: 992px) {
+  .contenedor {
+    max-width: 960px;
+    background-color:burlywood;	
+  }
+}
+
+/* Cuando se achique la pantalla por debajo de 1200px, no se cumplira mas con
+esta regla y el ancho del div cambiara de 1140px a 960px */
+@media (min-width: 1200px) {
+  .contenedor {
+    max-width: 1140px;
+    background-color:coral;		
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">  
+        <h1>Contenedor</h1> 
+    </div>
+</body>
+</html>

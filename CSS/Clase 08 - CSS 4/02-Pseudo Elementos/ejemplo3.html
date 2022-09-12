@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudoelementos before y after</title>
+    <style>
+        /* 
+        El pseudo-elemento before se utiliza para agregar algún contenido 
+        previo al contenido actual del elemento. Debemos inicializar la 
+        propiedad content con el dato a agregar.
+
+        El pseudo-elemento after agrega contenido al final del elemento. 
+        */
+
+        p
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+        }
+
+        body
+        {
+            background-color: cornsilk;
+        }
+        /* span: etiqueta de linea que afecta con estilos a una parte de un texto  */
+        span
+        {
+            color: red;
+            font-weight: bolder;
+        }
+
+
+        /* 
+        
+        Cada vez que en la página utilizamos el elemento span aparece su 
+        contenido precedido por el caracter "[" y al finalizar con el caracter
+         "]".  
+         
+         */
+
+        span::before 
+        {
+            content:"[";
+        }
+
+        span::after 
+        {
+            content:"]";
+        }
+    </style>
+</head>
+<body>
+    
+       <p><span>MySQL</span> es un interpretador 
+       de SQL, es un servidor de base de datos.</p>
+       
+       <p><span>MySQL</span> permite crear base
+        de datos y tablas, insertar datos, modificarlos,
+        eliminarlos, ordenarlos, hacer consultas y
+        realizar muchas operaciones, etc., resumiendo:
+        administrar bases de datos.</p>
+       
+       <p>Ingresando instrucciones en la linea 
+       de comandos o embebidas en un lenguaje como
+        <span>PHP</span> nos comunicamos con el servidor. 
+        Cada sentencia debe acabar con punto y coma.</p>
+</body>
+</html>

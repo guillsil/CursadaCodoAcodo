@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child</title>
+    <style>
+        /* 
+        Selecciona uno o más elementos según los valores que le pasemos como 
+        parámetro a esta pseudo-clase.
+
+        Si a la pseudoclase nth-child le pasamos el valor odd nos seleccionará 
+        todos los elementos de las posiciones impares.
+
+        Si a la pseudoclase nth-child le pasamos el valor even nos seleccionará 
+        todos los elementos de las posiciones pares. 
+        */
+
+        /* En este ejemplo, fijamos colores diferentes para las filas segun
+        sean pares o impares */
+        
+        tr:nth-child(odd) 
+        {
+            background-color: darksalmon;
+            
+        }
+
+        tr:nth-child(even) 
+        {
+            background-color: darkorchid;
+            color: black;
+        }
+
+        table 
+        {
+            width:50%;
+            margin:0 auto;
+        }
+
+        td 
+        {
+            border: 1px solid #000;
+            text-align:center;
+            padding:0.5rem;
+        }
+
+        body
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+          <td>fila 1</td>
+        </tr>
+        <tr>
+          <td>fila 2</td>
+        </tr>
+        <tr>
+          <td>fila 3</td>
+        </tr>
+        <tr>
+          <td>fila 4</td>
+        </tr>
+    </table>
+</body>
+</html>

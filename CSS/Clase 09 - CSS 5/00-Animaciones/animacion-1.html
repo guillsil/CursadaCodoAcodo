@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css"> 
+
+body {
+	background:#666;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+/* En el div la animacion se ejecuta inmediatamente al cargar o refrescar 
+la pagina web. */
+div
+{
+width:200px;
+height:100px;
+background:pink;
+animation:colores 5s;/*propiedad nativa*/
+
+}
+
+h1 {
+	height: 40px;
+	background-color:chartreuse;
+}
+
+/* Cuando paso el mouse por encima del titulo h1, la propiedad animation
+ejecuta la regla de CSS @keyframes que define como sera la animacion. 
+La duracion de la animacin sera de 5 seg. */
+h1:hover{
+	animation:colores 5s; 
+	
+	
+}
+
+/* La animacion comienza con color de fondo gris y tamaño de fuente de 40px
+y termina con color de fondo naranja y tamaño de fuente de 5px */
+@keyframes colores
+{
+	from
+	{
+		background:grey;
+		font-size: 40px;
+	}
+	to {
+		background:orange;
+		font-size: 5px;
+	}
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+	<h1>Animacion simple >> cambio de color</h1>
+
+	<div>Hola :)</div>	
+
+</body>
+</html>
+

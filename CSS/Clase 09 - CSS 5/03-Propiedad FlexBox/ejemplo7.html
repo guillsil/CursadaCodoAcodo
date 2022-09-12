@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style type="text/css">
+    /*
+        La propiedad flex es una propiedad de los ítems del contenedor flex.
+        flex: flex-grow, flex-shrink ( opcional ) y flex-basis ( opcional ) .
+        Valor por defecto --> flex: 0 1 auto;
+
+        La propiedad flex-grow es una propiedad de los ítems del contenedor flex.
+        Establece cuanto puede crecer un elemento flex en relación al resto de 
+        elementos de la misma caja flex. Su valor es un número.
+        El valor por defecto de flex-grow: 0, lo que quiere decir que el elemento
+        no puede crecer. Si todos los ítems de una caja tienen el mismo valor de 
+        flex-grow, por ejemplo flex-grow:1; quiere decir que todos los ítems 
+        tienen que crecer  en igual proporción, hasta ocupar todo el espacio 
+        disponible.
+
+        La propiedad flex-shrink establece cuanto puede disminuir un elemento 
+        flex en relación al resto de elementos de la misma caja flex. 
+        Su valor es un número.
+        El valor por defecto de flex-shrink: 1, lo que quiere decir que los 
+        elementos de una caja flex disminuirán en igual proporción.
+
+        La propiedad flex-basis especifica el valor inicial del tamaño 
+        principal de un elemento flex, antes de que esté redimensionado con 
+        flex-grow o flex-shrink.
+
+     */
+		section {
+		  display: flex;
+		  width: 100%;
+		  height: 100vh;
+		  padding: 0.5rem;
+		  background-color: blanchedalmond;
+		}
+		 
+		div {
+		  background-color: palevioletred;
+		  font-size: 2rem;
+		  color: white;
+
+          /* 
+		  	flex-grow: 0 y flex-basis: 400px 
+			
+			Como flex-grow es 0 -> las cajas no pueden crecer para ocupar el 
+			espacio sobrante en el eje horizontal
+
+			flex-basis indica el tamaño de las cajas sin crecimiento ni 
+			achicamiento. 
+
+			Si flex-grow > 0  y/o flex-shrink > 0 --> no tiene sentido el
+			valor de flex-basis(en ese caso se puede omitir) 
+		  */
+		  /* flex: 0 400px; */
+		  flex: 1;
+		  padding: 2rem;
+		  margin: 0.5rem;
+		  box-sizing: border-box;
+		}	
+</style>
+</head>
+<body>
+	<section>
+	  <div>¡Hola mundo!</div>
+	  <div>Hello world!</div>
+	</section>
+</body>
+</html>

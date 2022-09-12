@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-letter</title>
+    <style>
+        /* 
+        Los pseudo-elementos a diferencia de las pseudo-clases afectan a parte 
+        de un elemento HTML y no al elemento completo.
+        
+        Mediante el pseudoelemento first-letter la primer letra de un 
+        párrafo aparece con un tamaño de fuente mayor y otro color 
+        */
+
+        p::first-letter 
+        {
+            font-size: 4rem;/* 1rem = 16px => 4rem = 48px */
+            color:red;
+        }
+
+        p
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+        }
+
+        body
+        {
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <p>Esto es la prueba del pseudo-elemento first-letter.</p>
+
+</body>
+</html>

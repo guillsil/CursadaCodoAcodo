@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclase empty</title>
+    <style>
+        /* 
+        La pseudo-clase empty permite definir una regla css a un elemento html 
+        que no tenga elementos hijos y tampoco texto.
+        */
+
+        /*
+            Vamos a hacer una tabla HTML con un conjunto de filas y columnas. 
+            Dejamos algunas celdas de la tabla vacía. Utilizando la pseudo-clase
+            empty definimos de un color de fondo que querramos para las celdas 
+            vacías. 
+         */
+        
+        td:empty 
+        {
+            background:lavender;
+        }
+
+        table 
+        {
+            width:50%;
+            margin:0 auto;
+        }
+
+        td 
+        {
+            border: 1px solid #000;
+            text-align:center;
+            padding:0.5rem;
+        }
+
+        body
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+            <td>Celda 3</td>
+        </tr>
+
+        <tr>
+            <td>Celda 4</td>
+            <td></td>
+            <td>Celda 6</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Celda 8</td>
+            <td>Celda 9</td>
+        </tr>
+    </table>
+</body>
+</html>

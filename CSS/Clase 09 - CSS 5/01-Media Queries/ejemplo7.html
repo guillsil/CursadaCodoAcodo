@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 7</title>
+    <style>
+/* 
+    Plantilla  mobile first, usado en los modernos frameworks CSS responsive
+    design, se basa en preparar primero la vista óptima para el móvil y 
+    utilizar las media queries para ir adaptando la maqueta a dispositivos 
+    mayores.
+*/
+
+
+/* Pantallas muy pequeñas  (móviles en portrait de menos de 576px) 
+No hace falta media-query porque será nuestro diseño por defecto */
+
+/* Pantallas pequeñas (móviles en landscape de más de 576px) */
+@media (min-width: 576px) {}
+
+/* Pantallas medianas (tablets de más de 768px) */
+@media (min-width: 768px) {}
+
+/* Pantallas grandes (desktops de más de 992px) */
+@media (min-width: 992px) {}
+
+/* Pantallas muy grandes (desktops de más de 1200px) */
+@media (min-width: 1200px) {}
+
+
+
+/* 
+    Plantilla  desktop first, se basa en preparar primero la vista óptima 
+    para la PC y grandes pantallas e ir utilizando las media queries para 
+    ir adaptando la maqueta a dispositivos mas pequeños.
+*/
+
+/* Pantallas muy grandes  (desktops de más de 1200px de ancho)
+No hace falta media-query porque será nuestro diseño por defecto */
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1199.98px) {
+
+   
+
+}
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 991.98px) {}
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 767.98px) {}
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 575.98px) {}
+
+    </style>
+</head>
+<body>
+    <section class="contenedor">  
+        <article>Caja 1</article>
+        <article>Caja 2</article>
+    </section>
+</body>
+</html>

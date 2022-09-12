@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css"> 
+
+/* animacion */
+/* La animacion empieza con fondo naranja.
+En el 25% del tiempo dsd el arranque de la transicion (1,25 seg.), el fondo
+se vuelve amarillo. 
+En la mitad del tiempo de la transicion, el fondo se vuelve verde. 
+El fondo finaliza en color blanco. */
+@keyframes color2
+{
+0%   {background:orange;}
+25%  {background:yellow;}
+50%  {background:green;}
+100% {background:white;}
+}
+
+
+/* reglas */
+
+
+body {
+	background:#666;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+/* La animacion dura 5 seg. */
+div
+{
+width:200px;
+height:100px;
+background:pink;
+animation:color2 5s;
+
+}
+
+</style>
+</head>
+<body>
+
+<h1>Animacion >> Cambio de varios colores</h1>
+
+<div></div>
+
+</body>
+</html>
+
+

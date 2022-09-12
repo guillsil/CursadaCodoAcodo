@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedad z-index</title>
+    <style>
+        /* 
+        Cuando se posiciona en forma absoluta o relativa a las cajas, se
+        pueden producir superposiciones. Para manejar que caja se ve por
+        encima de otra, se usa la propiedad z-index.
+        
+        La caja que tenga el mayor valor de z-index se vera por encima del resto
+         */
+        .gris, .rojo, .azul 
+        {
+            position: absolute;
+        }
+        
+        .rojo {
+            z-index: 3;
+            background-color: red;
+            width: 300px;
+            height: 200px;
+            top: 200px;
+            left: 200px;
+        }
+        
+        .gris {
+            z-index: 2;
+            background-color: gray;
+            width: 300px;
+            height: 200px;
+            top: 150px;
+            left: 150px;
+        }
+        
+        .azul {
+            z-index: 1;
+            background-color: blue;
+            width: 300px;
+            height: 200px;
+            top: 50px;
+            left: 50px;
+        }
+        .amarillo {
+            /* El z-index no tiene efecto porque no esta posicionado*/
+            z-index: 200; 
+            background-color: yellow;
+            width: 300px;
+            height: 200px;
+
+            /* top, left, right y bottom tienen efecto solo si una caja esta
+            posicionada */
+            top: 0;
+            left: 200px;
+            /* 
+                Si descomento la siguiente linea, hago que la caja amarilla este
+                posicionada. Entonces, al tener el mayor valor de z-index, se ve 
+                por encima del resto de las cajas
+              */
+
+            /* position: absolute; */
+        }
+    </style>
+</head>
+<body>
+    <div class="rojo"></div>
+    <div class="gris"></div>
+    <div class="amarillo"></div>
+    <div class="azul"></div>    
+</body>
+</html>

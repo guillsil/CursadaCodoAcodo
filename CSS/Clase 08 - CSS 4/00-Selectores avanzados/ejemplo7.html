@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 7</title>
+    <style>
+        /*  
+            El atributo data-info nos indica el tipo de archivo al cual se 
+            pretende ir mediante el vinculo.
+
+            El símbolo tilde (~) nos permite afectar un atributo que tenga una 
+            lista de valores separados por espacios.
+
+            Podemos afectar cualquier etiqueta que tenga cualquiera de esos 
+            valores.
+        */
+
+        a[data-info~="external"] {
+            color: red;
+        }
+
+        a[data-info~="image"] {
+            border: 2px solid gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja">
+        <p> Lorem ipsum dolor sit amet, 
+            <a  href="https://www.google.com"
+                data-info="external"
+                title="algun titulo">
+                consectetur
+            </a>
+
+            adipisicing elit, sed do 
+            
+            <a href="https://www.w3schools.com">
+                w3schools
+            </a>
+            tempor. 
+        </p>
+
+        
+        <p> Lorem ipsum dolor sit amet, consectetur <a href="#">
+            adipisicing
+        </a> 
+            elit, sed do
+            eiusmod tempor. 
+        </p>
+        
+        <p> Lorem ipsum 
+            <a href="#">vinculo local</a>
+            sit amet, consectetur 
+            <a  href="http://d2o0t5hpnwv4c1.cloudfront.net/839_git/preview.jpg"
+                data-info="external image">
+                Getting Good with Git
+            </a> 
+            elit, sed do eiusmod tempor. 
+            </p>
+    </div>
+</body>
+
+</html>

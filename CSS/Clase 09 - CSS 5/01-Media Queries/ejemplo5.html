@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 5</title>
+    <style>
+/* selector universal */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+body{
+	background-color: #A8F0FD;
+	font-family: Tahoma;
+}
+
+h2{
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 30px;
+}
+
+.contenedor{
+    width:100%;/*A pantalla completa, el contenedor(section) ocupa todo el ancho
+    del body*/
+}
+
+.caja1{
+	width:80%;
+	height:400px;
+	background-color:red;
+	float: left;
+}
+
+.caja2{
+	width:20%; 
+	height: 400px;
+	background-color:#D2E741;
+	float: left;
+}
+
+/* Cuando el ancho de la pantalla desciende por debajo de 500px, entonces
+se elimina la flotacion de cajas y el ancho del contenedor baja al 90% del
+ancho del body */
+@media screen and (max-width:500px){
+    .contenedor{
+		width: 90%;
+        margin:auto;/*contenedor centrado*/
+    }
+    
+    /* Si la pantalla supera los 500px, entonces se deja de flotar las cajas */
+	.caja1, .caja2{
+		float: none;
+		width:100%;
+	}
+}
+
+    </style>
+</head>
+<body>
+    <h2>Ejemplo</h2>
+
+	<section class="contenedor">
+		<article class="caja1">Caja 1</article>
+		<article class="caja2">Caja 2</article>
+	</section>
+</body>
+</html>

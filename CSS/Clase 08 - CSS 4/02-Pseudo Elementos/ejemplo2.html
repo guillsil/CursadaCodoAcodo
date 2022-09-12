@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-line</title>
+    <style>
+        /* 
+        Los pseudo-elementos a diferencia de las pseudo-clases afectan a parte 
+        de un elemento HTML y no al elemento completo.
+        
+        El pseudo-elemento first-line permite seleccionar la primer línea de 
+        texto de un elemento HTML para aplicar un estilo. 
+        */
+
+        p::first-line 
+        {
+            text-decoration: underline;
+            color: red;
+            font-size: 2rem;
+        }
+
+        p
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+        }
+
+        body
+        {
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <p>El pseudo-elemento first-line permite aplicar
+        un estilo a la primer linea del contenido de un 
+        elemento HTML. Tengamos en cuenta que la cantidad
+        de datos a mostrar en la primer línea depende del
+        ancho de la ventana del navegador.
+    </p>
+</body>
+</html>

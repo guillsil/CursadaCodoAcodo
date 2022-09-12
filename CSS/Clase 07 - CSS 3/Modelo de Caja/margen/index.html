@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margen</title>
+    <style>
+        /* 
+        1) Si no se posicionan las cajas(propiedad position) o si no se las hacen 
+        flotar (propiedad float) una al lado de la otra, entonces naturalmente
+        los elementos de bloque(como estos divs) se ubican uno abajo del otro.
+        
+        2) Si no se indicara el ancho de las cajas, entonces van a ocupar todo
+        el ancho de su elmento contenedor(en este caso, la etiqueta body)
+         */
+        div
+        {
+            width: 300px;
+            height: 200px;
+            border:lightcoral 5px solid;
+            text-align: center;
+            line-height: 200px;
+            color: steelblue;
+            font-weight: bolder;
+            font-size: 30px;
+            margin: auto;
+            
+        }
+        
+        .caja1
+        {
+            background-color: lemonchiffon;
+            /*cajas unidas*/
+            margin-bottom: 50px;
+            /* cajas separadas por 20 pixeles (la caja 1 "desplaza" a la caja 2 hacia abajo)*/
+            /* margin-bottom: 20px; */
+        }
+        
+        .caja2
+        {
+            background-color: paleturquoise;
+            
+        }
+
+        .caja3
+        {
+            background-color: lavenderblush;
+            /* la caja 3 se desplaza hacia abajo 50 px */
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="caja1" >Caja 1</div>
+    <div class="caja2" >Caja 2</div>
+    <div class="caja3" >Caja 3</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-child y last-child</title>
+    <style>
+        /* 
+        La pseudoclase first-child nos permite seleccionar el primer elemento 
+        hijo de otro elemento padre y de manera similar la pseudoclase 
+        last-child selecciona el último elemento hijo. 
+        */
+
+        /* En este ejemplo, fijar con color verde el primer elemento y color 
+        rojo el último elemento de la lista */
+        ol li:first-child 
+        {
+            color:blue;
+        }
+
+        ol li:last-child 
+        {
+            color:red;
+        }
+
+        body
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Argentina</li>
+        <li>Brasil</li>
+        <li>Uruguay</li>
+        <li>Colombia</li>
+      </ol>
+</body>
+</html>

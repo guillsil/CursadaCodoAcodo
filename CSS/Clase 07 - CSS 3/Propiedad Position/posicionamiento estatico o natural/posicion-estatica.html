@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento static</title>
+    <style>
+        /*
+            Elementos en línea: el navegador los ubica uno al lado del otro en la 
+            misma linea si es posible.
+            (a, br, code, em, i, img, input, label, select, small, span,
+            strong, sub, sup, textarea, u).
+            
+            Elementos de bloque: el navegador los ubica uno abajo del otro, salvo
+            que se los haga flotar en la misma linea(mediante la propiedad float).
+            ( div, form, h1, h2, h3, h4, h5, h6, hr, ol, p, table, ul, li, td,
+             th, tr, header, nav, main, section, article, aside, footer, figure, 
+             figcaption).
+
+            
+            El posicionamiento normal o estático es el modelo que utilizan 
+            por defecto los navegadores para mostrar los elementos de las páginas. 
+            En este modelo, sólo se tiene en cuenta si el elemento es de bloque o 
+            en línea, sus propiedades width y height y su contenido.(No se consideran
+            top, bottom, left ni right)
+        */
+
+        div
+        {
+            width: 800px;
+            height: 150px;
+            position: static;
+            text-align: center;
+            line-height: 150px;/*permite alinear verticalmente al medio*/
+            color: white;
+            font-weight: bolder;/*grosor de la fuente*/
+            
+            /*1 rem = em referido al elemento root(etiqueta html) 1 rem = 16 px*/
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        p
+        {
+            line-height: 50px;
+
+        }
+
+        .caja1
+        {
+            background-color: burlywood;
+        }
+        
+        .caja2
+        {
+            background-color: cadetblue;
+        }
+        
+        .caja3
+        {
+            background-color: firebrick;
+        }
+        
+        .caja4
+        {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <!-- Como div es una etiqueta de bloque, entonces el navegador ubica las 
+        cajas una abajo de la anterior. -->
+    <div class="caja1">Caja 1</div>
+    <div class="caja2">Caja 2</div>
+
+    <!-- Como p es una etiqueta de bloque, entonces el navegador ubica los 
+        parrafos Parrafo 1 y Parrafo 2 uno abajo del otro -->
+    <div class="caja3">
+        <p>Parrafo 1</p>
+        <p>Parrafo 2</p>
+    </div>
+    
+    <!-- Como span es una etiqueta en linea, entonces el navegador ubica las 
+        frases Span 1 y Span 2 en la misma linea -->
+    <div class="caja4">
+        <span>Span 1</span>
+        <span>Span 2</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Propiedad Overflow</title>
+  <style>
+
+    body
+    { 
+      background-color:#FFC; 
+      font-family:Arial, Helvetica, sans-serif; 
+      color:#000; 
+      font-size:14px;
+    }
+
+    div
+    {
+      margin-bottom: 30px;
+      width: 800px;
+      height: 160px;
+      margin: 70px auto;
+    }
+
+    .caja1 
+    {
+      /* sin usar la propiedad overflow, si el contenido excede el contenedor
+      entonces desborda*/
+      background-color:gold;
+    }
+    
+    .caja2 
+    { 
+      /* overflow:auto, muestra las barras de scroll si son necesarias*/
+      background-color:gold; 
+      overflow:scroll;
+    }
+
+    .caja3 
+    { 
+      /* overflow:hidden, hace que el contenido que se desborda se esconda.*/
+      background-color:gold; 
+      overflow:hidden
+    }
+  </style>
+</head>
+
+<body>
+  
+    <div class="caja1">
+      <h2>La caja 1 NO usa overflow</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam accumsan magna non metus fermentum eu
+        sagittis felis feugiat. Mauris quis nulla dolor.
+        Quisque et justo in elit tempus vehicula sed vitae
+        ipsum. Integer posuere consectetur imperdiet. Mauris
+        dignissim, dui nec pretium volutpat, enim nulla
+        consectetur eros, id mattis elit dui et quam. In
+        aliquam urna eleifend erat gravida ut pretium lorem
+        luctus. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis
+        egestas. Nam tempor pellentesque nulla vitae
+        dapibus. Donec venenatis sodales nisl placerat
+        tempor. Nunc nulla tortor, aliquam eget vestibulum
+        sed, sagittis cursus tellus. Sed dapibus ante sed
+        nibh tristique at accumsan leo egestas. Mauris a
+        nisl sapien. Pellentesque venenatis augue vitae
+        turpis pellentesque accumsan. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere
+        cubilia Curae; Sed convallis, ipsum in consectetur
+        cursus, augue mauris ullamcorper nisl, quis aliquet
+        arcu urna eget elit. Aliquam ante nisi, tempor a
+        viverra sit amet, pharetra non massa. Sed facilisis
+        feugiat nisl eget interdum. Cras mattis, tortor id
+        consectetur sollicitudin, erat mauris tincidunt
+        metus, vel volutpat metus est nec libero. </p>
+    </div>
+
+    <div class="caja2">
+      <h2>La caja 2 usa overflow:auto</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam accumsan magna non metus fermentum eu
+        sagittis felis feugiat. Mauris quis nulla dolor.
+        Quisque et justo in elit tempus vehicula sed vitae
+        ipsum. Integer posuere consectetur imperdiet. Mauris
+        dignissim, dui nec pretium volutpat, enim nulla
+        consectetur eros, id mattis elit dui et quam. In
+        aliquam urna eleifend erat gravida ut pretium lorem
+        luctus. Pellentesque habitant morbi tristique
+        senectus netus et malesuada fames ac turpis egestas.
+        Nam tempor pellentesque nulla vitae dapibus. Donec
+        venenatis sodales nisl placerat tempor. Nunc nulla
+        tortor, aliquam eget vestibulum sed, sagittis cursus
+        tellus. Sed dapibus ante sed nibh tristique at
+        accumsan leo egestas. Mauris a nisl sapien.
+        Pellentesque venenatis augue vitae turpis
+        pellentesque accumsan. Vestibulum ante ipsum primis
+        in faucibus orci luctus et ultrices posuere cubilia
+        Curae; Sed convallis, ipsum in consectetur cursus,
+        augue mauris ullamcorper nisl, quis aliquet arcu
+        urna eget elit. Aliquam ante nisi, tempor a viverra
+        sit amet, pharetra non massa. Sed facilisis feugiat
+        nisl eget interdum. Cras mattis, tortor id
+        consectetur sollicitudin, erat mauris tincidunt
+        metus, vel volutpat metus est nec libero. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam accumsan magna non metus fermentum eu
+        sagittis felis feugiat. Mauris quis nulla dolor.
+        Quisque et justo in elit tempus vehicula sed vitae
+        ipsum. Integer posuere consectetur imperdiet. Mauris
+        dignissim, dui nec pretium volutpat, enim nulla
+        consectetur eros, id mattis elit dui et quam. In
+        aliquam urna eleifend erat gravida ut pretium lorem
+        luctus. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis
+        egestas. Nam tempor pellentesque nulla vitae
+        dapibus. Donec venenatis sodales nisl placerat
+        tempor. Nunc nulla tortor, aliquam eget vestibulum
+        sed, sagittis cursus tellus. Sed dapibus ante sed
+        nibh tristique at accumsan leo egestas. Mauris a
+        nisl sapien. Pellentesque venenatis augue vitae
+        turpis pellentesque accumsan. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere
+        cubilia Curae; Sed convallis, ipsum in consectetur
+        cursus, augue mauris ullamcorper nisl, quis aliquet
+        arcu urna eget elit. Aliquam ante nisi, tempor a
+        viverra sit amet, pharetra non massa. Sed facilisis
+        feugiat nisl eget interdum. Cras mattis, tortor id
+        consectetur sollicitudin, erat mauris tincidunt
+        metus, vel volutpat metus est nec libero. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam accumsan magna non metus fermentum eu
+        sagittis felis feugiat. Mauris quis nulla dolor.
+        Quisque et justo in elit tempus vehicula sed vitae
+        ipsum. Integer posuere consectetur imperdiet. Mauris
+        dignissim, dui nec pretium volutpat, enim nulla
+        consectetur eros, id mattis elit dui et quam. In
+        aliquam urna eleifend erat gravida ut pretium lorem
+        luctus. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis
+        egestas. Nam tempor pellentesque nulla vitae
+        dapibus. Donec venenatis sodales nisl placerat
+        tempor. Nunc nulla tortor, aliquam eget vestibulum
+        sed, sagittis cursus tellus. Sed dapibus ante sed
+        nibh tristique at accumsan leo egestas. Mauris a
+        nisl sapien. Pellentesque venenatis augue vitae
+        turpis pellentesque accumsan. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere
+        cubilia Curae; Sed convallis, ipsum in consectetur
+        cursus, augue mauris ullamcorper nisl, quis aliquet
+        arcu urna eget elit. Aliquam ante nisi, tempor a
+        viverra sit amet, pharetra non massa. Sed facilisis
+        feugiat nisl eget interdum. Cras mattis, tortor id
+        consectetur sollicitudin, erat mauris tincidunt
+        metus, vel volutpat metus est nec libero. </p>
+    </div>
+
+    <div class="caja3">
+      <h2>La caja 3 usa overflow:hidden(oculto)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Nam accumsan magna non metus fermentum eu
+        sagittis felis feugiat. Mauris quis nulla dolor.
+        Quisque et justo in elit tempus vehicula sed vitae
+        ipsum. Integer posuere consectetur imperdiet. Mauris
+        dignissim, dui nec pretium volutpat, enim nulla
+        consectetur eros, id mattis elit dui et quam. In
+        aliquam urna eleifend erat gravida ut pretium lorem
+        luctus. Pellentesque habitant morbi tristique
+        senectus et netus et malesuada fames ac turpis
+        egestas. Nam tempor pellentesque nulla vitae
+        dapibus. Donec venenatis sodales nisl placerat
+        tempor. Nunc nulla tortor, aliquam eget vestibulum
+        sed, sagittis cursus tellus. Sed dapibus ante sed
+        nibh tristique at accumsan leo egestas. Mauris a
+        nisl sapien. Pellentesque venenatis augue vitae
+        turpis pellentesque accumsan. Vestibulum ante ipsum
+        primis in faucibus orci luctus et ultrices posuere
+        cubilia Curae; Sed convallis, ipsum in consectetur
+        cursus, augue mauris ullamcorper nisl, quis aliquet
+        arcu urna eget elit. Aliquam ante nisi, tempor a
+        viverra sit amet, pharetra non massa. Sed facilisis
+        feugiat nisl eget interdum. Cras mattis, tortor id
+        consectetur sollicitudin, erat mauris tincidunt
+        metus, vel volutpat metus est nec libero. </p>
+    </div>
+  
+</body>
+
+</html>

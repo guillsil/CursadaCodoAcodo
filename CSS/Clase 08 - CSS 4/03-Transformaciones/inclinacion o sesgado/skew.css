@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #A8F0FD;
+	font-family: Tahoma;
+}
+h2{
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 30px;
+}
+.caja{
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	margin:50px auto;
+	background-color: #E2BE52;
+}
+.skew1{
+	transform: skew(10deg,0);/*se inclina 10 grados en el eje x */
+	-webkit-transform: skew(10deg,0);
+	-ms-transform: skew(10deg,0);
+}
+.skew2{
+	transform: skew(0,10deg);/*se inclina 10 grados en el eje y */
+	-webkit-transform: skew(0,50deg);
+	-ms-transform: skew(0,10deg);
+}
+.skew3{
+	transform: skew(5deg,5deg);/*se inclina 5 grados en ambos ejes*/
+	-webkit-transform: skew(5deg,5deg);
+	-ms-transform: skew(5deg,5deg);
+}
+
+/* se inclina 25 grados en el eje x cuando paso el mouse por esta caja
+(efecto rollover)*/
+.skew4:hover{
+	transform: skew(25deg,0);
+	-webkit-transform: skew(25deg,0);
+	-ms-transform: skew(25deg,0);
+}

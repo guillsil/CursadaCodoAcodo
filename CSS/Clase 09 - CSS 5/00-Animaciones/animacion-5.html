@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css"> 
+div
+{
+width:200px;
+height:100px;
+background:red;
+position:relative;
+animation:ciclo 5s linear 2s infinite alternate;
+/* Firefox: */
+/* uso de propiedad shorthand(se reunen varias propiedades en una sola linea)
+nombre duracion timing-function delay loop tipo-de-repetición */
+-moz-animation:ciclo 5s linear 2s infinite alternate; 
+/* Safari y Chrome: */
+-webkit-animation:ciclo 5s linear 2s infinite alternate;
+}
+
+@keyframes ciclo
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+@-moz-keyframes ciclo /* Firefox */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+@-webkit-keyframes ciclo /*Safari y Chrome */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<p><b>Nota:</b> </p>
+
+<div></div>
+
+</body>
+</html>
+
+

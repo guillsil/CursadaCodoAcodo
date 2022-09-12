@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css"> 
+
+
+body {
+	background:#666;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+/* la animacion se ejecuta en 5 seg. */
+div
+{
+width:200px;
+height:100px;
+background:red;
+position:relative;
+animation:movimiento 10s;
+
+/* La alternancia infinita permite que la caja tenga un movimiento de "rebote"
+en cada ciclo que cumple de la animacion */
+
+}
+
+/* defino en la regla @keyframes movimiento el color y la posicion de la caja
+segun el tiempo que transcurre desde el inicio de la animacion. */
+@keyframes movimiento
+{
+0%   {background:orange; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>animacion de movimiento y cambio de color</h1>
+
+<div></div>
+
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borde</title>
+    <style>
+        /* 
+        1) Si no se posicionan las cajas(propiedad position) o si no se las hacen 
+        flotar (propiedad float) una al lado de la otra, entonces naturalmente
+        los elementos de bloque(como estos divs) se ubican uno abajo del otro.
+        
+        2) Si no se indicara el ancho de las cajas, entonces van a ocupar todo
+        el ancho de su elmento contenedor(en este caso, la etiqueta body)
+         */
+        div
+        {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;/*permite centrar el texto en sentido vertical*/
+            color: darkviolet;
+            font-weight: bolder;
+            font-size: 30px;
+            margin: auto;/* centrado de las cajas*/
+            margin-bottom: 30px;/* margen con la caja adyacente(vecina) inferior*/
+            
+        }
+        
+        .caja1
+        {
+            background-color: blue;
+            border:lightcoral 5px solid;
+        }
+        
+        .caja2
+        {
+            background-color: moccasin;
+            
+            /* propiedad resumida: borde rayado de 5px color azul*/
+            border:dodgerblue 1px dashed;
+        }
+
+        .caja3
+        {
+            background-color: azure;
+            border:goldenrod 10px dotted;/* borde punteado de 5px*/
+        }
+
+        .caja4
+        {
+            background-color: lightgray;
+
+            /*ancho del borde*/
+            border-top-width:5px;
+            border-right-width:10px;
+            border-bottom-width:0;
+            border-left-width:15px;
+            
+            /*estilo del borde*/
+            border-top-style:dashed;
+            border-right-style:solid;
+            border-bottom-style:solid;
+            border-left-style:dotted;
+            
+            /*color del borde*/
+            border-top-color:#0000ff;
+            border-right-color:#ff0000;
+            border-bottom-color:#00ff00;
+            border-left-color:#ffff00;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div  class="caja1">Caja 1</div>
+    <div  class="caja2">Caja 2</div>
+    <div class="caja3">Caja 3</div>
+    <div class="caja4">Caja 4</div>
+
+    
+</body>
+</html>

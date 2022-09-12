@@ -1,0 +1,50 @@
+/* selector universal para que "amanezcan" todas las etiquetas
+sin margen ni relleno */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #A8F0FD;
+	font-family: Tahoma;
+}
+h2{
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 30px;
+}
+.caja{
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	margin:50px auto;
+	background-color: #E2BE52;
+}
+.scale1{
+	/* Deben colocarse los estilos propietarios para que lo q queremos hacer
+	sea reconocido en todos los navegadores */
+
+	/* propiedad nativa definida por la w3(organismo q regula los lenguajes web) */
+	transform:scale(1,.5);/*x: queda igual  y: se achica a la mitad */
+	/* -webkit: estilo propietario o prefijo CSS (Chrome y Safari) */
+	-webkit-transform:scale(1,.5);
+	/* -ms: estilo propietario o prefijo CSS (Internet Explorer) */
+	-ms-transform:scale(1,.5);
+}
+
+.scale2{
+	transform:scale(1.2,1.2);/*x e y se agrandan un 20% */
+	-webkit-transform:scale(1.2,1.2);
+	-ms-transform:scale(1.2,1.2);
+}
+
+/* usamos la pseudoclase :hover -> cuando paso el mouse por encima de
+esta caja, se agranda un 50% en x e y (efecto rollover) */
+.scale3:hover{
+	transform:scale(1.5,1.5);
+	-webkit-transform:scale(1.5,1.5);
+	-ms-transform:scale(1.5,1.5);
+}
+

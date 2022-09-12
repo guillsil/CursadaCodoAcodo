@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento absoluto</title>
+    <style>
+        /*
+            El posicionamiento absoluto se emplea para establecer de forma exacta 
+            la posición en la que se muestra la caja de un elemento. La nueva 
+            posición de la caja se indica mediante las propiedades top, right, 
+            bottom y left. La nueva ubicación depende del posicionamiento del 
+            elemento contenedor.
+        */
+
+        div
+        {
+            width: 800px;
+            height: 150px;
+            position: static;
+            text-align: center;
+            line-height: 150px;/*permite alinear verticalmente al medio*/
+            color: white;
+            font-weight: bolder;/*grosor de la fuente*/
+            
+            /*1 rem = em referido al elemento root(etiqueta html) 1 rem = 16 px*/
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        p
+        {
+            line-height: 50px;
+        }
+
+        .caja1
+        {
+            background-color: burlywood;
+        }
+        
+        .caja2
+        {
+            background-color: cadetblue;
+            position: absolute;
+            top: 250px;
+            left: 500px;
+        }
+        
+        /* Al desplazarse la caja 3 desde el extremo superior izquierdo 
+         del contenedor padre (body) hacia la derecha(200px) y hacia abajo(100px), 
+         provoca que haya una superposicion de cajas.
+        Las otras cajas(1, 2 ) permanecen en la misma posicion.La caja 4 ocupa 
+        la posición que dejó vacia la caja 3. 
+        */
+        .caja3
+        {
+            background-color: firebrick;
+            /* position: absolute; */
+            
+            /*desplazo hacia la derecha 200px respecto de la esquina
+            superior izquierda del contenedor(en este caso, body) */
+            left: 500px;
+
+            /*desplazo hacia abajo 100px respecto de la esquina
+            superior izquierda del contenedor(en este caso, body) */
+            top: 500px;
+        }
+        
+        /* La caja 4 se desplazo hacia arriba, ocupando ahora el espacio dejado 
+        por la caja 3 */
+        .caja4
+        {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <!-- Como div es una etiqueta de bloque, entonces el navegador ubica las 
+        cajas una abajo de la anterior. -->
+    <div class="caja1">Caja 1</div>
+    <div class="caja2">Caja 2</div>
+    <div class="caja3">Caja 3</div>
+    <div iclass="caja4">Caja 4</div>
+
+</body>
+</html>

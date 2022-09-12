@@ -74,8 +74,64 @@
         <div class="caja3" >Caja 3</div>
 
         <div class="caja4" >Caja 4</div>
-        
-        <div class="caja5" >Caja 5</div>
-        <h2>Colores</h2>
+        Colores
+        <p>La propiedad <b>color</b> se puede usar en cualquier elemento, aunque principalmente
+            se usa para modificar el color del texto y el del background de un elemento.
+            Existen diferentes formas de especificar el color: <br><br>
+            <b>Por palabra clave:</b> red, blue, lightblue, etc. (hay más de 140 palabras clave)+info <br> <br>
+            <b>Valor hexadecimal:</b> #31078C o #FF0000. Cada par de letras simboliza el valor del
+            RGB. <br><br>
+            <b>Valor RGB (Red, Green, Blue):</b> rgb(250, 0, 250), rgb(0, 0, 0) es el color negro y por
+            el contrario rgb(255, 255, 255) es blanco. Valores de 0 a 255. +info <br><br>
+            <b>Valor RGBA (RGB + Alpha):</b> rgba(5, 173, 213, 1) or rgba(100%, 62.5%, 100%, 1). El valor
+            Alpha tiene que estar comprendido en [0-1] y hace referencia a la transparencia del
+            elemento, siendo 1 = opaco y 0 = transparente.</p> <br><br>
+        <h3>Unidades de medida relativas</h3>
+        <p>La unidad rem (root em) toma la idea de la unidad em, pero permite establecer
+            un tamaño base personalizado (generalmente para el documento en general,
+            utilizando html o la pseudoclase :root). De esta forma, podemos trabajar con
+            múltiplos del tamaño base:</p>
+            <img src="/CSS/Clase 06 - CSS 2/img/unidades_medidas_relativas.png" alt="">
+            <p>Si queremos cambiar el tamaño del texto en general, sólo tenemos que cambiar
+                el font-size de la pseudoclase :root, y el resto se modificará en consecuencia.</p>
+        <h3>Unidades de medida flexibles</h3>
+        <p>Las unidades flexibles (vw y vh o vmin y vmax) son relativas al tamaño del
+            ancho o alto del viewport (ventana gráfica, región visible de la página Web en el
+            navegador, no el body).</p>
+        <ul>
+            <li><b>vw</b></li>
+            <p>viewport width. Por ejemplo, si decimos que un div debe medir 50vw, es
+                equivalente al 50% del ancho total del viewport.</p>
+            <li><b>vh</b></li>
+            viewport height. Por ejemplo, si definimos qué un div mide 50vh y el alto del viewport es 800px, nuestro div medirá 400px.
+        </ul>
+        <img src="/CSS/Clase 06 - CSS 2/img/vw_vm.png" alt="">
+        <h2>Colores y tipografías</h2>
+        <p>El fondo de un elemento, por ejemplo div puede ser un color o una imágen:</p>
+        <img src="/CSS/Clase 06 - CSS 2/img/color_de_fondo.png" alt="">
+        <p>En el caso de utilizar una imágen, se aplican las reglas vistas a la hora de definir rutas absolutas o relativas.</p>
+        <h3>Tipografías</h3>
+        <p>Las tipografías o fuentes son uno de los pilares del diseño web. La elección de
+            una tipografía adecuada, su tamaño, color, espacio entre letras, interlineado y
+            otras características pueden variar mucho, de forma consciente o inconsciente,
+            la percepción en la que una persona interpreta o accede a los contenidos de
+            una página.</p>
+        <p><b>Propiedades básicas:</b></p>
+        <ul>
+            <li><b>font-size:</b></li>
+            <p>Define el tamaño de la fuente. Por defecto, el tamaño de la fuente es 16px.</p>
+            <li><b>font-style:</b></li>
+            <p>Define el estilo de la fuente. Puede ser normal, italic o oblique.</p>
+            <li><b>font-family:</b></li>
+            <p>Define la familia de la fuente. Por defecto, el navegador utiliza la familia
+                de fuentes del sistema operativo. Para definir una familia de fuentes, se
+                deben especificar varias fuentes, separadas por comas. El navegador
+                utilizará la primera fuente que encuentre en el sistema. Si no encuentra
+                ninguna, utilizará la fuente por defecto del sistema.</p>
+            <li><b>font-weight:</b></li>
+            <p>Define el grosor de la fuente. Puede ser normal, bold, bolder, lighter o
+                un valor numérico entre 100 y 900.</p>
+        </ul>
+
 </body>
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Posicionamiento absoluto</title>
+<style type="text/css">
+	/* El posicionamiento absoluto se usa para ubicar una caja en la posicion 
+	que queremos dentro de un contenedor. La propiedad position:absolute sirve
+	solo si estan presentes left, top, right o bottom. El contenedor NO DEBE estar
+	posicionado en forma natural(o sea static)*/
+	header
+	{
+		width:950px;
+		height:120px;
+		background-color: beige;
+		margin:auto;
+	}
+
+	nav
+	{
+		width:950px;
+		height:30px;
+		background-color:burlywood;
+		margin:auto;
+	}
+
+	main
+	{
+		width:950px;
+		height:350px;
+		background-color:cornsilk;
+		margin:auto;
+		/* el contenedor(main) NO DEBE posicionarse en forma natural, sino
+		relativa o absoluta  */
+		position: relative;
+	}
+
+	/* section sin posicionamiento: se ubica en la esquina superior izquierda
+	de su contenedor(en este caso, la etiqueta main)  */
+	/* section
+	{
+		width: 200px;
+		height: 100px;
+		background-color: darkseagreen;
+	} */
+
+	/* section con posicionamiento absoluto: se ubica 50 px hacia abajo(top:50px)
+	y 100px hacia la derecha(left:100px) de su contenedor(main)  */
+	section
+	{
+		width: 200px;
+		height: 100px;
+		background-color: darkseagreen;
+		position: absolute;
+		top:50px;
+		left:300px;
+	}
+		
+	footer
+	{
+		width:950px;
+		height:25px;
+		background-color:darkgray;
+		margin:auto;
+	}
+</style>
+
+</head>
+
+<body>
+	<header></header>
+	<nav></nav>
+	<main>
+		<section></section>
+	</main>
+    <footer></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+/*selector universal: inicializa todas las etiquetas sin margen ni padding*/
+*{
+	margin: 0;
+	padding: 0;
+ }
+
+body
+{
+	font-family: Tahoma;
+}
+
+.cleaner
+{
+	/*corta la flotacion de los botones(etiquetas item de lista(li) de la lista ul)*/	
+	clear: both;
+}
+
+#nav
+{
+	width: 580px;/*ancho del menu(el contenedor es un div)*/
+	padding:15px;
+	background-color:#004080;/*color de fondo del contenedor (div)*/
+	margin:50px auto;/*el menu esta centrado y se desplaza 50px hacia abajo*/
+}
+
+#nav ul
+{
+	list-style: none; /*quitamos el bullet (viñeta) de los items de lista*/
+}
+
+#nav ul li
+{
+	font-size: 13px;
+	
+	/*hago que los items de lista(li) se apilen hacia la izquierda, uno al lado
+	del anterior, en la misma fila*/
+	float: left;
+	width: 100px;
+	height: 30px;
+	
+	/*para que "no queden pegados" los items de lista(li)*/
+	margin-left: 20px;
+	/* nota: se aplica este margen a los li de la lista horizontal con el vecino 
+	de la izquierda de 20px, salvo al primer li que no tendra margen izquierdo
+	y eso se hace mediante la pseudoclase :first-child (es la regla que viene a
+	continuacion) */
+}
+
+/* La pseudoclase first-child nos permite seleccionar el primer elemento hijo(primer
+li) de otro elemento padre(ul externo)*/
+#nav ul li:first-child
+{
+	margin-left: 0;
+}
+#nav ul li a
+{
+	text-decoration: none;
+	color: #fff;
+	background-color: #0080C0;
+	
+	/*para que <a> ocupe todo el area de <li> y generar de esa manera un boton*/
+	display: block;
+	
+	/*para que el texto de <a> quede centrado de manera vertical, 
+	aquí se escribe el mismo valor en pixeles que el height de <li>*/
+	line-height: 30px;
+	text-align: center;
+}
+
+#nav ul li a:hover
+{
+	/* la pseudoclase a:hover permite que al pasar el mouse por encima del vinculo
+	 cambie el color de fondo del boton*/
+	background-color: burlywood;
+}
+
+/*SUBMENU*/
+#nav ul li ul
+{
+	display: none; /*oculta el submenu de forma predeterminada*/
+}
+
+#nav ul li:hover ul
+{
+	/* cuando paso el mouse por encima de los li que tienen ul interno(es decir
+	submenu) con display:block hago que aparezca el menu interno(ul interno)
+	dando la sensacion que se despliega */
+	display: block;
+}
+
+#nav ul li ul li
+{
+	margin: 0;
+	width:130px;
+	border-bottom: solid 1px #fff;
+}
+
+#nav ul li ul li a
+{
+	text-align: left;
+	padding-left: 15px;
+	background-color: #1C5895;
+}
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases nth-child y nth-of-type</title>
+    <style>
+        /* 
+        La pseudo-clase nth-of-type selecciona el elemento HTML que es el 
+        enésimo elemento hermano del mismo nivel de su TIPO.
+
+        La pseudo-clase nth-child selecciona el elemento HTML que es el enésimo 
+        elemento hermano (teniendo en cuenta la posición de elementos de 
+        distinto tipo).
+ 
+        */
+
+        /* Para pintar de rojo el primer párrafo utilizando la pseudo-clase 
+        nth-child */
+        
+        #contenido :nth-child(2) 
+        {
+            color:red;
+        }
+
+        /* Para pintar de verde el primer párrafo utilizando la pseudo-clase 
+        nth-of-type */
+        #contenido p:nth-of-type(3) 
+        {
+            color:greenyellow;
+        }
+
+
+        body
+        {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS';
+        }
+    </style>
+</head>
+<body>
+    <div id="contenido">
+        <h1>Título</h1>
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+    </div>
+</body>
+</html>

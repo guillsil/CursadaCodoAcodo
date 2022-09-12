@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+    <style>
+        /* 
+            Los navegadores ubican naturalmente uno abajo del otro a los
+            elementos de bloque (en este ejemplo la etiqueta article).
+
+            Para que las cajas se ubiquen uno al lado de la anterior, se debe
+            utilizar la propiedad float.
+
+         */
+        body
+        {
+            /*
+                Al definir un ancho para el body, las cajas contenidas alli 
+                tomaran ese ancho, salvo que se indique un ancho determinado
+                para alguna caja
+            */
+            width: 800px;
+            background-color: burlywood;
+
+            /*centra el contenido del body(en este caso, centra las cajas)*/
+            margin: auto;
+        }
+
+        article
+        {
+            border: darkred 5px solid;
+            margin-bottom: 30px;/*margen con la caja vecina de abajo*/
+            height: 200px;
+            line-height: 200px;/*centra el texto de las cajas*/
+            /* margin: auto; */
+            text-align: center;/*alineado del texto de las cajas*/
+            font-size: 50px;/*tamaño del texto de las cajas*/
+        }
+
+        #caja1
+        {
+            background-color: cadetblue;
+            color: cornsilk;
+        }
+
+        #caja2
+        {
+            background-color: gold;
+            color: green;
+        }
+
+        #caja3
+        {
+            background-color: indigo;
+            color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <article id="caja1">Caja 1</article>
+    <article id="caja2">Caja 2</article>
+    <article id="caja3">Caja 3</article>
+</body>
+</html>

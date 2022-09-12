@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 08</title>
+</head>
+<body>
+    <h2>Selectores avanzados y Animaciones</h2>
+    <h3>Selectores avanzados</h3>
+    <p>Los selectores avanzados son aquellos que nos permiten seleccionar elementos de acuerdo a su posición en el documento, o bien, de acuerdo a su posición en relación a otros elementos.</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/selectores-avanzados.png" alt="">
+    <img src="/CSS/Clase 08 - CSS 4/img/selectores-avanzados2.png" alt="">
+    <h3>Pseudoclases</h3>
+    <p>Una pseudoclase es un selector que marca los elementos que están en un
+        estado específico o tienen un comportamiento determinado. Todas las
+        pseudoclases se denominan mediante una palabra precedida por dos puntos y
+        se comportan del mismo modo. Afectan a un fragmento del documento que
+        está en un estado determinado y se comportan como si se hubiera añadido
+        una clase a su HTML.</p>
+    <h3>:first-child</h3>
+    <p>Esta pseudoclase modifica el estilo del primer elemento de un grupo de
+        elementos hermanos dentro de un contenedor, es decir “el primer hijo de su
+        padre”.</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/first-child.png" alt="">
+    <h3>:last-child</h3>
+    <p>Se utiliza para representar al último elemento entre un grupo de elementos
+        hermanos dentro de un contenedor, es decir “el último hijo de su padre”.</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/last-child.png" alt="">
+    <h3>:nth-child()</h3>
+    <p>El selector coincide con cada elemento que es el n-ésimo hijo,
+        independientemente del tipo, de su padre. n puede ser un número, una palabra
+        clave o una fórmula.</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/nth-child.png" alt="">
+    <h3>Pseudoclases para hipervínculos</h3>
+    <p>Se aplican a las etiquetas <a>, que pueden tener cuatro estados:</p>
+    <ul>
+        <li><b>:link</b> se refiere a un enlace que todavía no ha sido visitado.</li>
+        <li><b>:hover</b> se refiere a un elemento sobre el que se coloca el puntero del mouse.</li>
+        <li><b>:visited</b> se refiere a un enlace que ya ha sido visitado.</li>
+        <li><b>:active</b> se refiere a cualquier elemento que ha sido activado por el usuario.</li>
+    </ul>
+    <img src="/CSS/Clase 08 - CSS 4/img/pseudoclases-para-hipervínculos.png" alt="">
+    <h3>Pseudoelementos</h3>
+    <p>Los pseudoelementos se añaden a los selectores, pero no describen un estado
+        especial sino que permiten añadir estilos a una parte concreta del documento.</p>
+    <p>Se utilizan para darle estilos a partes específicas de un elemento. Están
+        precedida por cuatro puntos (: :):
+        </p>
+    <ul>
+        <li><b>::first-letter</b> se utiliza para darle estilo a la primera letra de un texto:</li><img src="/CSS/Clase 08 - CSS 4/img/Pseudoelementos.png" alt="">
+        <li><b>::selection</b> agrega estilos a una parte del documento que ha sido resaltada por el
+            usuario:</li>
+            <img src="/CSS/Clase 08 - CSS 4/img/selection.png" alt="">
+        <li><b>::before</b> y <b>::after</b> agregan contenido antes y después, respectivamente, del
+            contenido:</li>
+            <img src="/CSS/Clase 08 - CSS 4/img/before-and-after.png" alt="">
+    </ul>
+    <h2>Transformaciones, animaciones y transiciones</h2>
+    <p>Permiten mover, rotar, escalar y sesgar elementos, es decir, efectos visuales en
+        2D y 3D. Las propiedades principales para realizar transformaciones son las
+        siguientes:</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/Transformaciones.png" alt="">
+    <p>Con la propiedad transform podemos indicar una o varias transformaciones para
+        realizar sobre un elemento, ya sean 2D (sobre dos ejes) o 3D (sobre tres ejes).</p>
+    <h4>2D - Traslaciones (translate)</h4>
+    <p>Las funciones de traslación son aquellas que realizan una transformación en la
+        que mueven un elemento de un lugar a otro. Si especificamos un valor positivo
+        en el eje X (horizontal), lo moveremos hacia la derecha, y si especificamos un
+        valor negativo, lo moveremos hacia la izquierda. Lo mismo con el eje Y (vertical).
+        Por ejemplo, transform: translate(20px, -30px) traslada el elemento 20 píxeles a la
+        derecha y 30 píxeles hacia arriba, que es equivalente a utilizar transform:
+        translateX(20px) translateY(-30px).</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/Traslaciones.png" alt="">
+    <h4>2D - Escalado (scale)</h4>
+    <p>Las funciones de escalado realizan una transformación en la que aumentan o
+        reducen el tamaño de un elemento, basándose en el parámetro indicado, que
+        no es más que un factor de escala:
+        En este ejemplo, transform: scale(2, 2) realiza una transformación de escalado del
+        elemento, ampliándolo al doble de su tamaño original. Si utilizamos scale() con
+        dos parámetros iguales, estamos manteniendo la proporción del elemento, pero
+        si utilizamos diferentes valores, acabaría deformandose.</p>
+        <img src="/CSS/Clase 08 - CSS 4/img/scale.png" alt="">
+    <h4>2D - Rotaciones (rotate)</h4>
+    <p>Las funciones de rotación simplemente giran el elemento el número de grados
+        indicado:
+        Con transform: rotate(5deg) realizamos una rotación de 5 grados del elemento
+        sobre sí mismo. Utilizando rotateX() y rotateY() podemos hacer lo mismo
+        respecto al eje X o el eje Y respectivamente.</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/rotate.png" alt="">
+    <h4>Funciones 3D</h4>
+    <p>A las funciones anteriores, también podemos añadir las funciones equivalentes
+        de CSS para hacer uso del eje Z y con esto acceder a las dimensiones espaciales
+        o “3D”. Las propiedades de transformación 3D son las siguientes:</p>
+        <img src="/CSS/Clase 08 - CSS 4/img/funciones-3d.png" alt="">
+    <h3>Transformaciones múltiples</h3>
+    <p>Si indicamos dos propiedades transform en el mismo elemento, con diferentes
+        funciones, la segunda propiedad sobreescribirá a la anterior, como ocurre con
+        cualquier propiedad de CSS:</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/multiples-transform.png" alt="">
+    <p>Para evitar esto se suelen emplear múltiples transformaciones, separándolas
+        mediante un espacio. En el siguiente ejemplo, aplicamos una función de
+        rotación, una función de escalado y una función de traslación de forma
+        simultánea:</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/multiples-transformaciones.png" alt="">
+    <h3>Transiciones</h3>
+    <p>Las transiciones CSS le permiten cambiar los valores de una propiedad, durante un
+        período determinado. Se basan en un principio muy básico: conseguir un cambio de
+        estilo con un efecto suavizado entre un estado inicial y un estado final.
+        Para crear un efecto de transición, debemos especificar dos cosas: <br>
+        ● La propiedad CSS a la que desea agregar un efecto (¿qué propiedad modifico?) <br>
+        ● La duración del efecto (¿durante cuánto tiempo?) <br>
+        Las propiedades relacionadas que existen son las siguientes:</p>
+        <img src="/CSS/Clase 08 - CSS 4/img/transiciones.png" alt="">
+        <ul>
+            <li><b>transition-property:</b> Indica la propiedad que será afectada por la transición.
+                Puede ser una propiedad concreta (width o color, por ejemplo) o
+                simplemente all para que se aplique a todos los elementos. Por otro lado,
+                none hace que no se aplique ninguna transición.</li>
+            <li><b>transition-duration:</b> Establece la duración de la transición. Se recomienda
+                comenzar con valores cortos, para que las transiciones sean rápidas y
+                elegantes. Una duración demasiado grande producirá una transición con
+                detenciones intermitentes, y pueden resultar molestas a muchos usuarios.</li>
+            <li><b>transition-timing-function:</b> indica el ritmo de la transición que queremos
+                conseguir. Se recomienda comenzar con linear (ritmo constante) y luego
+                utilizar otros valores para variar el ritmo sea al inicio y/o al final de la
+                transición.</li>
+                <img src="/CSS/Clase 08 - CSS 4/img/transition-timing-function.png" alt="">
+                <p>Un valor linear siempre es constante, mientras que ease comienza suavemente,
+                    aumenta la velocidad y finaliza suavemente. Ease-in y ease-out son variaciones que
+                    van más lento al principio o al final, y ease-in-out una mezcla de ambas.
+                    La función Cubic-Bezier() nos permite configurar con más detalle la transición.</p>
+        </ul>
+    <h3>La función de tiempo Cubic-Bezier()</h3>
+    <p>Es una función personalizada. Podemos asignar valores que definen la velocidad que
+        queramos que tenga la transición. En la última columna de la tabla anterior podemos
+        ver los valores equivalentes a cada una de las palabras clave mencionadas. En
+        principio, el formato de la función es cubic-bezier(A, B, C, D), donde:</p>
+        <img src="/CSS/Clase 08 - CSS 4/img/Cubic-Bezier().png" alt="">
+    <p>transition-delay nos ofrece la posibilidad de retrasar el inicio de la transición los
+            segundos especificados.</p>
+    <h4>Atajo: Transiciones</h4>
+    <p>Como siempre, podemos resumir todas estas operaciones en una propiedad de atajo
+        denominada transition. Los valores del ejemplo superior, se podrían escribir como se
+        puede ver a continuación (si no necesitas algún valor, se puede omitir):</p>
+    <img src="/CSS/Clase 08 - CSS 4/img/atajos-transition.png" alt="">
+</body>
+</html>

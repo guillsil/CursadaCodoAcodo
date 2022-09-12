@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 5</title>
+    <style>
+        /*  
+            Usado en expresiones regulares para designar el inicio de una 
+            cadena de texto. En el ejemplo, buscamos  todas las etiquetas 
+            de vinculo que tienen un href que comienza con http: NaN;
+
+        ^ => acento frances o circunflejo
+
+        */
+
+        a[href^="http"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja">
+        <p> Lorem ipsum dolor sit amet, <a href="#"
+                title="Algun titulo">
+                consectetur</a> adipisicing elit, sed do
+            eiusmod tempor.
+        </p>
+
+        <p> Lorem <a href="https://www.google.com">Ir a
+                Google</a>ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor.
+        </p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur
+            <a
+                href="https://www.w3schools.com/">adipisicing</a>
+            elit, sed do eiusmod tempor.
+        </p>
+    </div>
+</body>
+
+</html>

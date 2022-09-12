@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento static</title>
+    <style>
+        /*
+            El posicionamiento relativo desplaza una caja respecto de su posición
+            original establecida mediante el posicionamiento normal. El 
+            desplazamiento de la caja se controla con las propiedades top, right, 
+            bottom y left.
+            
+            El desplazamiento relativo de una caja no afecta al resto de cajas 
+            adyacentes, que se muestran en la misma posición que si la caja 
+            desplazada no se hubiera movido de su posición original.
+        */
+
+        div
+        {
+            width: 800px;
+            height: 150px;
+            position: static;
+            text-align: center;
+            line-height: 150px;/*permite alinear verticalmente al medio*/
+            color: white;
+            font-weight: bolder;/*grosor de la fuente*/
+            
+            /*1 rem = em referido al elemento root(etiqueta html) 1 rem = 16 px*/
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        p
+        {
+            line-height: 50px;
+
+        }
+
+        .caja1
+        {
+            background-color: burlywood;
+        }
+        
+        .caja2
+        {
+            background-color: cadetblue;
+        }
+        
+        /* Al desplazarse la caja 3 desde sun posicion original(que es estatica
+        o natural) hacia la derecha(200px) y hacia abajo(100px), provoca que haya
+        una superposicion de cajas.
+        Las otras cajas(1, 2 y 4) permanecen en la misma posicion.
+        */
+        .caja3
+        {
+            background-color: firebrick;
+            position: relative;
+            left: 200px;/*desplazo hacia la derecha 200px*/
+            top: 10px;/*desplazo hacia abajo 10px*/
+        }
+        
+        .caja4
+        {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <!-- Como div es una etiqueta de bloque, entonces el navegador ubica las 
+        cajas una abajo de la anterior. -->
+    <div class="caja1">Caja 1</div>
+    <div class="caja2">Caja 2</div>
+    <div class="caja3">Caja 3</div>
+    <div class="caja4">Caja 4</div>
+
+</body>
+</html>

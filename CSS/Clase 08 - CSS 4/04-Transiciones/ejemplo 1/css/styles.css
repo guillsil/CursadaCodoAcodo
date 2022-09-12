@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #A8F0FD;
+	font-family: Tahoma;
+}
+h2{
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 30px;
+}
+
+.caja1{
+	width: 400px;
+	height: 120px;
+	padding: 10px;
+	background-color: #EDF549;
+	margin:50px auto;
+	/* 
+		Cuando paso el mouse por encima del rectangulo ocurre lo siguiente:
+		1) cambia el color de fondo en 0,5 seg, rapido al comienzo y lento
+		al final de la transicion.
+		
+		2) se redondea el borde de las esquinas en una transicion de 2 seg.
+
+		3) se ensancha el rectangulo en una transicion de 1 seg.
+	*/
+	transition:
+					background-color .5s ease-out,
+					border-radius 2s ease-in,
+					width 1s;
+	-webkit-transition:
+					background-color .5s ease-out,
+					-webkit-border-radius 2s ease-in,
+					width 1s;
+}
+.caja1:hover{
+	background-color: #F279D1;
+	width: 300px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+
+.cuadro{
+	width: 80px;
+	height: 110px;
+	background-color: #F1F993;
+	border:solid 5px #000;
+	float: left;
+	padding: 10px;
+	margin:0 20px 0 20px;
+	transition:all .25s ease-out;
+	-webkit-transition:all .25s ease-out;
+}
+.cuadro:hover{
+	/* rota 10 grados sentido horario */
+	transform:rotate(10deg);
+	-webkit-transform:rotate(10deg);
+	-ms-transform:rotate(10deg);
+	/* 
+		Para el color rgba de la sombra, usa .8( 80% de opacidad).
+		box-shadow(sombra de la caja) usa 2px de sombra a la derecha,
+		2px de sombra hacia abajo y 6px de radio de sombra(o sea, sombra redondeada) 
+	*/
+
+	box-shadow: 2px 2px 6px rgba(0,0,0,.8);
+	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,.8);
+	border-radius: 10px;
+	-webkit-border-radius: 20px;
+}
+

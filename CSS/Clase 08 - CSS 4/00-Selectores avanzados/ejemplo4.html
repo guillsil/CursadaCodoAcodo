@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 4</title>
+    <style>
+        /*  
+            El asterisco designa que el valor a continuación debe aparecer en 
+            algún lugar del valor de la cadena de caracteres del atributo.
+        */
+        
+        a[href*="school"] 
+        { 
+            color: darkorange; 
+            text-decoration: none;/*saca el subrayado de los vinculos*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="caja">
+        <p> Lorem ipsum dolor sit amet, <a href="https://www.schools.nyc.gov/"
+            title="Algun titulo">consectetur</a>
+            adipisicing elit, sed do eiusmod tempor. 
+        </p>
+
+        <p> Lorem <a href="https://www.google.com">Ir a Google</a>ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor. 
+        </p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur 
+            <a href="https://www.w3schools.com/">adipisicing</a> 
+            elit, sed do eiusmod tempor. 
+        </p>
+    </div>
+</body>
+
+</html>

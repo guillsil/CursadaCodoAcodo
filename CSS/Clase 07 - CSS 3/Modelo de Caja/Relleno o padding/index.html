@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Relleno o Padding</title>
+    <style>
+        /*propiedad padding(relleno): es la distancia entre el contenido de la caja 
+        y el perimetro de la caja*/
+        div
+        {
+            width: 400px;
+            height: 300px;
+            text-align: justify;
+            color: maroon;
+            font-weight: bolder;
+            font-size: 1em;/* 1em = 16px */
+            margin: auto;/* centrado de las cajas*/
+            margin-bottom: 30px;/* margen con la caja adyacente(vecina) inferior*/
+            border:lightcoral 5px solid;
+        }
+
+        .caja1
+        {
+            background-color: lightgoldenrodyellow;
+            
+            /*sin padding entre el contenido y el perimetro de la caja*/
+             /* padding: 0; */
+            
+            padding-left:10px;
+        }
+        
+        .caja2
+        {
+            background-color: moccasin;
+
+            /* 
+                padding entre el contenido y el perimetro entero de la caja
+                de 10px lo que provoca que la caja se "ensanche" 10 px respecto
+                de la caja 1(esto se soluciona haciendo que todas las cajas tengan
+                box-sizing: border-box).
+                
+            */
+            padding: 10px;
+        }
+
+        .caja3
+        {
+            /* 
+                En este ejemplo, el padding-right(20px) y el padding-left(50px)
+                hacen que la caja se "ensanche" un total de 70px respecto de
+                la caja 1 (esto se soluciona haciendo que todas las cajas tengan
+                box-sizing: border-box)
+             */
+            background-color: azure;
+            padding-top: 0;
+            padding-right: 20px;
+            padding-bottom: 0;
+            padding-left: 50px;
+            /* padding: 0 20px 0 50px; */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="caja1">Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Ipsa est natus doloremque nihil
+        similique, corrupti enim fugit a, possimus laborum
+        quibusdam ex. Soluta, doloremque natus? Sint
+        corporis illo autem esse.
+    lorem</div>
+
+        <div class="caja2">Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Ipsa est natus doloremque nihil
+            similique, corrupti enim fugit a, possimus laborum
+            quibusdam ex. Soluta, doloremque natus? Sint
+            corporis illo autem esse.</div>
+
+        <div class="caja3">Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Ipsa est natus doloremque nihil
+            similique, corrupti enim fugit a, possimus laborum
+            quibusdam ex. Soluta, doloremque natus? Sint
+            corporis illo autem esse.</div>
+</body>
+
+</html>

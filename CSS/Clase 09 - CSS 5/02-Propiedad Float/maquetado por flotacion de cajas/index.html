@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Ejemplo 2 columnas</title>
+<style>
+	body
+	{
+		background-color:#F4E3C5;
+		width: 75%;/*el contenido del body ocupara el 75% de la pantalla*/
+		margin: auto;/*centrado del contenido del body*/
+		margin-top: 100px;/*se corre el contenido 100px para abajo*/
+	}
+
+	header,nav,footer
+	{
+		/*header, nav y footer ocupan todo el ancho de su contenedor(body)*/
+		width:100%;
+	}
+
+	header
+	{
+		background-color:#030303;
+		height:150px;
+	}
+		
+	nav
+	{
+		background-color:#FF3366;
+		height:30px;
+	}
+	
+	.cuerpo1
+	{
+		/*el cuerpo 1 (rosado) ocupa el 80 % del ancho de su contenedor(body)*/
+		width:80%;
+		background-color:#FF999A;
+		height:400px;
+		float:left;
+	}
+			
+	.cuerpo2
+	{
+		/*el cuerpo 2 (grisado) ocupa el 20 % del ancho de su contenedor(body)*/
+		width:20%;
+		background-color:#999999;
+		height:400px;
+		float:left;
+	}
+		
+	footer
+	{
+		/*para que el footer aparezca abajo de las cajas 1 y 2 se debe cortar la 
+		flotacion mediante la propiedad clear */
+		background-color:#7A7A7A;
+		height:20px;
+		clear:both;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<p style="color:white">aca hay un header</p>
+	</header>
+	<nav>Navbar</nav>
+	<section class="cuerpo1"></section>
+	<section class="cuerpo2"></section>
+	<footer></footer>
+</body>
+</html>
