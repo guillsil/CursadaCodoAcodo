@@ -1,0 +1,59 @@
+*{
+    background-color: pink;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+}
+
+.caja1{
+    width: 30vw;
+    height: 30vh;
+    border: 1px solid black;
+    
+}
+
+.caja2{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    
+}
+
+.caja3{
+    width: 30vw;
+    height: 30vh;
+    border: 1px solid black;
+    
+}
+
+
+@media only screen and (max-width:750px){
+
+    *{
+        background-color: aqua;
+    }
+
+    .caja2{
+        width: 30vw;
+    height: 30vh;
+    border: 1px solid black;
+    }
+
+}
+
+@media only screen and (max-width:600px){
+
+    *{
+        background-color: orange;
+    }
+
+    .caja2{
+        background-color: red;
+    }
+
+}

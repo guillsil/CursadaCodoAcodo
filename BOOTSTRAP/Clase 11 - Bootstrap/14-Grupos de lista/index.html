@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo de Listas</title>
+
+    <!-- por CDN(CONTENT DELIVERY NETWORK): envio de datos por la red -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Grupo de lista básica</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Primer elemento</li>
+          <li class="list-group-item">Segundo elemento</li>
+          <li class="list-group-item">Tercer elemento</li>
+        </ul>
+
+        <hr>
+
+        <h2> Elemento activo en un grupo de lista </h2>
+        <ul class = "list-group">
+            <li class = "list-group-item active"> Elemento activo </li>
+            <li class = "list-group-item"> Segundo elemento </li>
+            <li class = "list-group-item"> Tercer elemento </li>
+        </ul>
+
+        <hr>
+
+        <h2> Listar grupo con elementos vinculados </h2>
+        <div class = "list-group">
+            <a href="#" class="list-group-item list-group-item-action"> Primer elemento </a>
+            <a href="#" class="list-group-item list-group-item-action"> Segundo elemento </a>
+            <a href="#" class="list-group-item list-group-item-action"> Tercer elemento </a>
+        </div>
+
+        <hr>
+
+        <h2> Listar grupo con un elemento deshabilitado </h2>
+        <p> La clase deshabilitada agrega un color de texto más claro al 
+            elemento deshabilitado. Y si se usa en enlaces, eliminará el efecto 
+            de desplazamiento predeterminado. </p>
+
+        <div class = "list-group">
+            <a href="#" class="list-group-item disabled"> Elemento inhabilitado </a>
+            <a href="#" class="list-group-item disabled"> Elemento inhabilitado </a>
+            <a href="#" class="list-group-item"> Tercer elemento </a>
+        </div>
+
+        <hr>
+
+        <h2>Flush: Remueve Bordes</h2>
+        <!-- list-group-flush: grupo de lista vaciado -->
+        <ul class = "list-group list-group-flush">
+            <li class = "list-group-item"> Primer elemento </li>
+            <li class = "list-group-item"> Segundo elemento </li>
+            <li class = "list-group-item"> Tercer elemento </li>
+            <li class = "list-group-item"> Cuarto elemento </li>
+        </ul>
+
+        <hr>
+
+        <h2> Grupos de listas horizontales </h2>
+        <p> La clase "list-group-horizontal" muestra los elementos de la lista 
+            horizontalmente en lugar de verticalmente: </p>
+
+        <ul class = "list-group list-group-horizontal">
+            <li class = "list-group-item"> Primer elemento </li>
+            <li class = "list-group-item"> Segundo elemento </li>
+            <li class = "list-group-item"> Tercer elemento </li>
+            <li class = "list-group-item"> Cuarto elemento </li>
+        </ul>
+
+        <hr>
+
+        <h2> Listar grupo con clases contextuales </h2>
+        <ul class = "list-group">
+            <li class = "list-group-item list-group-item-success"> Elemento exitoso </li>
+            <li class = "list-group-item list-group-item-secondary"> Elemento secundario </li>
+            <li class = "list-group-item list-group-item-info"> Elemento de información </li>
+            <li class = "list-group-item list-group-item-warning"> Elemento de advertencia </li>
+            <li class = "list-group-item list-group-item-danger"> Elemento peligroso </li>
+            <li class = "list-group-item list-group-item-primary"> Elemento principal </li>
+            <li class = "list-group-item list-group-item-dark"> Elemento oscuro </li>
+            <li class = "list-group-item list-group-item-light"> Elemento ligero </li>
+        </ul>
+
+        <hr>
+
+        <h2> Elementos vinculados con clases contextuales </h2>
+        <p> Mueva el mouse sobre los elementos vinculados para ver el efecto de 
+            desplazamiento: </p>
+
+  <div class = "list-group">
+    <a href="#" class="list-group-item list-group-item-action"> Elemento de acción </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-success"> Elemento correcto </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> Elemento secundario </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-info"> Elemento de información </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-warning"> Elemento de advertencia </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-danger"> Elemento peligroso </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-primary"> Elemento principal </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-dark"> Elemento oscuro </a>
+    <a href="#" class="list-group-item list-group-item-action list-group-item-light"> Elemento ligero </a>
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Lista de grupo con insignias</h2>
+    <p>Combine clases "badge" con clases de utilidad / ayuda para agregar 
+        insignias dentro del grupo de lista:</p>
+
+    <!-- 
+        badged: insignia
+        badged-primary: insignia azul
+        badged-pill: insignia ovalada (con forma de pildora)
+        
+        d-flex: para crear un contenedor flexible, transformando elementos 
+        hijos directos en elementos flexibles.
+
+        justify-content-between: para justificar los elementos hijos con el 
+        mismo espacio entre ellos.
+
+        align-items-center: para alinear los elementos hijos flexibles en el
+        centro del eje x. 
+     -->
+    <ul class="list-group">
+      <li class="list-group-item">
+        Inbox
+        <span class="badge badge-primary badge-pill">12</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Ads
+        <span class="badge badge-primary badge-pill">50</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Junk
+        <span class="badge badge-primary badge-pill">99</span>
+      </li>
+    </ul>
+</div>
+
+    
+
+</body>
+
+</html>

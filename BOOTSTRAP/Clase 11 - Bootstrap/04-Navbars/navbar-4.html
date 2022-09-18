@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras de Navegacion</title>
+
+    <!-- por CDN(CONTENT DELIVERY NETWORK): envio de datos por la red -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<!-- 
+    Muy a menudo, especialmente en pantallas pequeñas, desea ocultar los 
+    enlaces de navegación y reemplazarlos con un botón que debería revelarlos 
+    cuando se hace clic en él.
+
+    Para crear una barra de navegación plegable, use un botón con 
+    class = "navbar-toggler", data-toggle = "collapse" y 
+    data-target = "# thetarget". Luego, envuelva el contenido de la barra de 
+    navegación (enlaces, etc.) dentro de un elemento div con 
+    class = "collapse navbar-collapse", seguido de una identificación que 
+    coincida con el objetivo de datos del botón: "thetarget(el objetivo)".
+
+ -->
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>    
+          </ul>
+        </div>  
+      </nav>
+      <br>
+      
+      <div class="container">
+        <h3>Collapsible Navbar</h3>
+        <p> En este ejemplo, la barra de navegación está oculta en pantallas 
+            pequeñas y reemplazada por un botón en la esquina superior derecha 
+            (intente cambiar el tamaño de esta ventana). </p>
+        <p> Solo cuando se hace clic en el botón, se muestra la barra de navegación. </p>
+        <p> Sugerencia: también puede eliminar la clase .navbar-expand-md para ocultar 
+            SIEMPRE los enlaces de la barra de navegación y mostrar el botón de 
+            alternancia. </p>
+      </div>
+</body>
+
+</html>

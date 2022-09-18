@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main 
+        {
+            max-width: 800px;
+            padding: 1rem;
+            margin: 0 auto;
+            display: grid;
+
+            /* defino grilla de 4 columnas de 200px y 3 filas de 200px */
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px;
+            grid-gap: 1rem;/*separacion entre cajas -> 1rem = 16px*/
+        }
+
+        img 
+        {
+            /* redimensiona la imagen para que ocupe todo el area de su 
+            contenedor*/
+            object-fit: fill;
+            
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* fila inicial = 1 / fila final = 3 (el hoyo chubut)*/
+        .item-a 
+        {
+            grid-row: 1 / 3;
+        }
+
+         /* columna inicial = 3 / columna final = 5 (cerro 7 colores)*/
+        .item-b 
+        {
+            grid-column: 3 / 5;
+        }
+
+        /* fila inicial = 2 / fila final = 4 (valle de la luna)*/
+        .item-c 
+        {
+            grid-row: 2 / 4;
+        }
+
+        /* columna inicial = 3 / columna final = 5 (valle de uco)*/
+        .item-d 
+        {
+            grid-column: 3 / 5;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="item-a">
+            <img src="imagenes/paisaje.jpg"><!--el hoyo chubut-->
+        </div>
+        <div>
+            <img src="imagenes/paisaje-2.jpg"><!--cafayate-->
+        </div>
+        <div class="item-b">
+            <img src="imagenes/paisaje-3.jpg"><!--cerro 7 colores-->
+        </div>
+        <div>
+            <img src="imagenes/paisaje-4.jpg"><!--chalten-->
+        </div>
+        <div class="item-c">
+            <img src="imagenes/paisaje-5.jpg"><!--valle de la luna-->
+        </div>
+        <div>
+            <img src="imagenes/paisaje-6.jpg"><!--glaciar p. moreno-->
+        </div>
+        <div>
+            <img src="imagenes/paisaje-7.jpg"><!--cataratas-->
+        </div>
+        <div class="item-d">
+            <img src="imagenes/paisaje-8.jpg"><!--valle de uco-->
+        </div>
+</main>
+</body>
+</html>

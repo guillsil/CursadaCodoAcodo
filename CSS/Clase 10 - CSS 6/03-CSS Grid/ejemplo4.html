@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*  
+          Diseño mobile-first
+          Empezamos maquetando para móvil e iremos avanzando por los puntos de 
+          ruptura pasando por tablet y posteriormente a desktop.
+       */
+
+main 
+{
+  color: gainsboro;
+  margin: 0 auto;
+
+  /*
+  ancho del contenedor(main)
+  Especificamos un máximo de ancho de 1000px. 
+  Es recomendable hacer uso del max-width dado que en monitores especialmente 
+  grandes no queremos que el ancho de la web sea el total del mismo.
+  */
+  max-width: 1000px;
+  
+  /*el contenedor main ocupa el 100% de la altura del viewport */
+  min-height: 100vh;
+
+  /* 
+    En modo móvil(mobile-first) disponemos de 5 filas y 1 única columna
+   */
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px
+    50px
+    1fr /*fracción de espacio restante en el grid */
+    100px
+    200px;
+
+    /* permite ordenar el diseño que queramos mediante los grid-area */
+  grid-template-areas: 
+    "my-header my-header my-header"
+    "my-nav my-nav my-nav"
+    "my-section my-section my-section"
+    "my-aside my-aside my-aside"
+    "my-footer my-footer my-footer"
+}
+
+header,nav,aside,section,footer
+{
+    font-size: 3rem;
+    text-align: center;
+    color: steelblue;
+}
+
+/* defino para cada seccion de nuestra pagina web, un grid-area (alias de seccion) */
+header {
+  grid-area: my-header;
+  background-color: khaki;
+}
+
+nav {
+  grid-area: my-nav;
+  background-color: cornflowerblue;
+}
+
+aside {
+  grid-area: my-aside;
+  background-color: lemonchiffon;
+}
+
+section {
+  grid-area: my-section;
+  background-color: lightskyblue;
+}
+
+footer {
+  grid-area: my-footer;
+  background-color: peachpuff;
+}
+
+/* modo tablet */
+@media (min-width: 600px) and (max-width: 1000px) {
+  main {
+
+    /* 3 columnas(1ra y 3ra de 200px y la 2da con el espacio restante) */
+    grid-template-columns: 200px 1fr 200px;
+
+    /* 4 filas */
+    grid-template-rows: 150px
+      100px
+      1fr
+      100px;
+    grid-template-areas: 
+      "my-header my-header my-header"
+      "my-nav my-nav my-nav"
+      "my-aside my-section my-section"
+      "my-footer my-footer my-footer"
+  }
+}
+
+/* modo desktop */
+@media (min-width: 1001px) {
+  main {
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px
+      1fr
+      100px;
+    grid-template-areas:
+      "my-header my-header my-header"
+      "my-nav my-section my-aside"
+      "my-footer my-footer my-footer"
+  }
+}
+    </style>
+</head>
+<body>
+    <main>
+        <header>Header</header>
+        <nav>Nav</nav>
+        <section>Section</section>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </main>
+</body>
+</html>

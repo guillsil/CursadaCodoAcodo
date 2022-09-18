@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container 
+        {
+            width: 90%;
+            height: 90vh;
+            margin: auto;
+            border: 0.25rem solid blueviolet;
+            text-align: center;
+            line-height: 12rem;
+            font-size: 3rem;
+            box-sizing: border-box;  
+            font-weight: bolder;
+            font-family: 'Trebuchet MS';          
+            color: gray;
+
+
+            display: grid;
+            
+            grid-template-columns: 2fr 1fr;/*proporcion entre columnas*/
+            grid-template-rows: repeat(3,fr) ;/*3 filas de igual proporcion*/
+
+            /* determina el orden de las secciones de la pagina */
+            grid-template-areas:    "head head"
+                                    "menu main"
+                                    "foot foot";
+        }
+
+        .item-1 { grid-area: head; background: darkseagreen }
+        .item-2 { grid-area: menu; background: seashell }
+        .item-3 { grid-area: main; background: pink }
+        .item-4 { grid-area: foot; background: palegoldenrod }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="item-1">Head</section>
+        <section class="item-2">Menu</section>
+        <section class="item-3">Main</section>
+        <section class="item-4">Foot</section>
+    </main>
+</body>
+</html>

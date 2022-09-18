@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            CSS grid es un sistema de maquetación basado en grillas y se 
+            caracteriza por ser bidimensional(maneja filas y columnas al mismo
+            tiempo) y flexible.
+            
+            Como vemos en el CSS de la clase container(etiqueta main) decimos a 
+            este elemento que su modo display es grid. Lo que quiere decir que 
+            los hijos inmediatamente descendientes serán parte de la grilla.
+
+            Nota: Recordemos que la unidad rem es un tamaño que se basa en el 
+            tamaño base de la letra m. Se usa comunmente para maquetar de una 
+            forma más flexible, dado que con modificar el tamaño de la fuente 
+            base todo el contenido se adaptaría en concordancia con en el tamaño 
+            base.
+        */
+        
+        main 
+        {
+            display: grid;
+            padding: 16px;
+            margin: auto;
+
+            /* separa los elementos de la grilla */
+            grid-gap: 10px;
+
+            /* definimos 4 columnas de 200px cada una (de ancho) */
+            grid-template-columns: repeat(4, 200px);
+            
+            /* definimos 2 filas de 150px cada una (de alto) */
+            grid-template-rows: 150px 150px;/*repeat(2, 150px)*/
+
+            font-size: 5rem;
+        }
+
+        div 
+        {
+            background-color: darksalmon;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+
+        <!-- si agregamos mas cajas, Grid las ubica siguiendo el patron
+        definido -->
+        <!-- <div>7</div> -->
+    </main>
+</body>
+</html>

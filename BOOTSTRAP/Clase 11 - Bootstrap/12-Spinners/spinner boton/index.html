@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinners</title>
+
+    <!-- por CDN(CONTENT DELIVERY NETWORK): envio de datos por la red -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Spinners Botones</h2>
+        <p>Como Agregar spinners a los botones:</p>
+                                              
+        <button class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
+        </button>
+      
+        <button class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+        
+        <!-- atributo disabled: deshabilita el boton y no funciona -->
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+        
+        <!--spinner-grow: el spinner crece  -->
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-grow spinner-grow-sm"></span>
+          Loading..
+        </button>
+      </div>
+</body>
+
+</html>

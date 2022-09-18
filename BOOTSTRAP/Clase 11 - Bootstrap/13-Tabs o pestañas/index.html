@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- por CDN(CONTENT DELIVERY NETWORK): envio de datos por la red -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+  <style>
+      /*    Puedo personalizar el estilo del componente */
+      .nav-item
+        {
+            background-color: floralwhite;
+            border: 0.2rem thistle solid;
+        }
+      .active
+        {
+            background-color: lightcyan;
+            border: 0.2rem thistle solid;
+        }
+  </style>
+  
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h2>Toggleable Tabs (Pestañas conmutables)</h2>
+        <br>
+        <!-- Nav tabs: barra de navegacion en pestañas(se maneja por anclajes) -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab"
+                    href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab"
+                    href="#menu1">Menu 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab"
+                    href="#menu2">Menu 2</a>
+            </li>
+        </ul>
+
+        <!-- 
+            Tab panes: panel de pestañas 
+            container tab-pane active: pestaña activa por defecto
+            container tab-pane fade: pestaña oculta por defecto
+        -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna
+                    aliqua.</p>
+            </div>
+            <div id="menu1" class="container tab-pane fade">
+                <br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="container tab-pane fade">
+                <br>
+                <h3>Menu 2</h3>
+                <p>
+                    Podemos apreciar un hermoso paisaje noruego:    
+                    <img id="imagen" src="imagenes/paisaje.jpg" width="100%">
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+    
+
+</html>
