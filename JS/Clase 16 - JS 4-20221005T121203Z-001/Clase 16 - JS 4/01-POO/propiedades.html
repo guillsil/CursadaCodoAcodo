@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Hay dos formas diferentes de acceder a la propiedad de un objeto: </p>
+    <p> Puede utilizar .property o ["property"]. </p>
+
+    <p id="demo"></p>
+
+    <script>
+        var persona = {
+                        nombre:"Juan",
+                        apellido:"Perez",
+                        edad:40
+                      };
+
+        document.getElementById("demo").innerHTML = persona["nombre"] + " tiene " 
+        + persona["edad"] + " años de edad."; //persona.nombre 
+    </script>
+
+
+<p id="demo2"></p>
+
+    <script>
+        var persona = {
+                        nombre:"Maria",
+                        apellido:"Garcia",
+                        edad:30
+                      };
+
+        document.getElementById("demo2").innerHTML = persona.nombre + " tiene " 
+        + persona.edad + " años de edad.";
+    </script>
+<body>
+</html>

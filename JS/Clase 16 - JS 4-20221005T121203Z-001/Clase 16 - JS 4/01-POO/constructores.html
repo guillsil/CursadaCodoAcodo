@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Funcion Constructor</h3>
+
+    <p> Permite crear objetos con un estado inicial(es decir, con sus atributos
+        inicializados)</p>
+    <p> La palabra this hara referencia a los diferentes objetos creados de persona</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // Creamos un constructor parametrizado para crear objetos:
+        function Persona (nombre,apellido,edad)
+                        {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad; 
+                        };
+
+        // Creamos 2 objetos de tipo Persona
+        var persona1 = new Persona("Carlos", "Rios", 50);
+        var persona2 = new Persona("Maria", "Garcia", 35);
+
+        // Agregamos nacionalidad al primer objeto
+        persona1.nacionalidad = "Argentina";
+        
+        // Mostramos la nacionalidad del primer objeto:
+        document.getElementById("demo").innerHTML = "La nacionalidad de " +
+        persona1.nombre + " es " + persona1.nacionalidad;
+    </script>
+
+
+<h3>Agregar metodos a objetos</h3>
+
+    <p id="demo2"></p>
+
+    <script>
+        // Creamos un constructor parametrizado para crear objetos:
+        function Persona (nombre,apellido,edad)
+                        {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad; 
+                        };
+
+        // Creamos 2 objetos de tipo Persona
+        var persona1 = new Persona("Carlos", "Rios", 50);
+        var persona2 = new Persona("Maria", "Garcia", 35);
+
+        // Agregamos el metodo nombreCompleto al primer objeto
+        persona1.nombreCompleto = function() 
+                                    {
+                                        return this.nombre + " " + this.apellido;
+                                    };
+        
+        // Mostramos el nombre completo del primer objeto:
+        document.getElementById("demo2").innerHTML = persona1.nombreCompleto();
+    </script>
+
+
+<h3>Agregar metodos al constructor</h3>
+
+    <p id="demo3"></p>
+
+    <script>
+        // Creamos un constructor parametrizado para crear objetos:
+        function Persona (nombre,apellido,edad)
+                        {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad;
+                            // Agregamos el metodo cumplirAños al constructor
+                            this.cumplirAños = function() 
+                                                {
+                                                    this.edad ++;
+                                                    return this.edad;
+                                                }; 
+
+                        };
+
+        // Creamos 2 objetos de tipo Persona
+        var persona1 = new Persona("Carlos", "Rios", 50);
+        var persona2 = new Persona("Maria", "Garcia", 35);
+  
+        // Mostramos la nueva edad del primer objeto:
+        document.getElementById("demo3").innerHTML = persona1.cumplirAños();
+    </script>
+
+
+<h3>Agregar metodos al constructor - parte 2</h3>
+
+    <p id="demo4"></p>
+
+    <script>
+        // Creamos un constructor parametrizado para crear objetos:
+        function Persona (nombre,apellido,edad)
+                        {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad;
+                            this.cambiarNombre = function(nuevoNombre) 
+                                                    {
+                                                        this.nombre = nuevoNombre;
+                                                    } 
+                        };
+
+        // Creamos 2 objetos de tipo Persona
+        var persona1 = new Persona("Carlos", "Rios", 50);
+        persona1.cambiarNombre("Pedro");
+  
+        // Mostramos la nueva edad del primer objeto:
+        document.getElementById("demo4").innerHTML = persona1.nombre;
+    </script>
+
+    <h3>No se puede agregar una nueva propiedad a una función de constructor</h3>
+
+    <p id="demo5"></p>
+
+    <script>
+        // Creamos un constructor parametrizado para crear objetos:
+        function Persona (nombre,apellido,edad)
+                        {
+                            this.nombre = nombre;
+                            this.apellido = apellido;
+                            this.edad = edad; 
+                        };
+
+        // No se puede agregar una nueva propiedad a una función de constructor.
+        //se asignara undefined
+        //Para agregar una nueva propiedad a un constructor, debe agregarla a la 
+        //función del constructor como vimos en el ejemplo 3
+        Persona.nacionalidad = "Argentina";
+
+        var p = new Persona("Maria", "Garcia", 35);
+
+        // Mostramos la nueva edad del primer objeto:
+        document.getElementById("demo5").innerHTML = p.nacionalidad;
+    </script>
+
+    <h3>Constructores nativos de Javascript</h3>
+
+    <p id="demo6"></p>
+
+    <script>
+        var x1 = new Object();   // Un nuevo objeto Object 
+        var x2 = new String();   // Un nuevo objeto String 
+        var x3 = new Number();   // Un nuevo objeto Number 
+        var x4 = new Boolean();  // Un nuevo objeto Boolean 
+        var x5 = new Array();  // Un nuevo objeto Array 
+        var x6 = new RegExp();   // Un nuevo objeto RegExp (expresion regular)
+        var x7 = new Function(); // Un nuevo objeto Function 
+        var x8 = new Date();   // Un nuevo objeto Date 
+        
+        // Display the type of all objects
+        document.getElementById("demo6").innerHTML = "x1: " + typeof x1;
+    </script>
+                        
+</body>
+</html>

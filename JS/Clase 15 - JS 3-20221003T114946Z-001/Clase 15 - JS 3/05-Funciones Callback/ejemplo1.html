@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Una función callback se usa para propagar el resultado de una operación. 
+        
+        Esta función callback se pasa como parámetro a otra función, y es llamada 
+        con un resultado cuando la función complete su operación.
+        
+        Se suele usar en asincronismo para hacer peticiones-respuesta entre cliente
+        (javascript) y servidor(python,node js, etc.) que permiten hacer cambios en 
+        diferentes porciones de una pagina web sin tener que "refrescar" la pagina 
+        completa.
+
+        Sincronismo: luego de un ciclo de peticion-respuesta, se inicia otro y asi 
+        sucesivamente.
+
+        Asincronismo: el servidor responde a las diferentes peticiones, sin respetar
+        el orden cronologico de esas peticiones. Entonces, no es necesario esperar a
+        que el servidor responda una peticion para hacer la siguiente, sino que el 
+        cliente(javascript) puede hacer todas las peticiones y esperar q el servidor
+        vaya respondiendo "cuando pueda" a cada una de ellas. 
+       
+        nota: las respuestas desde el servidor suelen darse en formatos XML o JSON. 
+        Ambos formatos son reconocibles por javascript para modificar la parte 
+        que se necesita del DOM asociado a la pagina web.
+     -->
+     <script>
+         function miCallback(mensaje) 
+        {
+            console.log(mensaje);
+            document.write(mensaje);
+        }
+
+        function saludo(nombre, miCallback) 
+        {
+            // simbolo acento grave(`) --> se hace con alt+96
+            // ${nombre} permite reemplazar el valor de esa variable en la consola
+            const mensaje = `Bienvenido ${nombre} !!`;
+            miCallback(mensaje);
+            
+        }
+
+        saludo(prompt('Decime tu nombre: '), miCallback);// Bienvenido Fulano !!
+
+     </script>
+
+     <!-- 
+         En este ejemplo 1 creo una función saludo y le pasó como segundo parámetro
+        otra función miCallback. De esta forma, el resultado de la función saludo se 
+        propaga en la función callback al llamar miCallback.
+
+        En javascript las funciones son objetos de primera clase. Estas pueden ser 
+        usadas como variables, pasarlas como parámetros y son manipulables como 
+        cualquier otro objeto.
+      -->
+</body>
+</html>

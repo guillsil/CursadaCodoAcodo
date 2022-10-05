@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Palabra reservada this</h3>
+
+    <p> En este ejemplo, <b> this </b> representa el objeto <b> persona </b>. </p>
+
+    <p id="demo"></p>
+
+    <script>
+    // Creamos un objeto con 3 atributos y 1 metodo:
+    var persona = {
+                    nombre: "Juan",
+                    apellido : "Perez",
+                    dni     : 12345678,
+                    nombreCompleto : function() 
+                                    {
+                                        return this.nombre + " " + this.apellido;
+                                    }
+                  };
+
+    // Mostramos los datos del objeto:
+    document.getElementById("demo").innerHTML = persona.nombreCompleto();
+    </script>
+
+    <h3>Acceso a la definicion de una funcion(no usamos los parentesis)</h3>
+
+    <p id="demo2"></p>
+
+    <script>
+    // Creamos un objeto:
+    var persona = {
+                    nombre: "Juan",
+                    apellido : "Perez",
+                    dni     : 12345678,
+                    nombreCompleto : function() 
+                                    {
+                                        return this.nombre + " " + this.apellido;
+                                    }
+                };
+
+    // Mostramos los datos del objeto:
+    document.getElementById("demo2").innerHTML = persona.nombreCompleto;
+    </script>
+
+    <h3>Acceso a metodos nativos de Javascript </h3>
+
+    <p id="demo3"></p>
+
+    <script>
+        var mensaje = "Hola Argentina!";
+        var salida = mensaje.toUpperCase();//transforma la cadena a mayusculas
+        
+        // Mostramos los datos del objeto:
+        document.getElementById("demo3").innerHTML = salida;
+    </script>
+</body>
+</html>

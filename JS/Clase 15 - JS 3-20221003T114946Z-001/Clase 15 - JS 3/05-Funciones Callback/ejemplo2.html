@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Estilos de uso de un callback en javascript:
+        a) Estilo directo(mediante return)
+        b) Estilo con paso continuo síncrono
+        c) Estilo con paso continuo asíncrono
+     -->
+
+     <!-- 
+         Estilo Directo: es una función normal, donde el resultado de la operación es 
+         devuelto usando la instrucción return. Es la forma más común de devolver un 
+         resultado en una operación síncrona.
+      -->
+
+     <h3>Estilo directo</h3>
+     <script>
+        function sumar(a, b) 
+        {
+            return a + b;
+        }
+
+        console.log(sumar(10, 20));// 30
+        document.write(sumar(10, 20));// 30
+     </script>
+
+     <!-- 
+         Estilo con paso continuo síncrono: El equivalente al ejemplo anterior del
+        estilo directo usando una función callback en javascript queda asi:
+      -->
+
+      <h3>Estilo con paso continuo síncrono</h3>
+      <script>
+        function agregar(a, b, callback) 
+        {
+            callback(a + b);
+        }
+
+        agregar(5, 7, function(resultado) 
+        {
+            console.log(resultado);// 12
+            document.write(resultado);// 12
+        });
+      </script>
+
+      <!-- 
+          Es una función síncrona y obtenemos el resultado cuando la función callback 
+          es pasada como tercer parámetro y ejecutada. En este caso el código es 
+          ejecutado según su orden(por eso es sincronico).
+       -->
+</body>
+</html>

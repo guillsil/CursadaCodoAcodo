@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+         Estilo con paso continuo asíncrono: Modifiquemos el ejemplo anterior y 
+         agreguemos dentro de la función agregar una función asíncrona(setTimeout)
+      -->
+
+      <h3>Estilo con paso continuo asíncrono</h3>
+      <script>
+          //declaro la funcion agregar
+        function agregar(a, b, callback) 
+        {
+            setTimeout
+            (
+                function() 
+                {
+                    callback(a + b);
+                }, 
+                4000   
+            );
+        }
+
+        //invovo a la funcion agregar
+        agregar
+        (
+            2, 
+            3, 
+            function(resultado) 
+            {
+                    console.log("a+b = " + resultado);//5
+                    document.write("a+b = " + resultado);//5
+            }
+        );
+      </script>
+
+      <!-- 
+          En este ejemplo cambia el orden de la ejecución del código, mostrando al 
+          final el resultado de la suma. Usamos la función setTimeout para simular una 
+          operación asíncrona. La función setTimeout toma como primer parámetro una 
+          función callback y como segundo parámetro el tiempo de demora en ejecutar el 
+          contenido de la función callback(dada en milisegundos).
+
+            Como setTimeout es una función asíncrona, no espera para ejecutar el 
+            código de la función callback; lo que hace es devolver el control a la 
+            función agregar, y esta sigue la ejecución del programa, dejando la 
+            función callback a la espera en el ciclo de eventos de javascript para ser 
+            ejecutada.
+       -->
+</body>
+</html>

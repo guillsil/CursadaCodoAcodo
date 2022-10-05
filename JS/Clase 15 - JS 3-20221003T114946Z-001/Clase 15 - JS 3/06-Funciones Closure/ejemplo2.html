@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        Vida útil variable
+        Las variables globales viven hasta que se descarta la página, como cuando 
+        navega a otra página o cierra la ventana.
+
+        Las variables locales tienen una vida corta. Se crean cuando se invoca la 
+        función y se eliminan cuando finaliza la función.
+
+        Un problema a resolver
+        Suponga que desea utilizar una variable para contar algo y desea que este 
+        contador esté disponible para todas las funciones.
+
+        Podría usar una variable global y una function para aumentar el contador:
+     -->
+     <h3>Ejemplo 1</h3>
+     <script>
+         // Inicializo contador
+        var contador = 0;
+
+        // Funcion q incrementa el contador
+        function agregar() 
+        {
+            contador ++;
+            document.write(contador+'<br>');
+            console.log(contador);//ver con F12 desarrollador web 
+        }
+
+        // Llamo agregar() 3 veces
+        agregar();
+        agregar();
+        agregar();//contador termina en 3
+     </script>
+
+     <!-- 
+         Hay un problema con la solución anterior: cualquier código en la página puede
+        cambiar el contador, sin llamar a agregar ().
+
+        El contador debe ser local a la función agregar(), para evitar que otro código 
+        lo cambie:
+      -->
+      <h3>Ejemplo 2</h3>
+
+      <script>
+        // Funcion q incrementa el contador
+        function agregar2() 
+        {
+            // Inicializo contador
+            var contador2 = 0;
+            
+            contador2 ++;
+            
+            document.write(contador2 + '<br>');
+            console.log(contador2);//ver con F12 desarrollador web 
+        }
+
+        // Llamo agregar2() 3 veces
+        agregar2();
+        agregar2();
+        agregar2();//contador2 deberia ser 3 pero termina en 1.
+      </script>
+
+      <!-- 
+        No funcionó porque reiniciamos el contador local cada vez que llamamos a la 
+        función.
+
+        Usar una función anidada de JavaScript puede resolver esto.
+
+        Todas las funciones tienen acceso al alcance global.  
+
+        De hecho, en JavaScript, todas las funciones tienen acceso al alcance "por 
+        encima" de ellas.
+
+        JavaScript admite funciones anidadas. Las funciones anidadas tienen acceso al 
+        ámbito "por encima" de ellas.
+
+        En este ejemplo, la función interna adicionar() tiene acceso a la variable
+        contador3 en la función principal:
+       -->
+       <h3>Ejemplo 3</h3>
+       <p id="demo">0</p>
+
+       <script>
+            document.getElementById("demo").innerHTML = agregar();
+            
+            function agregar() 
+            {
+                var contador3 = 0;
+
+                function adicionar() {contador3 ++;}
+                
+                adicionar();  
+                
+                return contador3; 
+            }
+       </script>
+
+       <!-- 
+            Esto podría haber resuelto el dilema del contador, si pudiéramos llegar a 
+            la función adicionar() desde afuera.
+
+            También necesitamos encontrar una forma de ejecutar contador3 = 0 solo una 
+            vez.
+
+            Necesitamos un cierre. Entonces se usan las funciones closure.
+        -->
+
+        <h3>Funciones Closure</h3>
+
+        <!-- 
+            A la variable agregar4 se le asigna el valor de retorno de una función 
+            autoejecutable.
+
+            La función de autoejecucion solo se ejecuta una vez. Establece el contador 
+            en cero (0) y devuelve una definicion de función.
+
+            De esta manera, agregar4 se convierte en una función. Puede acceder al 
+            contador en el ámbito principal.
+
+            Este proceso se llama cierre de JavaScript(closure) . Hace posible que 
+            una función tenga variables "privadas".
+
+            El contador está protegido por el alcance de la función anónima y solo se 
+            puede cambiar mediante la función agregar4.
+
+            NOTA: Funciones autoejecutables
+            ( ... )()
+            
+            El esquema es el mismo que cuando llamamos a una función normal utilizando 
+            el nombre con que se ha declarado.
+
+            function myFunction(){
+            console.log( 'Hello World' );
+            }
+        
+            myFunction(); // 'Hello World'
+            Los paréntesis exteriores, como en una operación matématica, ‘encierran’ 
+            el contenido. El segundo juego de paréntesis asume que el interior de los 
+            anteriores es una función y la ejecuta inmediatamente. En el caso anterior,
+            para invocar myFunction nada más declararla, pordríamos utilizar:
+
+            (myFunction)();
+
+            Sin embargo, para flexibilizar la estructura, en lugar de hacer referencia 
+            a una función existente, construímos una anónima:
+
+            (function(){})();
+            
+            Con el código anterior, conseguimos crear una función, ejecutarla y luego 
+            desecharla: realmente lo interesante es que enlazamos el objeto devuelto 
+            al contexto global, no la función en sí misma. Con esto, sus propiedades 
+            y métodos tienen acceso al resto de variables globales dándole una gran 
+            flexibilidad y alcance al esquema.
+         -->
+
+        <p> Contando con una variable local. </p>
+
+        <button type="button" onclick="mostrar()">Contar</button>
+
+        <p id="demo4">0</p>
+
+        <script>
+            var agregar4 = (
+                                function () 
+                                {
+                                    var contador4 = 0;
+                                    return function incrementar () 
+                                                {
+                                                    contador4 ++; 
+                                                    return contador4;
+                                                }
+                                }
+                            )();
+
+            function mostrar()
+            {
+                document.getElementById("demo4").innerHTML = agregar4();
+            }
+        </script>
+
+</body>
+</html>

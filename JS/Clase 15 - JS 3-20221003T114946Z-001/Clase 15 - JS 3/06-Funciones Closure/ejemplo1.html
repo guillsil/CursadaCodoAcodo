@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        a) Las variables de JavaScript pueden pertenecer al ámbito local o global .
+        b) Las variables globales pueden hacerse locales (privadas) con cierres(closure) .
+        c) Una variable local solo se puede usar dentro de la función donde está 
+        definida. Está oculto a otras funciones.
+        d) Las variables globales y locales con el mismo nombre son variables 
+        diferentes. Modificar uno no modifica el otro.
+        e) Las variables creadas sin una palabra clave de declaración ( var, let o const)
+         son siempre globales, incluso si se crean dentro de una función.
+        f) Las variables globales viven hasta que se descarta la página, como cuando 
+        navega a otra página o cierra la ventana.
+        g) Las variables locales tienen una vida corta. Se crean cuando se invoca la 
+        función y se eliminan cuando finaliza la función.
+     -->
+     <h2>Accceso por parte de una funcion a una variable local</h2>
+     <p> Una función puede acceder a variables definidas dentro de la función: </p>
+
+    <button type="button" onclick="miFuncion()">Hace Click</button>
+
+    <p id="demo"></p>
+
+    <script>
+    function miFuncion() 
+    {
+        var a = 5;
+        document.getElementById("demo").innerHTML = a * a;
+    } 
+    </script>
+
+    <h2>Acceso por parte de una funcion a una variable global</h2>
+    <p> Una función puede acceder a variables definidas fuera de la función: </p>
+
+    <button type="button" onclick="miFuncion2()">Hace Click</button>
+
+    <p id="demo2"></p>
+
+    <script>
+        var a = 5;
+        function miFuncion2() 
+        {
+            document.getElementById("demo2").innerHTML = a * a;
+        } 
+    </script>
+
+    
+</body>
+</html>

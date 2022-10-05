@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1) Todos los objetos de JavaScript heredan propiedades y métodos de un prototipo. 
+        
+        2)  objetos Date:  heredan de Date.prototype
+            objetos Array: heredan de Array.prototype
+            objetos Person: heredan de Person.prototype
+
+        3) El Object.prototype está en la parte superior de la cadena de herencia:
+
+        4) Mediante los prototipos podemos agregar nuevas propiedades (o métodos) a 
+        todos los objetos existentes de un tipo determinado.
+        Tambien agregar nuevas propiedades (o métodos) a un constructor de objetos.
+    -->
+    <h3>Propiedad prototype</h3>
+    <p>La propiedad prototype de JavaScript permite agregar nuevas propiedades 
+        a los constructores de objetos:</p>
+    <p id="demo"></p>
+
+    <script>
+        function Persona(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        }
+
+        Persona.prototype.nacionalidad = "Argentina";
+
+        var p = new Persona("Juan", "Perez", 40);
+
+        document.getElementById("demo").innerHTML =
+        "La nacionalidad de Juan es " + p.nacionalidad; 
+    </script>
+
+
+    <h3>Propiedad prototype - parte 2</h3>
+    <p>La propiedad prototype de JavaScript también permite agregar nuevos métodos 
+        a los constructores de objetos</p>
+    <p id="demo2"></p>
+
+    <script>
+        function Persona(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        }
+
+        Persona.prototype.nombreCompleto = function() {
+                                                        return this.nombre + 
+                                                        " " + 
+                                                        this.apellido;
+                                                      };
+
+        var p = new Persona("Juan", "Perez", 40);
+
+        document.getElementById("demo2").innerHTML =
+        "Nombre completo de la persona: " + p.nombreCompleto(); 
+    </script>
+</body>
+</html>

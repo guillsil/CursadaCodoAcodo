@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Objetos Literales
+        Esta es la forma más sencilla de crear un objeto JavaScript.
+        Un objeto literal es una lista de pares de nombre: valor 
+        
+        Ejemplo: objeto JavaScript con cuatro propiedades
+     -->
+    <h3>Creando un objeto JavaScript</h3>
+
+    <p id="demo"></p>
+
+    <script>
+        var persona = {nombre:"Juan", apellido:"Perez", edad:35, colorDeOjos:"azul"};
+
+        document.getElementById("demo").innerHTML =
+        persona.nombre + " tiene " + persona.edad + " años de edad";
+    </script>
+
+
+<h3>Creando un objeto JavaScript- version 2</h3>
+
+    <p id="demo2"></p>
+
+    <script>
+        var auto = {
+                        marca:"Ford", 
+                        color:"Gris", 
+                        precio:750000
+                    };
+                    
+
+        document.getElementById("demo2").innerHTML =
+        "El auto de marca " + auto.marca + " es de color " + auto.color 
+        + " y vale " + auto.precio + " $";
+    </script>
+
+
+<h3>Uso de la palabra clave JavaScript new</h3>
+
+    <p id="demo3"></p>
+
+    <script>
+        var cajaDeAhorro = new Object();
+
+        cajaDeAhorro.numero = "007";
+        cajaDeAhorro.saldo = 35000;
+        cajaDeAhorro.moneda =" $";
+        cajaDeAhorro.nombre = "Caja de ahorro";
+                           
+        document.getElementById("demo3").innerHTML =
+        "La caja de ahorro " + cajaDeAhorro.numero + " posee un saldo de " 
+        + cajaDeAhorro.saldo + " " + cajaDeAhorro.moneda ;
+    </script>
+
+    <h3>Los objetos JavaScript son intercambiables</h3>
+    <!-- 
+        Los objetos son intercambiables: se abordan por referencia, no por valor.
+
+        El objeto x no es una copia de persona. Tanto x como persona son el mismo 
+        objeto.
+
+        Cualquier cambio en x también cambiará a persona, porque x y persona son el 
+        mismo objeto.
+
+        Si la persona es un objeto, la siguiente declaración no creará una copia de 
+        la persona:
+     -->
+    <p id="demo4"></p>
+
+    <script>
+        var persona = {nombre:"Maria", apellido:"Garcia", edad:40}
+        
+        var x = persona;
+        x.edad = 10;
+        
+        document.getElementById("demo4").innerHTML =
+        persona.nombre + " tiene " + persona.edad + " años de edad.";
+    </script>
+        
+</body>
+</html>
