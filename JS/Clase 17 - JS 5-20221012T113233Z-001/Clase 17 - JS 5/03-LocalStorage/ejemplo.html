@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+    localStorage y sessionStorage son propiedades que acceden al objeto Storage 
+    y tienen la función de almacenar datos de manera local, la diferencia entre 
+    éstas dos es que localStorage almacena la información de forma indefinida o 
+    hasta que se decida limpiar los datos del navegador y sessionStorage almacena 
+    información mientras la pestaña donde se esté utilizando siga abierta, una 
+    vez cerrada, la información se elimina.
+
+    Ubicacion de las bases de datos dnd Chrome guarda las variables localStorage
+    C:\Users\Erica\AppData\Local\Google\Chrome\User Data\Profile 2\Local Storage
+ -->
+<body>
+    <h3>El método localStorage.setItem ()</h3>
+    <p>El método localStorage.setItem () almacena un elemento de datos en un 
+        almacenamiento.</p>
+    <p id="demo"></p>
+
+    <script>
+        localStorage.setItem("nombre","Juan Perez");
+        document.getElementById("demo").innerHTML = localStorage.getItem("nombre");
+    </script>
+
+
+    <h3>El método localStorage.getItem ()</h3>
+    <p>El método localStorage.getItem () recupera un elemento de datos del 
+        almacenamiento.</p>
+    <p id="demo2"></p>
+
+    <script>
+        document.getElementById("demo2").innerHTML = localStorage.getItem("nombre");
+    </script>
+
+    <h3>El sessionStorage.setItem ()</h3>
+    <p>El sessionStorage.setItem () establece un elemento de datos en el 
+        almacenamiento.</p>
+    <p id="demo3"></p>
+
+    <script>
+        sessionStorage.setItem("nombre2","Maria Garcia");
+        document.getElementById("demo3").innerHTML = sessionStorage.getItem("nombre2");
+    </script>
+
+    <h3>El sessionStorage.getItem ()</h3>
+    <p>El sessionStorage.getItem () recupera un elemento de datos del 
+        almacenamiento.</p>
+    <p id="demo4"></p>
+
+    <script>
+        sessionStorage.setItem("nombre2","Maria Garcia");
+        document.getElementById("demo4").innerHTML = sessionStorage.getItem("nombre2");
+    </script>
+
+
+    <h3>El localStorage.removeItem ()</h3>
+    <p>El localStorage.removeItem () elimina un elemento de datos del 
+        almacenamiento.</p>
+    <p id="demo5"></p>
+
+    <script>
+        localStorage.removeItem("nombre");
+        document.getElementById("demo5").innerHTML = localStorage.getItem("nombre");
+    </script>
+
+
+    <h3>Limpiar todo el Storage</h3>
+    
+    <script>
+        localStorage.clear();    
+        sessionStorage.clear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer ejemplo con VUE</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+
+
+</head>
+
+<body>
+    <h3>Primer ejemplo con VUE</h3>
+    <hr>
+
+    <!-- El div presente tiene un mensaje en una INTERPOLACION {{}}. Esto interactúa con Vue.JS 
+        y muestra los datos en el navegador.  -->
+
+    <div id="app">
+        {{ mensaje }}   <!-- Esto interactúa con Vue -->
+    </div>
+
+
+    <!-- Para mostrar el valor del mensaje en el DOM, se crea una instancia de Vue.JS. 
+    Se llama a la instancia de Vue, la cual toma el ID del elemento del DOM, por ejemplo ‘#app. 
+    Hay datos dentro de dicha instancia con el mensaje al cual se le asigna el valor ‘Hola Vue!’. 
+    Vue interactúa con el DOM y cambia el valor en el DOM {{message}} con el mensaje ‘Hola Vue!’. -->
+
+    <div id="app2">
+    <a v-bind:title="titulo" href="www.google.com.ar">www.google.com.ar</a>
+    </div>
+
+    
+
+    <script>
+        
+        var app = new Vue({          // Creamos la instancia de Vue 
+            el: '#app',              // Elemento? el: es un identificador para el elemento del DOM
+            data: {                  // Datos . De nuevo data: es el identificador
+                mensaje: 'Hola Mundo!'
+            }
+        })
+
+
+        app.mensaje = 'Hola chicos!!';  // Cambiamos el valor del mensaje
+
+
+        var app2 = new Vue({          // Creamos la instancia de Vue 
+            el: '#app2',              // Elemento? el: es un identificador para el elemento del DOM
+            data: {                  // Datos . De nuevo data: es el identificador
+                titulo: 'Hacé click para ir a la web de Google'
+            }
+        })
+
+
+    </script>
+
+</body>
+
+</html>

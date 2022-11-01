@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Prueba Vue</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .contenedor {
+          width: 50%;
+          margin: auto;
+          background-color: #e4e2e2;
+          padding: 0.2rem;
+          border-radius: 0.5rem;
+        }
+        .fila-form {
+          display: flex;
+          justify-content: flex-end;
+          padding: .5rem;
+        }
+        .fila-form > label {
+          padding: .5rem 1rem .5rem 0;
+          font-size: 1.4rem;
+          flex: 1;
+        }
+        .fila-form > input {
+          flex: 2;
+        }
+        .fila-form > input,
+        .fila-form > button {
+          padding: .5rem;
+        }
+      </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Ubicación del valor de la propiedad 'template'.
+
+        Hasta ahora hemos visto que todo componente debe definir la propiedad 'template' 
+        con los elementos HTML que representan la interfaz visual de la misma.
+
+        Normalmente como dicho valor requiere varias líneas lo más común es utilizar 
+        las comillas oblicuas `.....` que nos permiten crear string de varias líneas.
+
+        Si tenemos un componente que requiere un template muy largo la metodología 
+        de definir el valor del template directamente luego de la propiedad puede 
+        ser un poco laborioso. Veremos otras formas donde ubicar la definición del 
+        template.
+
+        Creamos un componente llamado 'dias-semana' que defina una propiedad llamada 
+        'seleccionado'. El objetivo de la misma es mostrar todos los días de la 
+        semana en una misma línea y con un color distinto aquel que coincide con el 
+        valor de la propiedad 'seleccionado'.
+        
+        Definimos el valor del atributo 'template' fuera de la clase.
+
+     -->
+     <div id="aplicacion">
+        <login></login>
+      </div>
+    
+    <template id="login">
+      <form>
+        <div class="contenedor">
+          <div class="fila-form">
+            <label for="nombre">Nombre de usuario</label>
+            <input type="text" id="nombre">
+          </div>
+          <div class="fila-form">
+            <label for="clave">Clave</label>
+            <input type="password" id="clave">
+          </div>
+          <div class="fila-form">
+            <button type="submit">Confirmar</button>
+          </div>
+        </div>
+      </form>
+    </template>
+    
+    
+    <script>
+      Vue.component('login',{
+        template:'#login'
+      })
+    
+      new Vue({
+        el:"#aplicacion"
+      })
+    </script>
+</body>
+
+</html>

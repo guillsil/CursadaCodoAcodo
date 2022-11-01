@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <style>
+      strong{color: crimson;}
+  </style>
+</head>
+<body>
+    <!-- 
+        Hacemos una página que haga una petición fetch a un sitio web que retorne un 
+        archivo JSON.
+
+        La idea es recuperar el archivo JSON y mostrar el nombre y la calle donde
+        viven los usuarios de este sitio de datos de personas ficticio.
+
+        Cuando hacemos clic en el boton, llamamos a la funcion obtenerUsuarios. Alli
+        se usa la funcion fetch para solicitar al servidor el recurso JSON. El servidor
+        responde con un objeto de tipo promesa que contiene toda la informacion de 
+        los usuarios. Esta informacion se vuelca en el array que luego es recorrido
+        por la directiva v-for para completar los items de la lista, interpolando
+        los datos que queremos visualizar.
+     -->
+    <div id="app">
+        <button @click="getUsers">Obtener Usuarios</button>
+        <ul>
+            <li v-for="user in users" key="user.id">
+                <strong>Nombre: </strong>{{user.name}} 
+                --
+                <strong>Calle: </strong>{{user.address.street}}
+            </li>
+        </ul>
+    </div>
+ 
+  <script>
+var app=new Vue({
+      el: '#app',
+      data:{ 
+        users:[]
+      },
+      methods: {
+        getUsers () {
+          fetch('https://jsonplaceholder.typicode.com/users')
+          .then(res => {
+              return res.json()
+          }) 
+          .then(data => {
+            this.users = data;
+          })
+          .catch(err => {
+            console.log(err)
+          })  
+        }
+      }
+    })
+  </script>
+</body>
+</html>

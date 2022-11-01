@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function miFuncion(elem) 
+        {
+            elem.style.background = "#e0ffff";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Ademas de ahcer click sobre la caja de texto, mediante la tecla TAB
+         tambien se puede seleccionar el foco del cursor sobre dicha caja
+        de texto  -->
+    Ingresa tu nombre: <input type="text" onfocus="miFuncion(this);">
+
+    <p> Cuando el campo de entrada se enfoca, se ejecuta la función 
+        que cambia el color de fondo. </p>
+</body>
+
+</html>

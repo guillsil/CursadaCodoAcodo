@@ -1,0 +1,30 @@
+SQL: lenguaje estructurado de consultas
+query: consulta 
+servidores de datos
+	--> empresariales
+			--> SQL Server (.NET)
+			--> Oracle 
+	--> web
+		--> MySQL
+		--> Posgre-SQL
+	--> Hogar
+		--> Access
+	--> Mobile
+		--> SQLite
+
+
+		------------------------
+
+herramientas
+Aplicacion Cliente administrativa de SGBD(sistema gestor de base de datos) MySQL
+		--> MySQL Workbench
+
+Aplication Server: es una aplcacion q emula un servidor web en mi PC
+	--> XAMPP
+	--> WAMPP
+	--> LAMPP
+	--> AppServ
+
+
+
+

@@ -1,0 +1,32 @@
+
+
+
+
+CLAUSULAS
+from
+where
+order by
+distinct
+limit
+
+OPERADORES
+aritmeticos: + - * /
+relacionales: < > <= <= = <> o !=
+logicos: and or not
+rango --> between
+lista --> in
+similitud 	--> like
+				--> % : comodin q representa desde 0 a N caracteres
+				--> _ : comodin q representa un unico caracter
+			--> rlike
+				--> ^ : acento circunflejo o frances
+						--> indica que debe empezar con un detreminado caracter o conjunto de caracteres 
+				--> $ : --> indica que debe terminar con un detreminado caracter o conjunto de caracteres
+				--> .* : comodin q representa desde 0 a N caracteres
+is null
+is not null
+
+
+
+
+

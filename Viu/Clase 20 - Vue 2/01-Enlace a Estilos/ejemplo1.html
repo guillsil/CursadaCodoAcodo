@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        Vue permite enlazar nuestro modelo de datos con una o más propiedades en 
+        línea mediante la directiva v-bind.
+
+        Modificamos el tamaño de la fuente y color de un párrafo en forma dinámica.
+
+        La sintaxis para actualizar las propiedades de la hoja de estilos en línea 
+        lo hacemos mediante la directiva v-bind:style.
+
+        Disponemos un objeto literal asociando cada una de las propiedades y el 
+        valor que extraemos del modelo de datos:
+     -->
+     <div id="aplicacion">
+        <p>Tamaño de la fuente:
+          <input type="range" v-model="tamañoFuente" min=10 max=100>{{tamañoFuente}}
+        </p>
+        <p>Color:
+            <input type="color" v-model="colorParrafo">
+        </p>      
+        <p v-bind:style="{'font-size':tamañoFuente+'px', 'color': colorParrafo}">Párrafo de prueba</p>
+      </div>
+
+    <script>
+        var app=new Vue({
+        el: '#aplicacion',
+        data: { 
+            tamañoFuente: 20,
+            colorParrafo: '#000'
+        }
+    })
+    </script>
+</body>
+</html>

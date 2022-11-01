@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            width: 20%;
+            height: 20vh;
+            background-color: bisque;
+            padding: 1rem;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">
+        <p id="p1">Este es un parrafo.</p>
+        <p id="p2">Este es otro parrafo.</p>
+    </div>
+        <!-- 
+            Creación de nuevos elementos HTML (nodos)
+            Para agregar un nuevo elemento al DOM HTML, primero debe crear el 
+            elemento (nodo de elemento) y luego agregarlo a un elemento existente.
+         -->
+    <script>
+        //Este código crea un nuevo elemento <p>:
+        var parrafo = document.createElement("p");
+        
+        //le doy color azul al nuevo parrafo creado
+        parrafo.style.color = "blue";
+        
+        //para agregar texto al elemento <p>, primero debe crear un nodo de texto
+        var nodo = document.createTextNode("Esto es un nuevo parrafo.");
+        
+        //Luego debe agregar el nodo de texto al elemento <p>
+        parrafo.appendChild(nodo);
+        
+        //Finalmente, debe agregar el nuevo elemento a un elemento existente.
+        var elemento = document.getElementById("caja");
+        
+        //Este código agrega el nuevo elemento al elemento existente:div
+        elemento.appendChild(parrafo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    
+    <title>Clase 19</title>
+</head>
+<body>
+
+    <style>
+        h2{
+            background-color: pink;
+        }
+
+        .menor{
+            background-color: red;
+        }
+
+        .mayor{
+            background-color: green;
+        }
+
+    </style>
+
+    <h1>Introduccion a Vue!</h1>
+
+     <div id="app">
+
+        {{ mensaje }}
+        <span v-text="mensaje1"></span>
+
+        <span v-html="mensaje2"></span>
+        <a v-bind:href="url">Ir a google</a>
+
+        <li v-for="i in alumnos">
+             {{i.apellido}}, {{i.nombre}} ({{i.edad}} años)
+        </li>
+
+        <li v-for="(i,indice) in alumnos">
+           [{{indice+1}}]: {{i.apellido}}, {{i.nombre}} ({{i.edad}} años)
+       </li>
+
+       <li v-for="i in alumnos">
+        <span v-if="i.edad<18" class="menor">{{i.apellido}}, {{i.nombre}} ({{i.edad}} años)</span>
+        <span v-else class="mayor">{{i.apellido}}, {{i.nombre}} ({{i.edad}} años)</span>
+   </li>
+   <button v-on:click="contador+=1">+</button>
+   <span>{{contador}}</span>
+   <button v-on:click="contador-=1">-</button>
+
+     </div>
+
+
+
+     <script> 
+
+        const { createApp } = Vue
+        createApp({
+            data(){
+                return{
+                    mensaje:"Hola mundo desde Vue!",
+                    mensaje1:"Esto es lo mismo que antes haciamos con document.write",
+                    mensaje2: "<br><h2>Esto es lo mismo que innerHTML en JS</h2>",
+                    url:"https://www.google.com.ar",
+
+                    alumnos:[
+                        {nombre:"Juan", apellido:"Gonzalez", edad: 22},
+                        {nombre:"Maria", apellido:"Gonzalez", edad: 15},
+                        {nombre:"Ruben", apellido:"Fernandez", edad: 35},
+                        {nombre:"Fiorela", apellido:"Muñoz", edad: 60},
+                        {nombre:"Fiorela", apellido:"Muñoz", edad: 15},
+                    ],
+                    contador:0,
+                }
+            }
+        }).mount("#app")
+     </script>
+     
+
+
+
+
+  
+    
+</body>
+</html>

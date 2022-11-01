@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            width: 20%;
+            height: 20vh;
+            background-color: bisque;
+            padding: 1rem;
+            margin: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="caja">
+        <p id="p1">Este es un parrafo.</p>
+        <p id="p2">Este es otro parrafo.</p>
+    </div>
+        <!-- 
+            El appendChild()método del ejemplo anterior agregó el nuevo elemento 
+            como último hijo del padre.
+
+            Puede usar el metodo insertBefore() para insertar el nuevo parrafo
+            al como primer hijo.
+         -->
+    <script>
+        
+        var parrafo = document.createElement("p");
+        parrafo.style.color = "blue";
+        var nodo = document.createTextNode("Esto es un nuevo parrafo.");
+        parrafo.appendChild(nodo);
+        
+        var elemento = document.getElementById("caja");
+        var hijo = document.getElementById("p1");
+        elemento.insertBefore(parrafo, hijo);
+
+    </script>
+</body>
+</html>

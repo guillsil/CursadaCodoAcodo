@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Clase 20</title>
+</head>
+<body>
+
+    <h1>Vue parte 2 - Componentes y otros temitas</h1>
+
+
+    <div id="app">
+
+        <ul>
+            <li v-for="fruta in frutas">
+                {{fruta.nombre}} - cantidad: {{fruta.cantidades}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        const { createApp } = Vue
+        createApp({
+            data(){
+                return{
+                    frutas: [
+                        {nombre: "banana", cantidades: 15},
+                        {nombre: "mandarina", cantidades: 5},
+                        {nombre: "naranja", cantidades: 0},
+                    ]
+
+                }
+            }
+        }).mount('app')
+    </script>
+
+
+    
+</body>
+</html>

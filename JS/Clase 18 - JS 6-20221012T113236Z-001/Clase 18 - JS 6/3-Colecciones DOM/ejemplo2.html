@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> ¡Hola Mundo! </p>
+    <p> ¡Hola, Argentina! </p>
+    <p> Haga clic en el botón para cambiar el color de todos los elementos p. </p>
+
+    <button onclick="miFuncion()">Probar</button>
+
+    <script>
+        function miFuncion() 
+        {
+            var miColeccion = document.getElementsByTagName("p");
+            var i;
+            
+            //La propiedad length es útil cuando desea recorrer los elementos de una colección:
+            for (i = 0; i < miColeccion.length; i++) 
+            {
+                miColeccion[i].style.color = "violet";
+            }
+        }
+    </script>
+</body>
+</html>

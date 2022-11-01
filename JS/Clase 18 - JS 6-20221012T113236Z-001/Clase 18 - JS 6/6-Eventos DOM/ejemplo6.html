@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            background-color:crimson;
+            width:300px;
+            height:100px;
+            padding:40px; 
+            font-family: 'Trebuchet MS';
+            font-size: 1.5rem;
+            color: #fff8dc;
+            text-align: center;
+            line-height: 1.5rem;
+            margin: auto;/*centrado del div*/
+        }
+    </style>
+    
+    <script>
+        function mDown(obj) 
+        {
+          obj.style.backgroundColor = "#fff8dc";
+          obj.style.color = "#000";/*fuente color negro*/
+          obj.innerHTML = "Soltame";
+        }
+        
+        function mUp(obj) 
+        {
+          obj.style.backgroundColor="#dc143c";
+          obj.style.color = "#fff8dc";
+          obj.innerHTML="Gracias";
+        }
+    </script>
+</head>
+<body>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)">Hace Click</div>
+
+    
+</body>
+</html>

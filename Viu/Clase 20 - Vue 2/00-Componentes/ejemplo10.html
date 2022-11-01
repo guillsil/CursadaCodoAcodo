@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        La interfaz de un componente la podemos transformar mediante datos que le 
+        enviamos a sus propiedades y también veremos ahora que el contenido del 
+        'template' puede ser modificado mediante el concepto de 'slot'.
+
+        Los slot (espacio) se los declara dentro del template del componente y son 
+        espacios que pueden ser redefinidos cuando definimos un componente en el 
+        HTML.
+
+        Creamos un componente que muestra dos botones 'confirmar', 'cancelar' y un 
+        hipervínculo. Definimos un slot en el componente para poder agregar botones a 
+        otras actividades remplazando al hipervínculo.
+     -->
+    <div id="aplicacion">
+        <barra-botones></barra-botones>
+        <hr>
+        <barra-botones>
+            <button>Alta</button> <button>Baja</button>
+            <button>Modificacion</button>
+        </barra-botones>
+    </div>
+
+    <script>
+        Vue.component('barra-botones', {
+            template: `
+        <div><button>Confirmar</button>
+             <button>Cancelar</button>
+             <slot><a href="#">Otras opciones</a></slot>
+        </div>
+      `
+        })
+
+        new Vue({
+            el: '#aplicacion'
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+1) Traer la fecha de ingreso del primer empleado
+
+
+2) Listar todos los datos del empleado de menor antiguedad
+
+
+3) Listar nombre, apellido y telefono del autor que publico el libro mas caro
+
+
+4) Traer nombre y apellido del primer cliente que compro
+
+
+5) Listar la cantidad de ventas del dia de hoy

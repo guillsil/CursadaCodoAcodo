@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Para reemplazar un elemento al DOM HTML, use el metodo replaceChild() -->
+    <div id="caja">
+        <p id="p1">Este es un parrafo.</p>
+        <p id="p2">Este es otro parrafo.</p>
+    </div>
+
+    <button onclick="miFuncion()">Reemplazar Elemento</button>
+
+    <script>
+        function miFuncion() 
+        {
+            var padre = document.getElementById("caja");
+            var hijo = document.getElementById("p1");
+            var parrafo = document.createElement("p");
+            var nodo = document.createTextNode("Este es un nuevo parrafo.");
+            parrafo.appendChild(nodo);
+            padre.replaceChild(parrafo,hijo);    
+        }
+    </script>
+</body>
+</html>

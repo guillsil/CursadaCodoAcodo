@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        El objeto HTML DOM NodeList
+        
+        Un NodeListobjeto es una lista (colección) de nodos extraídos de un documento.
+
+        Un NodeListobjeto es casi lo mismo que un HTMLCollectionobjeto.
+
+        Algunos navegadores (más antiguos) devuelven un objeto NodeList en lugar 
+        de una HTMLCollection para métodos como getElementsByClassName().
+
+        Todos los navegadores devuelven un objeto NodeList para la propiedad 
+        childNodes. 
+
+        La mayoría de los navegadores devuelven un objeto NodeList para el método 
+        querySelectorAll().
+
+        El siguiente código selecciona todos los <p>nodos de un documento:
+    -->
+    <p>Hola Mundo!</p>
+
+    <p>Hola Argentina!</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <button onclick="miFuncion()">Probar</button>
+
+    <script>
+        
+        var myNodelist = document.querySelectorAll("p");
+
+        //Para acceder al segundo nodo <p>
+        document.getElementById("demo").innerHTML =
+        "El innerHTML del segundo parrafo es: " + myNodelist[0].innerHTML;
+
+        //La propiedad length define el número de nodos en una lista de nodos:
+        document.getElementById("demo2").innerHTML =
+        "El documento contiene: " + myNodelist.length + " parrafos";
+
+        //Cambio el color de todos los elementos <p> en una lista de nodos:
+        function miFuncion() 
+        {
+            var i;
+            
+            for (i = 0; i < myNodelist.length; i++) 
+            {
+                myNodelist[i].style.color = "red";
+            }
+        }
+    
+    </script>
+</body>
+</html>

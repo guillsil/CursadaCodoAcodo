@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Prueba Vue</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Creamos un componente que contenga un botón que en su interior tiene el 
+        valor 0. Cada vez que lo presionamos se  incrementa en 1
+     -->
+    <div id="aplicacion">
+        <contador></contador>
+    </div>
+
+    <script>
+
+        Vue.component('contador', {
+            template: `<div><button v-on:click="incrementar()">+
+                  
+                  </button>
+                  
+                  {{cantidad}}
+                  <button v-on:click="decrementar()">-
+                  
+                </button>
+                <br>
+                <button >Agregar al carrito
+                  
+                </button></div>`,
+            data: function () {
+                return {
+                    cantidad: 0
+                }
+            },
+            methods: {
+                incrementar: function () {
+                    this.cantidad++;
+                },
+                decrementar: function () {
+                    this.cantidad--;
+                }
+            }
+        });
+
+        var app = new Vue({
+            el: '#aplicacion'
+        })
+
+    </script>
+</body>
+
+</html>

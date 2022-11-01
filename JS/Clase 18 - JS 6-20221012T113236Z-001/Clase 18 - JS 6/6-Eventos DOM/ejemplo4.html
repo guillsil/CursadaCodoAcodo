@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        La función upperCase() se ejecutara cuando un usuario cambie el 
+        contenido de un campo de entrada. 
+    -->
+    <script>
+        function miFuncion() 
+        {
+            var entrada = document.getElementById("nombre");
+            entrada.value = entrada.value.toUpperCase();
+            entrada.style.border ="3px solid red";
+            entrada.style.background ="lightGray";
+            entrada.style.color ="white";
+        }
+    </script>
+</head>
+
+<body>
+
+    Ingrese su nombre: <input type="text" id="nombre" onchange="miFuncion()">
+
+    <p> Cuando abandona el campo de entrada, una función se
+        ejecuta y transforma el texto de entrada en mayusculas.</p>
+</body>
+
+</html>

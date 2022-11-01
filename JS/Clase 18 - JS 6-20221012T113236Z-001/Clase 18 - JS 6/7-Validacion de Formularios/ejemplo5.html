@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mensaje{
+                width: 30%;
+                /* float: left;  */
+                background-color: bisque;
+                color: mediumorchid;
+                border-radius: 0.5rem;
+                box-shadow: 0.25rem 0.25rem .5 darkblue;
+            }
+    </style>
+</head>
+<body>
+    <h3>Validar que un checkbox ha sido seleccionado</h3>
+    <!-- 
+         Si un elemento de tipo checkbox se debe seleccionar de forma obligatoria, 
+         JavaScript permite comprobarlo de forma muy sencilla:
+    -->
+
+    <form name="f1" action="destino.html" onsubmit="return validacion();">
+        <label for="aceptar">Aceptar los terminos de la Licencia</label>
+        <input type="checkbox" id="aceptar"> <label id="mensaje"></label><br><br>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </form>
+
+    <script>
+        function validacion() 
+        {
+            
+            elemento = document.getElementById("aceptar");
+            
+            if( !elemento.checked ) 
+            {
+                document.getElementById('mensaje').innerHTML = "Debe aceptar los terminos de la Licencia" ;
+                return false;
+            }
+            
+            return true;          
+        }
+    </script>
+
+
+</body>
+</html>

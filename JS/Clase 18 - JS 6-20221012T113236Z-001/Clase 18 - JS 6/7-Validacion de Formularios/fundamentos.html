@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Si el usuario ha cometido algún error al rellenar el formulario, se le puede 
+        notificar de forma instantánea, sin necesidad de esperar la respuesta del 
+        servidor, esto ayuda a reducir la carga de procesamiento en el servidor.
+
+        Algunas comprobaciones son muy habituales: que se rellene un campo obligatorio,
+        que se seleccione el valor de una lista desplegable, que la dirección de email 
+        indicada sea correcta, que la fecha introducida sea lógica, que se haya 
+        introducido un número donde así se requiere, etc.
+
+        Código JavaScript básico necesario para incorporar la validación a un 
+        formulario:
+     
+     <form action="" method="" id="" name="" onsubmit="return validacion();">
+        
+      </form>
+
+       
+          Esquema de la función validacion():
+          Si el evento onsubmit devuelve el valor true, el formulario se envía como 
+          lo haría normalmente. Sin embargo, si el evento onsubmit devuelve el valor 
+          false, el formulario no se envía.
+       
+
+      <script>
+          function validacion() 
+          {
+                if (condicion que debe cumplir el primer campo del formulario) 
+                {
+                    // Si no se cumple la condicion...
+                    alert('[ERROR] El campo debe tener un valor de...');
+                    return false;
+                }
+                else if (condicion que debe cumplir el segundo campo del formulario) {
+                    // Si no se cumple la condicion...
+                    alert('[ERROR] El campo debe tener un valor de...');
+                    return false;
+                }
+                ...
+                else if (condicion que debe cumplir el último campo del formulario) {
+                    // Si no se cumple la condicion...
+                    alert('[ERROR] El campo debe tener un valor de...');
+                    return false;
+                }
+
+                // Si el script ha llegado a este punto, todas las condiciones
+                // se han cumplido, por lo que se devuelve el valor true
+                return true;
+                }
+      </script>
+
+    -->
+</body>
+</html>

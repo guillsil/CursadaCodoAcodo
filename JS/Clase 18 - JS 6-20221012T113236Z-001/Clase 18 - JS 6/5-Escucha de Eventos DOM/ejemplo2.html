@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript addEventListener()</h2>
+
+    <p> Este ejemplo usa el método addEventListener () para
+        asociar un evento de clic a un botón. </p>
+
+    <button id="miBoton">Hace click</button>
+
+    <!-- Cuando hago click sobre el boton, se ejecuta la funcion anonima(porque
+        no tiene nombre) que, a su vez, llama a la funcion alert  -->
+    <script>
+        document.getElementById("miBoton").addEventListener("click", function () {
+            alert("Hola Mundo!");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mensaje{
+                width: 30%;
+                /* float: left;  */
+                background-color: bisque;
+                color: mediumorchid;
+                border-radius: 0.5rem;
+                box-shadow: 0.25rem 0.25rem .5 darkblue;
+            }
+    </style>
+</head>
+<body>
+    <h3>Validar un campo de texto obligatorio</h3>
+    <!-- 
+        Para que se de por completado un campo de texto obligatorio, se comprueba que 
+        el valor introducido sea válido, que el número de caracteres introducido sea 
+        mayor que cero 
+    -->
+
+    <form name="f1" action="destino.html" onsubmit="return validacion();">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre"> <label id="mensaje"></label><br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </form>
+
+    <script>
+        function validacion() 
+        {
+            valor = document.getElementById("nombre").value;
+            
+            if( valor == null || valor.length == 0) 
+            {
+                
+                document.getElementById('mensaje').innerHTML = "Tenes que completar el Nombre!";
+                elemento = document.getElementById('nombre');
+                elemento.focus();
+                
+                return false;
+            }
+            return true;          
+        }
+    </script>
+
+
+</body>
+</html>

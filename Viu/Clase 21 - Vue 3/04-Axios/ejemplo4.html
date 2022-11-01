@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!--Axios CDN: siempre debe ir despues de la libreria de vue js-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body 
+            {
+                display: flex;
+                justify-content: center;
+                background: #7E8D85;
+                font-family: 'Roboto Slab', serif;
+                line-height: 1.4;
+            }
+
+        #app 
+            {
+                margin-top: 20px;
+                width: 300px;
+                padding: 0 40px 40px;
+                background: #2F242C;
+                border-radius: 5px;
+                color: #B3BFB8;
+            }
+
+            h1 
+            {
+            color: #F0F7F4;
+            }
+
+            .lighten 
+            {
+            color: white;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        En el ejemplo anterior, los datos son obtenidos correctamente pero lucen 
+         desordenados, así que a continuación los mostrará apropiadamente. Además 
+         se incluirá manejo de errores en caso de que las cosas no funcionen o 
+         demoren en obtener la información más de lo esperado.
+     -->
+     <!-- Vista -->
+    <div id="app">
+        <h1>Índice de precios de Bitcoin</h1>
+        <div v-for="currency in info" class="currency">
+            {{ currency.description }}:
+            <span class="lighten">
+                <span
+                    v-html="currency.symbol"></span>{{ currency.rate_float | currencydecimal }}
+            </span>
+        </div>
+    </div>
+
+    <!-- creo el componente -->
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    info: null
+                };
+            },
+            filters: {
+                currencydecimal(value) {
+                    return value.toFixed(2);//valor con 2 decimales
+                }
+            },
+            mounted() {
+                /*
+                    cuando el componente fue creado y montado en el DOM, entonces
+                    se hace la peticion axios al servidor para solicitar el precio
+                    del bitcoin
+                */
+                axios
+                    .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                    .then(response => (this.info = response.data.bpi));
+            }
+        });
+    </script>
+</body>
+
+</html>

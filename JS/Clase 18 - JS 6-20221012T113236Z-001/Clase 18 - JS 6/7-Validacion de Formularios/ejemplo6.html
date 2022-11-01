@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mensaje{
+                width: 30%;
+                /* float: left;  */
+                background-color: bisque;
+                color: mediumorchid;
+                border-radius: 0.5rem;
+                box-shadow: 0.25rem 0.25rem .5 darkblue;
+            }
+    </style>
+</head>
+<body>
+    <h3>Validar que un radiobutton ha sido seleccionado</h3>
+    <!-- 
+         En este ejemplo recorre todos los radiobutton que forman un grupo y comprueba elemento 
+         por elemento si ha sido seleccionado. Cuando se encuentra el primer radiobutton seleccionado, 
+         se sale del bucle y se indica que al menos uno ha sido seleccionado.
+    -->
+
+    <form name="f1" action="destino.html" onsubmit="return validacion();">
+        
+        <label>Formas de Pago</label><br><br>
+        <input type="radio" id="efectivo" name="pago"> <label id="efectivo">Efectivo</label><br>
+        <input type="radio" id="tarjeta" name="pago"> <label id="tarjeta">Tarjeta</label><br> 
+        <label id="mensaje"></label><br><br>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </form>
+
+    <script>
+        function validacion() 
+        {
+            
+            opciones = document.getElementsByName("pago");
+
+            var seleccionado = false;
+            for(var i=0; i < opciones.length; i++) 
+            {
+                if(opciones[i].checked) 
+                {
+                    seleccionado = true;
+                    break;
+                }
+            }
+
+            if(!seleccionado) 
+            {
+                document.getElementById('mensaje').innerHTML = "Debe seleccionar una forma de pago" ;
+                return false;
+            }
+            
+            
+            return true;          
+        }
+    </script>
+
+
+</body>
+</html>

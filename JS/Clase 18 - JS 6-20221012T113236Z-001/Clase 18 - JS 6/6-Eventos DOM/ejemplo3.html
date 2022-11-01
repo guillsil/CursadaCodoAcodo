@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p> Haga clic en el botón para mostrar la fecha. </p>
+
+<button onclick="mostrarFecha()">Ver la Fecha:</button>
+
+<!-- el script tb puede estar en el body. Este ejercicio no es el caso,
+    pero cuando el script recibe respuesta desde el servidor(backend), a 
+    veces es necesario primero que se "cargue" el DOM asociado a la pagina 
+    web antes que se ejecute el script -->
+<script>
+    function mostrarFecha() 
+    {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 

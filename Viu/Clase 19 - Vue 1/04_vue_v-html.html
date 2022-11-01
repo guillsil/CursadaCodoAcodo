@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue -  v-html</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+</head>
+
+<body>
+    <h3>Vue - v-html</h3>
+    <hr>
+    
+    <div id="misDatos">
+        <h4>Apellido: {{apellido}}</h4>
+        <h4>Nombre: {{nombre}}</h4>
+        <h4>Documento: {{dni}}</h4>
+        <h4>Edad: {{edad}} años</h4>
+        <div v-html = "mensaje"></div>   <!-- Cuidado con la sintaxis -->
+    </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#misDatos',
+            data: {
+                nombre: "Juan Carlos",
+                apellido: "Fernandez",
+                dni: "DNI 28.453.234",
+                edad: 34,
+                mensaje: "<h5 style='color: red;'>Esto es HTML tuneado desde Vue.</h5>"
+            }
+        })    
+
+    </script>
+
+    
+
+
+</body>
+
+</html>

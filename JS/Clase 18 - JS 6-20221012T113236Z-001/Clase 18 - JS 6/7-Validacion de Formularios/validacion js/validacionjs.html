@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>validacion</title>
+  <script type='text/javascript'>
+
+function validar()
+{
+  usuario=document.getElementById("usuario");
+  excedente=document.getElementById("excedente");
+  error=false;
+
+  if(usuario.value=="")
+    {
+      document.getElementById("validar_usuario").innerHTML="Debe completar el usuario";
+      error = true;
+      usuario.focus();
+      
+    }
+  else
+    {
+      document.getElementById("validar_usuario").innerHTML="";
+    }
+
+    if(excedente.value=="")
+    {
+      error = true;
+    }
+  
+
+    if (error) return false; 
+    else return true;
+    
+    
+}
+</script>
+</head>
+<body>
+  <form name='f1' onsubmit="return validar();">
+  <table>
+    <tr>
+      <td>Usuario</td>
+      <td><input type='text' name='usuario' id='usuario' value="" /></td>
+      <td><div id="validar_usuario" style="color:red;"></div></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type='text' name='excedente' id='excedente' value="" style='display:none;'/></td>
+    </tr>
+    <tr>
+      <td><input type='submit'  value='Enviar'></td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mensaje{
+                width: 30%;
+                /* float: left;  */
+                background-color: bisque;
+                color: mediumorchid;
+                border-radius: 0.5rem;
+                box-shadow: 0.25rem 0.25rem .5 darkblue;
+            }
+    </style>
+</head>
+<body>
+    <h3>Validar un campo numerico</h3>
+    <!-- 
+         Uso de expresiones regulares 
+    -->
+
+    <form name="f1" action="destino.html" onsubmit="return validacion();">
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Ingrese su email"> <label id="mensaje"></label><br><br>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </form>
+
+    <script>
+        function validacion() 
+        {
+            valor = document.getElementById("email").value;
+            
+              
+            if (!(/^\w+([\.-]?\w+)*@(?:|hotmail|outlook|yahoo|live|gmail|edu)\.(?:|com|ar)+$/.test(valor)))
+            {
+                document.getElementById('mensaje').innerHTML = "No es una direccion de email correcta" ;
+                
+                elemento = document.getElementById('email');
+                elemento.value = '';
+                elemento.focus();
+
+                return false;
+            }
+            
+            return true;          
+        }
+    </script>
+
+
+</body>
+</html>

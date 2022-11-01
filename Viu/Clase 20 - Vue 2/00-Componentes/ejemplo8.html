@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Prueba Vue</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Ubicación del valor de la propiedad 'template'.
+
+        Hasta ahora hemos visto que todo componente debe definir la propiedad 'template' 
+        con los elementos HTML que representan la interfaz visual de la misma.
+
+        Normalmente como dicho valor requiere varias líneas lo más común es utilizar 
+        las comillas oblicuas `.....` que nos permiten crear string de varias líneas.
+
+        Si tenemos un componente que requiere un template muy largo la metodología 
+        de definir el valor del template directamente luego de la propiedad puede 
+        ser un poco laborioso. Veremos otras formas donde ubicar la definición del 
+        template.
+
+        Creamos un componente llamado 'dias-semana' que defina una propiedad llamada 
+        'seleccionado'. El objetivo de la misma es mostrar todos los días de la 
+        semana en una misma línea y con un color distinto aquel que coincide con el 
+        valor de la propiedad 'seleccionado'.
+        
+        Definimos el valor del atributo 'template' fuera de la clase.
+
+     -->
+    <div id="aplicacion">
+        <dias-semana seleccionado="sábado"></dias-semana>
+    </div>
+
+
+    <template id="dias-semana">
+        <div
+            style="display: flex; flex-direction:row;justify-content:space-between;background:#ff0;font-size:1.5rem">
+            <div v-for="dia in dias">
+                <span v-if="seleccionado==dia"
+                    style="background:#000;color:#fff">{{dia}}</span>
+                <span v-else>{{dia}}</span>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        Vue.component('dias-semana', {
+            props: ['seleccionado'],
+            template: '#dias-semana',
+            data: function () {
+                return {
+                    dias: ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo']
+                }
+            }
+        });
+
+        new Vue({
+            el: '#aplicacion'
+        })
+
+    </script>
+</body>
+
+</html>

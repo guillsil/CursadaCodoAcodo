@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">" 
+        <h1>Wine</h1>
+        <div v-if="error">
+            Lo sentimos se produjo un error
+            Error: {{nroerror}}
+        </div>
+        <div v-else-if="cargando==false"    class="container">
+           
+            <table class="table table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th>Winery</th>
+                    <th>Wine</th>
+                    <th>Average</th>
+                    <th>Reviews</th>
+                    <th>Location</th>
+                    <th>Image</th>
+                </thead>
+                <tr v-for="wine of wines">
+                    <td>{{wine.id}}</td>
+                    <td>{{wine.winery}}</td>
+                    <td>{{wine.wine}}</td>
+                    <td>{{wine.rating.average}}</td>
+                    <td>{{wine.rating.reviews}}</td>
+                    <td>{{wine.location}}</td>
+
+                    <td>
+                        <img :src="wine.image" :alt="wine.wine">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div v-else   class="spinner-border">
+            <!-- spinner mientras se esta cargando-->
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

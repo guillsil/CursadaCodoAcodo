@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Copio el contenido de h1 en p al pasar el mouse sobre h1 -->
+    <h1 id="id01">Titulo Principal</h1>
+    <p id="id02"></p>
+
+    <script>
+        document.getElementById("id01").addEventListener("mouseover", copiarTexto);
+
+        function copiarTexto() 
+        {
+            // Acceder al primer hijo se puede hacer así: 
+            var texto = document.getElementById("id01").firstChild.nodeValue;
+            document.getElementById("id02").innerHTML = texto;    
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>JavaScript addEventListener()</h2>
+
+    <p> Este ejemplo demuestra cómo pasar valores como
+        parámetros cuando se usa el método addEventListener (). </p>
+
+    <p>Haga clic en el botón para realizar un cálculo.</p>
+
+    <button id="miBoton"></button>
+
+    <p id="demo"></p>
+        <!-- Lo que ingresamos x teclado son cadenas de caracteres(string). 
+            Mediante parseInt o parseFloat transformamos ese string en un numero
+        entero o decimal(flotante). -->
+    <script>
+        var p1 = parseInt(prompt('Ingresa n1: '));
+        var p2 = parseInt(prompt('Ingresa n2: '));
+
+        document.getElementById("miBoton").innerHTML = "Calcular " + p1 + " * " +p2;
+
+        document.getElementById("miBoton").addEventListener("click", function () {
+            miFuncion(p1, p2);
+        });
+
+        function miFuncion(a, b) {
+            var resultado = a * b;
+            document.getElementById("demo").innerHTML = "Resultado = " + resultado;
+        }
+    </script>
+</body>
+
+</html>

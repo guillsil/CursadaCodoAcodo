@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            background-color:coral;
+            width:300px;
+            height:100px;
+            padding:40px; 
+            font-family: 'Trebuchet MS';
+            font-size: 1.5rem;
+            color: cornsilk;
+            text-align: center;
+            line-height: 1.5rem;
+            margin: auto;/*centrado del div*/
+        }
+    </style>
+
+    <script>
+        function mOver(obj) 
+        {
+            obj.innerHTML = "Gracias!";
+        }
+
+        function mOut(obj) 
+        {
+            obj.innerHTML = "Pasa el mouse por encima";
+        }
+    </script>
+</head>
+<body>
+    <!-- this: hace referencia al objeto por el cual se ejecute el evento
+    en ese momento. En este caso, this = la etiqueta div -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">Evento MouseOver</div>
+</body>
+</html>

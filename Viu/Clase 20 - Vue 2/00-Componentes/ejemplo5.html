@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Prueba Vue</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        Propiedades de tipo objeto y vector.
+        
+        Pasamos un vector de objetos literales al componente.
+        
+        Creamos un componente llamada 'articulos' que tenga una propiedad que reciba 
+        un vector de objetos literales. El objetivo del componente es mostrar los 
+        datos del vector de articulos en una tabla HTML:
+     -->
+    <div id="aplicacion">
+        <articulos v-bind:datos="datos"></articulos>
+        
+       
+        
+        
+    </div>
+
+    <script>
+        Vue.component('articulos', {
+            props: ['datos'],
+            template: `<div>
+                     <table border="1" align="center">
+                     <tr><td>Código</td><td>Descripción</td><td>Precio</td></tr>
+                     <tr v-for="art in datos"><td>{{art.codigo}}</td><td>{{art.descripcion}}</td><td>{{art.precio}}</td></tr>
+                     </table>
+                   </div>`
+        })
+
+        var app = new Vue({
+            el: '#aplicacion',
+            data: {
+                datos: [{
+                    codigo: 1,
+                    descripcion: 'papas',
+                    precio: 12.52
+                }, {
+                    codigo: 2,
+                    descripcion: 'naranjas',
+                    precio: 21
+                }, {
+                    codigo: 3,
+                    descripcion: 'peras',
+                    precio: 18.20
+                },
+                {
+                    codigo: 4,
+                    descripcion: 'mandarinas',
+                    precio: 18.20
+                },
+                {
+                    codigo: 5,
+                    descripcion: 'banana',
+                    precio: 18.20
+                }
+            ]
+            }
+        })
+    </script>
+</body>
+
+</html>

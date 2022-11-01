@@ -1,0 +1,27 @@
+-- traer la fecha de ingreso del primer empleado
+select min(hire_date) 'fecha de ingreso' from employee;
+
+-- listar todos los datos del empleado de menor antiguedad
+select 	*
+from 	employee
+where	hire_date = (select max(hire_date) from employee);
+
+-- listar nombre, apellido y telefono del autor que publico el libro mas caro
+select        	concat(a.au_fname,' ',a.au_lname) autor) autor,
+				a.phone telefono
+from          	authors a       
+inner join    	titleauthor ta on (a.au_id = ta.au_id)
+inner join    	titles t on ta.title_id = t.title_id
+where			t.price = (select max(price) from titles);
+
+-- traer nombre y apellido del primer cliente que compro
+select		nombre, apellido
+from		clientes c
+inner join 	facturas v on c.idcliente = v.idcliente
+where 		 fecha = (select min(fecha) from facturas);
+
+-- listar la cantidad de ventas del dia de hoy
+select		count(*) 'cantidad de facturas'
+from		facturas
+-- where		fecha = curdate();
+where		fecha in (select curdate() from facturas);

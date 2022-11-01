@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mensaje{
+                width: 30%;
+                /* float: left;  */
+                background-color: bisque;
+                color: mediumorchid;
+                border-radius: 0.5rem;
+                box-shadow: 0.25rem 0.25rem .5 darkblue;
+            }
+    </style>
+</head>
+<body>
+    <h3>Validar que se ha seleccionado una opción de una lista</h3>
+    <!-- 
+        A partir de la propiedad selectedIndex, se comprueba si el índice de la opción seleccionada es 
+        válido y además es distinto de cero. La primera opción de la lista (- Selecciona un valor –)
+         no es válida, por lo que no se permite el valor 0 para esta propiedad selectedIndex.
+    -->
+
+    <form name="f1" action="destino.html" onsubmit="return validacion();">
+        <select id="opciones" name="opciones">
+            <option value="">- Selecciona un pais -</option>
+            <option value="1">Argentina</option>
+            <option value="2">Brasil</option>
+            <option value="3">Uruguay</option>
+        </select>
+        
+        <label id="mensaje"></label><br><br>
+        
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+    </form>
+
+    <script>
+        function validacion() 
+        {
+            indice = document.getElementById("opciones").selectedIndex;
+            
+            if( indice == null || indice == 0 ) 
+            {
+                document.getElementById('mensaje').innerHTML = "Tenes que seleccionar un pais!";
+                return false;
+            }
+            
+            return true;          
+        }
+    </script>
+
+
+</body>
+</html>
