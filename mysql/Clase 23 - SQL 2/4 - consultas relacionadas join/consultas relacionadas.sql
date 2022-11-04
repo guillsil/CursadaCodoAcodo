@@ -18,40 +18,22 @@ ON table1.column_name = table2.column_name;
 create database relaciones;
 
 use relaciones;
+#crear tabla
+create table empleados(emp_id int,emp_nombre varchar(20),suc_id int);
+#crear tabla
+create table sucursales(suc_id int,suc_nombre varchar(20));
 
-create table empleados
-(
-	emp_id int,
-	emp_nombre varchar(20),
-	suc_id int
-);
+insert into empleados values(1,'Juan',1),(2,'Carlos',2),(3,'Jose',2),(4,'Maria',null);
 
-create table sucursales
-(
-	suc_id int,
-	suc_nombre varchar(20)
-);
-
-
-insert into empleados values
-(1,'Juan',1),
-(2,'Carlos',2),
-(3,'Jose',2),
-(4,'Maria',null);
-
-insert into sucursales values
-(1,'Centro'),
-(2,'Congreso'),
-(3,'Almagro'),
-(4,'Palermo');
+insert into sucursales values(1,'Centro'),(2,'Congreso'),(3,'Almagro'),(4,'Palermo');
 
 truncate table empleados;
 truncate table sucursales;
 
 -- delete fom empleados;
 
-select * from sucursales;
-select * from empleados;
+select * from sucursales;#A
+select * from empleados;#B
 
 -- listar el nombre de los empleados y de las sucursales 
 -- dnd trabajan
@@ -60,6 +42,7 @@ select * from empleados;
 -- por los cuales se relacionan ambas tablas.(suc_id de ambas tablas).
 select 		emp_nombre, 
 			suc_nombre
+            
 from 		empleados
 -- JOIN 		sucursales
 inner join		sucursales
