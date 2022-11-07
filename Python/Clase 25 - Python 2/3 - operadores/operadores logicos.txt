@@ -1,0 +1,10 @@
+operadores logicos
+	
+	proposiciones: son afirmaciones q pueden ser V o F
+
+	En programacion --> proposicion = condicion logica
+
+	Las condiciones logicas se relacionan por los operadores logicos
+			-> Y --> and 
+			-> O --> or
+			-> NO --> not

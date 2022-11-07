@@ -1,0 +1,33 @@
+ Laboratorio  Estructura de control While
+         Ejercicio 1
+        Imprimir los números del 1 al 10 uno abajo del otro
+
+        Ejercicio 2 
+        Imprimir los números del 1 al 10 salteando de a 2 uno abajo del otro
+
+         Ejercicio 3 
+        Imprimir los números del 10 al 1 uno abajo del otro
+
+        Ejercicio 4 
+        Imprimir los números del 1 al 10 sin imprimir números 2,5 y 9 uno abajo del otro.
+        Requisito: se necesita tener conocimientos del operador AND (&&) y del operador NOT  (!=)
+
+        Ejercicio 5 
+        Imprimir los números del 1 al 30 sin imprimir números entre 
+        el 10 y el 20 uno abajo del otro.
+        Requisitos: se necesita tener conocimientos del operador OR (||)  
+
+        Ejercicio 6 
+         Imprimir la suma de los números del 1 al 10
+
+         Ejercicio 7
+         Imprimir la suma de los números pares del 1 al 25
+         Requisito: se necesita tener conocimiento del operador RESTO   (%)
+
+         Ejercicio 8
+        Imprimir la multiplicación de números impares 
+        que se encuentran entre el -10 y 10
+
+        Ejercicio 9
+        Imprimir la suma de los números pares mayores a 9 y menores a 20
+        que se encuentran entre el 1 y el 30

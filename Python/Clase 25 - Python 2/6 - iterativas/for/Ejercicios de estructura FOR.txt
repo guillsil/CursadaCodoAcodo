@@ -1,0 +1,11 @@
+Ejercicios de estructura FOR
+
+Ejercicio 1: Imprimir los numeros del 1 al 10 uno abajo del otro. 
+
+Ejercicio 2: Imprimir los numeros del 1 al 10 solo los impares abajo del otro.
+
+Ejercicio 3: Imprimir los numeros del 10 al 1 uno abajo del otro.
+
+Ejercicio 4: Imprimir la suma de los numeros impares del 1 al 25.
+
+
