@@ -1,0 +1,9 @@
+1) Crear una funcion que permita ingresar por teclado ancho y alto de un rectangulo e informe el area del mismo.
+
+2) Crear una función que reciba tres enteros y nos muestre el mayor de ellos. La carga de los valores debe hacerse por teclado.
+
+3) Desarrollar una funcion que permita ingresar el lado de un cuadrado. Luego preguntar si quiere calcular y mostrar su perímetro o su superficie.
+
+4) Crear una función que reciba tres enteros y los muestre ordenados de menor a mayor. En otra función solicitar la carga de 3 enteros por teclado y proceder a llamar a la primer función definida.
+
+5) Crear una función que le enviemos como parámetro un string y nos retorne la cantidad de caracteres que tiene. En el bloque principal solicitar la carga de dos nombres por teclado y llamar a la función dos veces. Imprimir en el bloque principal cual de las dos palabras tiene más caracteres.
