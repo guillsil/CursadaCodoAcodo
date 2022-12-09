@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Hola mundo desde un html importado!</h1>
+        <h2>Nombre: {{nombre}}</h2>
+        <h2>Apellido: {{apellido}}</h2>
+        <h2>Dia: {{now.day}}</h2>
+        <h2>Mes: {{now.month}}</h2>
+        <h2>Anio: {{now.year}}</h2>
+
+        {% if edad >= 18  %}
+        <p>Sos mayor de edad!</p>
+        {% else  %}
+        <p>Sos menor de edad</p>
+        {% endif %}
+    </body>
+</html>
+
