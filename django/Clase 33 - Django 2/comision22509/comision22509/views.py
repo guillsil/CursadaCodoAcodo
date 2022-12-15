@@ -4,7 +4,7 @@ from django.template import Template, Context
 
 
 def saludo(request):
-
+    temas = ["Guillermo", "Silva", "Codo a Codo", "Python", "Django", "HTML"]
     fecha = datetime.datetime.now()
     archivo = open("C:/Users/Andres/OneDrive/Documentos/GitHub/CursadaCodoAcodo/django/Clase 33 - Django 2/comision22509/templates/plantilla.html")
     doc = Template(archivo.read())

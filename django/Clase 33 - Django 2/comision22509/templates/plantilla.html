@@ -12,6 +12,19 @@
         {% else  %}
         <p>Sos menor de edad</p>
         {% endif %}
+        {% endcomment %}
+
+        {% if temas_curso%}
+        <ul>
+            {% for tema in temas_curso %}
+            <li>{{tema}}</li>
+            {% endfor %}
+        </ul>
+        
+
+
+
+
     </body>
 </html>
 
