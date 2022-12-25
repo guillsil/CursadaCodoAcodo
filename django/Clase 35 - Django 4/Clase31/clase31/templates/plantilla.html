@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+</head>
+<body>
+    {% include './superior/barra.html' %}
+    {# Esto es un comentario #}
+    <h1>Hola Mundo ahora desde plantilla</h1>
+    <h2>Otro saludos mas!!!!</h2>
+    <p>Nombre: {{nombre_persona}} </p>
+    <p>Apellido: {{apellido_persona}}</p>
+    <p>Fecha: {{now}}</p>
+
+    {% if nombre_persona == "Juan" %}
+    <p>Te llamas Juan</p>
+    {% else %}
+    <p>No te llamas Juan</p>
+    {% endif %}
+
+    <ul>
+    {% if temas_curso %}
+    {% for tema in temas_curso %}
+    <li>{{tema|first|upper}}</li>
+    {% endfor %}
+    {% else %}
+    <p>No hay temas que mostrar</p>
+    {% endif %}
+    </ul>
+
+    {% comment %}
+    Comentario de 
+    varias líneas
+    {% endcomment %}
+    
+</body>
+</html>

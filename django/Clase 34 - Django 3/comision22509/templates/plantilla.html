@@ -1,5 +1,6 @@
 <html>
     <body>
+        {% include 'nabvar.html' %}
         <h1>Hola mundo desde un html importado!</h1>
         <h2>Nombre: {{nombre}}</h2>
         <h2>Apellido: {{apellido}}</h2>
@@ -14,14 +15,13 @@
         {% endif %}
 
         {% if temas_curso%}
-        <ul>
             {% for tema in temas_curso %}
-            <li>{{temas}}</li>
+                <li>{{tema}}</li>
             {% endfor %}
-        </ul>
         {% else %}
-        <p>No hay temas para mostrar</p>
+            <p>No hay temas para mostrar</p>
         {% endif %}
+
 
      
         
